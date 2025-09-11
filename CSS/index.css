@@ -1,5 +1,90 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+
+body {
+  padding: 20px 30px;
+}
+
+.child1,
+.child3,
+.parent_child1,
+.parent_child2,
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.parent_child1 {
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid gray;
+}
+
+.child1 {
+  gap: 20px;
+}
+
+.child3 {
+  gap: 17px;
+}
+
+.child2 > img {
+  width: 200px;
+  height: 100px;
+  object-fit: fill;
+  margin-left: 150px;
+}
+
+.child1 > img {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+  opacity: 0.7;
+}
+
+.profile {
+  width: 21px;
+  height: 21px;
+  object-fit: contain;
+}
+
+.cart {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.parent_child2 {
+  padding: 30px 0;
+  margin: auto;
+}
+
+ul,
+li {
+  list-style: none;
+  gap: 30px;
+  font-size: 17px;
+  font-weight: 700;
+  opacity: 0.8;
+}
+
+li:hover,
+select:hover {
+  color: #f6bf54;
+  cursor: pointer;
+}
+
+select {
+  border: none;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 700;
+  opacity: 0.8;
 }
