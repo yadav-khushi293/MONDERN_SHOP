@@ -6,8 +6,28 @@
   font-size: 17px;
 }
 
-body {
-  padding: 20px 30px;
+.main_parent {
+  padding: 20px 50px;
+  box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+  width: 21px;
+  height: 21px;
+  object-fit: cover;
+  fill: #000;
+  transition: color 0.2s ease;
+}
+
+.cart {
+  width: 31px;
+  height: 31px;
+  transition: color 0.2s ease;
+}
+
+.icon:hover,
+.cart:hover {
+  fill: #f6bf54;
 }
 
 .child1,
@@ -22,9 +42,8 @@ ul {
 
 .parent_child1 {
   justify-content: space-between;
-  width: 90%;
   margin: auto;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(222, 220, 220);
 }
 
 .child1 {
@@ -42,23 +61,10 @@ ul {
   margin-left: 150px;
 }
 
-.child1 > img {
-  width: 21px;
-  height: 21px;
-  object-fit: contain;
-  opacity: 0.7;
-}
-
-.profile {
-  width: 21px;
-  height: 21px;
-  object-fit: contain;
-}
-
-.cart {
-  width: 35px;
-  height: 35px;
-  object-fit: contain;
+.child1:hover,
+.child2:hover,
+.child3:hover {
+  cursor: pointer;
 }
 
 .parent_child2 {
@@ -87,4 +93,46 @@ select {
   font-size: 17px;
   font-weight: 700;
   opacity: 0.8;
+}
+
+/* Battery Css */
+
+.battery {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  padding-top: 15px;
+}
+
+.battery_box {
+  border: 4px solid #00b9f5;
+  width: 35px;
+  height: 15px;
+  border-radius: 3px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.battery_level {
+  height: 100%;
+  width: 0%;
+  background-color: #00b9f5;
+  transition: width 0.5s ease;
+}
+
+.battery_tip {
+  width: 10px;
+  height: 30px;
+  background-color: #00b9f5;
+  border-radius: 3px;
+  position: absolute;
+  right: -15px;
+  top: 10px;
+}
+
+.battery_info {
+  padding-top: 1.5px;
+  font-size: 9px;
+  font-weight: 600;
 }
