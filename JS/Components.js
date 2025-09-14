@@ -158,15 +158,7 @@ export const Navbar = () => {
 
 export const NavStyle = () => {
   return `
-    * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 17px;
-}
-
-.main_parent {
+ .main_parent {
   padding: 20px 50px;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
