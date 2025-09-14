@@ -134,13 +134,13 @@ export const Navbar = () => {
             </div>
             <div class="parent_child2">
                 <ul>
-                    <li>Home</li>
-                    <select name="Shop" id="shop">
+                    <li class="homePage nav-link">Home</li>
+                    <select name="Shop" id="shop" class="shopPage nav-link">
                         <option value="shop">Shop</option>
                         <option value="right">Right Sidebar</option>
                         <option value="left">Left Sidebar</option>
                     </select>
-                    <select name="Products" id="products">
+                    <select name="Products" id="products" class="productPage nav-link">
                         <option value="product">Products</option>
                         <option value="simple">Simple Product</option>
                         <option value="variable">Variable Product</option>
@@ -148,8 +148,8 @@ export const Navbar = () => {
                         <option value="external">Extrenal Product</option>
                         <option value="account">My Account</option>
                     </select>
-                    <li>About</li>
-                    <li>Contact</li>
+                    <li class="aboutPage nav-link">About</li>
+                    <li class="contactPage nav-link">Contact</li>
                 </ul>
             </div>
         </div>
@@ -293,6 +293,11 @@ input::placeholder {
   font-size: 13px;
   font-weight: 700;
 }
+
+.nav-link.active {
+  color: #f6bf54;   /* highlight like hover */
+  opacity: 1;
+}
  `;
 };
 
@@ -382,3 +387,79 @@ navigator.getBattery().then(function (battery) {
   battery.addEventListener("levelchange", updateBattery);
   battery.addEventListener("chargingchange", updateBattery);
 });
+
+function getBasePath(path) {
+  // remove "index.html" if it exists anywhere
+  path = path.replace("index.html", "");
+
+  // find where "/pages/" starts
+  let index = path.indexOf("/pages/");
+
+  if (index !== -1) {
+    // keep everything before "/pages/"
+    path = path.substring(0, index);
+  }
+
+  // ✅ normalize multiple slashes to a single slash
+  path = path.replace(/\/{2,}/g, "/");
+
+  // ✅ always ensure trailing slash
+  if (!path.endsWith("/")) {
+    path += "/";
+  }
+
+  return path;
+}
+
+let fullPath = window.location.pathname;
+
+let basePath = getBasePath(fullPath);
+
+export const aboutPage = () => {
+  window.location.pathname = `${basePath}pages/about.html`;
+};
+
+export const goHome = () => {
+  window.location.pathname = `${basePath}index.html`;
+};
+
+export const contactPage = () => {
+  window.location.pathname = `${basePath}pages/contact.html`;
+};
+
+export const shopPage = () => {
+  window.location.pathname = `${basePath}pages/shop.html`;
+};
+
+export const productPage = () => {
+  window.location.pathname = `${basePath}pages/product.html`;
+};
+// Highlight Active Nav Item
+export const setActiveNav = () => {
+  // Get current page name (like index.html, Login.html, Cart.html)
+  let currentPage = window.location.pathname.split("/").pop().toLowerCase();
+
+  if (currentPage === "" || currentPage === "/") {
+    currentPage = "index.html";
+  }
+
+  // Select all nav links
+  const navItems = document.querySelectorAll(".nav-link");
+
+  navItems.forEach((item) => {
+    // reset
+    item.classList.remove("active");
+
+    // Match based on text or condition
+    if (
+      (currentPage === "index.html" && item.classList.contains("homePage")) ||
+      (currentPage === "about.html" && item.classList.contains("aboutPage")) ||
+      (currentPage === "contact.html" &&
+        item.classList.contains("contactPage")) ||
+      (currentPage === "shop.html" && item.classList.contains("shopPage")) ||
+      (currentPage === "product.html" && item.classList.contains("productPage"))
+    ) {
+      item.classList.add("active");
+    }
+  });
+};

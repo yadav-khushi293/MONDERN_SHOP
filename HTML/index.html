@@ -18,7 +18,7 @@
         <footer class="footers"></footer>
     </body>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder } from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
             document.querySelector('.header').innerHTML = Navbar();
 
@@ -27,5 +27,25 @@
         let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100);
     </script>
 </html>
