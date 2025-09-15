@@ -160,6 +160,7 @@ export const NavStyle = () => {
   return `
  .main_parent {
   padding: 20px 50px;
+  padding-bottom:0;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
@@ -220,7 +221,7 @@ ul {
 }
 
 .parent_child2 {
-  padding: 30px 0;
+  padding: 20px 0;
   margin: auto;
 }
 
@@ -297,6 +298,124 @@ input::placeholder {
 .nav-link.active {
   color: #f6bf54;   /* highlight like hover */
   opacity: 1;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  height: 80vh;
+  background-color: #1b1b1b;
+  color: #d1dce8;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.2fr;
+  column-gap: 20px;
+  padding: 10px 40px;
+  /* border:2px solid #e90303; */
+}
+
+h3 {
+  padding: 30px 0px 17px 0px;
+  color: #d1dce8;
+}
+
+h4{
+  color:  #9a9e99;
+}
+
+li {
+  padding-bottom: 10px;
+}
+
+p,i {
+  line-height: 25px;
+  color: #9a9e99;
+  font-size: larger;
+}
+
+a {
+  text-decoration: none;
+  color: #9a9e99;
+  font-weight: 500;
+  font-size: larger;
+}
+
+a:hover{
+  color: #ebb44d;
+  text-decoration: underline;
+}
+
+.parent1,
+.parent2,
+.parent3,
+.parent4 {
+  padding: 50px 20px;
+  width: 100%;
+  /* border: 2px solid red; */
+}
+
+.iconDiv {
+  /* border: 2px solid red; */
+  margin-top: 50px;
+}
+
+.iconUl > li {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 20px;
+  display: flex;
+  /* border: 2px solid red; */
+  /* justify-content: space-between; */
+}
+
+.img_span {
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #9a9e99;
+}
+
+span > img{
+  /* border: 2px solid red; */
+  width: 20px;
+  height: 20px;
+  color: #d1dce8;
+}
+
+.iconText1 {
+  display: grid;
+  grid-template-columns: auto;
+  margin-left: 30px;
+  font-size: larger;
+  color: #9a9e99;
+  line-height: 30px;
+}
+
+.iconText1>span>a{
+font-size: large;
+}
+
+.parent5{
+  width: 100%;
+  height:20vh;
+  display: flex;
+  align-items: center;
+  background-color:#181818;
+  font-weight: normal;
+  font-size:13px;
+  padding-left: 60px;
+}
+
+.iconUl li:hover .iconText1 span a,
+.iconUl li:hover .img_span i,
+.iconUl li:hover .img_span p {
+  color: #ebb44d;
+}
+
+.iconUl li:hover .img_span p{
+  cursor: context-menu;
 }
  `;
 };
@@ -466,4 +585,106 @@ export const setActiveNav = () => {
 
 // Footer
 
-// export const Footers = () => {};
+export const Footers = () => {
+  return `
+    <footer>
+        <div class="parent1">
+            <div class="child1" id="box1">
+                <h3>About Us</h3>
+                <div class="ul">
+                    <ul>
+                        <li><a href="#">About Organization</a></li>
+                        <li><a href="#">Our Clients</a></li>
+                        <li><a href="#">Our Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child1" id="box2">
+                <h3>Achievements</h3>
+                <div class="paragraph1">
+                    <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
+                </div>
+            </div>
+        </div>
+        <div class="parent2">
+            <div class="child1" id="box3">
+                <h3>Quick Links</h3>
+                <div class="ul">
+                    <ul>
+                        <li><a href="#">Introduction</a></li>
+                        <li><a href="#">Organization Team</a></li>
+                        <li><a href="#">Press Enquiries</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child1" id="box4">
+                <h3>Useful Information</h3>
+                <div class="paragraph1">
+                    <p>Amet commodo nulla facilisi nullam vehicula ipsum. Faucibus pulvinar elementum integer enim.</p>
+                </div>
+            </div>
+        </div>
+        <div class="parent3">
+            <div class="child1" id="box5">
+                <h3>Important Links</h3>
+                <div class="ul">
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Cookies Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="child1" id="box6">
+                <h3>Shipping Imformation</h3>
+                <div class="paragraph1">
+                    <p>Fringilla urna porttitor rhoncus dolor purus nonulla malesuada pellentesque elit eget.</p>
+                </div>
+            </div>
+        </div>
+        <div class="parent4">
+            <div class="child1">
+                <h3>Contact Info</h3>
+                <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.</p>
+                <div class="iconDiv">
+                    <ul class="iconUl">
+                        <li>
+                            <span class="img_span">
+                                <!-- <img src="utils/location.img.svg" alt="image"> -->
+                                 <i class="fa-solid fa-location-dot"></i>
+                            </span>
+                            <div class="iconText1">
+                                <span><h4>Address:</h4></span>
+                                <span>Street Name, NY 38954</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img_span">
+                                <!-- <img src="utils/phone.img.svg" alt="image"> -->
+                                 <i class="fa-solid fa-phone"></i>
+                            </span>
+                            <div class="iconText1">
+                                <span><h4>Phone:</h4></span>
+                                <span><a href="#">973-475-8462</a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="img_span">
+                                <!-- <img src="utils/Email.img.svg" alt="image"> -->
+                                 <p>@</p>
+                            </span>
+                            <div class="iconText1">
+                                <span><h4>Email:</h4></span>
+                                <span><a href="#">Website@gmail.com</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="parent5">
+        <p>Copyright © 2025 - WordPress Theme by <a href="#">Creative Themes</a></p>
+    </div>
+  `;
+};
