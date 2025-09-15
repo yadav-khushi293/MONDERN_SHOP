@@ -41,4 +41,99 @@ button {
   color: whitesmoke;
   font-size: larger;
   font-weight: 500;
+  cursor: pointer;
+}
+
+button:hover {
+  color: #000;
+  background-color: #ffcd05;
+}
+
+/* Discount */
+
+.hot_discount {
+  background-color: whitesmoke;
+  margin-top: 170px;
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+.discount_child1,
+.discount_child2 {
+  width: 50%;
+  padding: 20px;
+}
+
+.discount_child2 {
+  background-image: url(../Utils/Image-7.jpg);
+  background-size: cover;
+}
+
+.discount_child1d {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+  padding-top: 40px;
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+.discount_child1a > img {
+  border-radius: 50%;
+  border: 0;
+  width: 80px;
+  height: 80px;
+}
+
+.discount_child1b {
+  cursor: text;
+}
+
+.discount_child1b > h5 {
+  padding: 0;
+  opacity: 1;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.discount_child1c > h3 {
+  font-size: 40px;
+  padding-left: 37px;
+  font-weight: 1000;
+  font-family: "Open Sans", sans-serif;
+}
+
+.discount_child1c > p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  letter-spacing: 0.5px;
+  padding-left: 30px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.discount_child2 {
+  padding-left: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.discount_child2 > h3 {
+  font-size: 39px;
+  font-weight: 1000;
+  color: #fff;
+  font-family: "Open Snas", sans-serif;
+}
+
+.discount_child2 > p {
+  font-size: 18.5px;
+  font-weight: 500;
+  font-family: "Open Snas", sans-serif;
+  color: #fff;
 }

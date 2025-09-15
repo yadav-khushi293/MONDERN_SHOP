@@ -16,11 +16,86 @@
                 amet consectetur adipisicing elit. <br> quis
                 quisquam voluptatibus ex soluta.</h5>
             <button>See Collection</button>
+            <div class="hot_discount">
+                <div class="discount_child1">
+                    <div class="discount_child1d">
+                        <div class="discount_child1a">
+                            <img src="../Utils/User.jpg" alt="User">
+                        </div>
+                        <div class="discount_child1b">
+                            <h5>Landon Peters</h5>
+                            <p>Sportsman / Champion / Backpack</p>
+                        </div>
+                    </div>
+                    <div class="discount_child1c">
+                        <h3>
+                            Quisque Diam Quam <br> Elementum
+                        </h3><br>
+                        <p>
+                            Condimentum id venenatis a condimentum vitae sapien.
+                            <br>Ullamcorper malesuada proin libero nunc
+                            consequat interdum <br>varius sit. Enim neque
+                            volutpat ac tincidunt vitae.
+                        </p><br>
+                        <p>
+                            Fringilla urna porttitor rhoncus dolor purus non.
+                            Nulla <br>malesuada pellentesque elit eget gravida
+                            cum.
+                        </p>
+                    </div>
+                </div>
+                <div class="discount_child2">
+                    <h3>Hot Discount - 70% OFF</h3>
+                    <p>
+                        Fringilla urna porttitor rhoncus dolor purus non. Nulla
+                        <br>
+                        malesuada pellentesque elit eget gravida cum.
+                    </p>
+                    <button>Find Out More</button>
+                </div>
+            </div>
+        </div>
+        <div class="backpack">
+            <h4>Backpack Types</h4>
+            <p>Molestie ac feugiat sed lectus.</p>
+            <div class="backpack_parent">
+                <div class="backpack_child1">
+                    <h5>Maecenas Ultricies Mieget</h5>
+                    <p>
+                        Ultrices neque ornare aenean euismod. Faucibus
+                        scelerisque eleifend donec pretium.
+                    </p>
+                </div>
+                <div class="backpack_child2">
+                    <h5>Laoreet Nonarcu Curabitur</h5>
+                    <br>
+                    <p>
+                        Ultrices neque ornare aenean euismod. Faucibus
+                        scelerisque eleifend donec pretium.
+                    </p>
+                </div>
+                <div class="backpack_child3">
+                    <h5>Facilisis Volutpat Estvelit</h5>
+                    <br>
+                    <p>
+                        Ultrices neque ornare aenean euismod. Faucibus
+                        scelerisque eleifend donec pretium.
+                    </p>
+                </div>
+                <div class="backpack_child4">
+                    <h5>Cursus Metus Aliquam Eleifend</h5>
+                    <br>
+                    <p>
+                        Ultrices neque ornare aenean euismod. Faucibus
+                        scelerisque eleifend donec pretium.
+                    </p>
+                </div>
+            </div>
         </div>
         <footer class="footers"></footer>
     </body>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
             document.querySelector('.header').innerHTML = Navbar();
 
@@ -30,7 +105,7 @@
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
 
-    document.querySelector('.footers').innerHTML = Footers();
+    // document.querySelector('.footers').innerHTML = Footers();
 
 document.querySelector(".homePage").addEventListener('click',()=>{
     goHome();
