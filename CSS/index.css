@@ -131,9 +131,162 @@ button:hover {
   font-family: "Open Snas", sans-serif;
 }
 
+.backpack > h4,
+.backpack > p {
+  font-size: 35px;
+  text-align: center;
+  font-family: "Open Snas", sans-serif;
+  font-weight: 1000;
+  padding: 5px 0;
+}
+
+.backpack > p {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.6;
+  padding: 10px 0;
+}
+
 .discount_child2 > p {
   font-size: 18.5px;
   font-weight: 500;
   font-family: "Open Snas", sans-serif;
   color: #fff;
+}
+
+.backpack {
+  margin-top: 80px;
+}
+
+.backpack_parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.backpack_child1,
+.backpack_child2,
+.backpack_child3,
+.backpack_child4 {
+  border: 1px solid black;
+  width: 25%;
+  height: 79vh;
+  filter: grayscale(0.1);
+  cursor: pointer;
+}
+
+.backpack_child1:hover {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
+    ),
+    url(../Utils/BackPack_Image1.jpg) center/cover no-repeat;
+}
+
+.backpack_child2:hover {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
+    ),
+    url(../Utils/BackPack_Image2.jpg) center/cover no-repeat;
+}
+
+.backpack_child3:hover {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
+    ),
+    url(../Utils/BackPack_Image3.jpg) center/cover no-repeat;
+}
+
+.backpack_child4:hover {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
+    ),
+    url(../Utils/BackPack_Image4.jpg) center/cover no-repeat;
+}
+
+.backpack_child1 > p,
+.backpack_child1 > h5,
+.backpack_child2 > p,
+.backpack_child2 > h5,
+.backpack_child3 > p,
+.backpack_child3 > h5,
+.backpack_child4 > p,
+.backpack_child4 > h5 {
+  color: #fff;
+  font-weight: 700;
+  opacity: 1;
+}
+
+.backpack_child1 > h5,
+.backpack_child2 > h5,
+.backpack_child3 > h5,
+.backpack_child4 > h5 {
+  font-size: x-large;
+}
+
+.backpack_child1 > p,
+.backpack_child2 > p,
+.backpack_child3 > p,
+.backpack_child4 > p {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.backpack_child1 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
+    ),
+    url("../Utils/BackPack_Image1.jpg") center/cover no-repeat;
+  padding: 0 25px;
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.backpack_child2 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
+    ),
+    url("../Utils/BackPack_Image2.jpg") center/cover no-repeat;
+  padding: 0 25px;
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.backpack_child3 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
+    ),
+    url("../Utils/BackPack_Image3.jpg") center/cover no-repeat;
+  padding: 0 25px;
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.backpack_child4 {
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
+    ),
+    url("../Utils/BackPack_Image4.jpg") center/cover no-repeat;
+  padding: 0 25px;
+  display: flex;
+  align-items: baseline;
+  justify-content: end;
+  flex-direction: column;
+  padding-bottom: 20px;
 }
