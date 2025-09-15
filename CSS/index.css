@@ -1,5 +1,44 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+
+.parent {
+  padding: 150px 100px;
+  background-image: url(../Utils/Image-1.jpg);
+  height: 115vh;
+  background-position: center;
+}
+
+h1,
+h5 {
+  padding-top: 25px;
+  font-size: 55px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 900;
+}
+
+h5 {
+  font-weight: 600;
+  font-size: 16.5px;
+  opacity: 0.5;
+  padding-bottom: 25px;
+  padding-top: 15px;
+}
+
+button {
+  font-family: "Open Sans", sans-serif;
+  width: 190px;
+  height: 60px;
+  border: 0;
+  border-radius: 4px;
+  background-color: black;
+  color: whitesmoke;
+  font-size: larger;
+  font-weight: 500;
 }

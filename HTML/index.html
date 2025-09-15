@@ -1,13 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/index.css">
-</head>
-<body onload="ApiCall()">
-<div id="info"></div>
-    <script src="../JS/index.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navbar</title>
+        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    </head>
+    <body>
+        <header class="header"></header>
+        <div class="parent">
+            <h1>Full Set Of Great Features <br>To Make You Look Fresh</h1>
+            <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit
+                amet consectetur adipisicing elit. <br> quis
+                quisquam voluptatibus ex soluta.</h5>
+            <button>See Collection</button>
+        </div>
+        <footer class="footers"></footer>
+    </body>
+    <script type="module">
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+
+            document.querySelector('.header').innerHTML = Navbar();
+
+    document.querySelector('body').addEventListener('load', typePlaceholder());
+
+        let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('.footers').innerHTML = Footers();
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100);
+    </script>
 </html>
