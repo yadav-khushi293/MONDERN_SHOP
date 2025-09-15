@@ -463,3 +463,7 @@ export const setActiveNav = () => {
     }
   });
 };
+
+// Footer
+
+// export const Footers = () => {};
