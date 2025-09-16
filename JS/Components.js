@@ -307,13 +307,12 @@ input::placeholder {
 border:2px solid;
 border-radius:20px;
 height:35px;
+padding: 0 10px;
 }
 
-#search:hover,#search:focus{
+#search:hover{
 border: 2px solid #f8a705ff;
 }
-
-/* Footer */
  `;
 };
 
@@ -486,103 +485,99 @@ export const setActiveNav = () => {
 // export const Footers = () => {
 //   return `
 //     <footer>
-//         <div class="parent1">
-//             <div class="child1" id="box1">
-//                 <h3>About Us</h3>
-//                 <div class="ul">
-//                     <ul>
-//                         <li><a href="#">About Organization</a></li>
-//                         <li><a href="#">Our Clients</a></li>
-//                         <li><a href="#">Our Partners</a></li>
-//                     </ul>
+//         <div class="footer_cantaner1">
+//             <div class="FC_child1">
+//                 <div class="FC_child1_box1 Box">
+//                     <h2>About Us</h2>
+//                     <div class="ulDiv1">
+//                         <ul>
+//                             <li>About Organization</li>
+//                             <li>Our Clients</li>
+//                             <li>Our Partners</li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//                 <div class="FC_child1_box2 Box">
+//                     <h2>Quick Links</h2>
+//                     <div class="ulDiv2">
+//                         <ul>
+//                             <li>Introduction</li>
+//                             <li>Organization Team</li>
+//                             <li>Press Enquiries</li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//                 <div class="FC_child1_box3 Box">
+//                     <h2>Important Links</h2>
+//                     <div class="ulDiv3">
+//                         <ul>
+//                             <li>Privacy Policy</li>
+//                             <li>Cookies Policy</li>
+//                             <li>Terms & Conditions</li>
+//                         </ul>
+//                     </div>
+//                 </div>
+//                 <div class="Box">
+//                     <h2>Contact Info</h2>
+//                     <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.
+//                     </p>
 //                 </div>
 //             </div>
-//             <div class="child1" id="box2">
-//                 <h3>Achievements</h3>
-//                 <div class="paragraph1">
-//                     <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
+//             <!-- footer cantaner child2 -->
+//             <div class="FC_child2">
+//                 <div class="Box">
+//                     <h2>Achievements</h2>
+//                     <div>
+//                         <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
+//                     </div>
 //                 </div>
-//             </div>
-//         </div>
-//         <div class="parent2">
-//             <div class="child1" id="box3">
-//                 <h3>Quick Links</h3>
-//                 <div class="ul">
-//                     <ul>
-//                         <li><a href="#">Introduction</a></li>
-//                         <li><a href="#">Organization Team</a></li>
-//                         <li><a href="#">Press Enquiries</a></li>
-//                     </ul>
+//                 <div class="Box">
+//                     <h2>Useful Information</h2>
+//                     <div>
+//                         <p>Amet commodo nulla facilisi nullam vehicula ipsum. Faucibus pulvinar elementum integer enim.
+//                         </p>
+//                     </div>
 //                 </div>
-//             </div>
-//             <div class="child1" id="box4">
-//                 <h3>Useful Information</h3>
-//                 <div class="paragraph1">
-//                     <p>Amet commodo nulla facilisi nullam vehicula ipsum. Faucibus pulvinar elementum integer enim.</p>
+//                 <div class="Box">
+//                     <h2>Shipping Imformation</h2>
+//                     <div class="paragraph1">
+//                         <p>Fringilla urna porttitor rhoncus dolor purus nonulla malesuada pellentesque elit eget.</p>
+//                     </div>
 //                 </div>
-//             </div>
-//         </div>
-//         <div class="parent3">
-//             <div class="child1" id="box5">
-//                 <h3>Important Links</h3>
-//                 <div class="ul">
-//                     <ul>
-//                         <li><a href="#">Privacy Policy</a></li>
-//                         <li><a href="#">Cookies Policy</a></li>
-//                         <li><a href="#">Terms & Conditions</a></li>
-//                     </ul>
-//                 </div>
-//             </div>
-//             <div class="child1" id="box6">
-//                 <h3>Shipping Imformation</h3>
-//                 <div class="paragraph1">
-//                     <p>Fringilla urna porttitor rhoncus dolor purus nonulla malesuada pellentesque elit eget.</p>
-//                 </div>
-//             </div>
-//         </div>
-//         <div class="parent4">
-//             <div class="child1">
-//                 <h3>Contact Info</h3>
-//                 <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.</p>
-//                 <div class="iconDiv">
-//                     <ul class="iconUl">
-//                         <li>
-//                             <span class="img_span">
-//                                 <!-- <img src="utils/location.img.svg" alt="image"> -->
-//                                  <i class="fa-solid fa-location-dot"></i>
-//                             </span>
-//                             <div class="iconText1">
-//                                 <span><h4>Address:</h4></span>
-//                                 <span>Street Name, NY 38954</span>
-//                             </div>
-//                         </li>
-//                         <li>
-//                             <span class="img_span">
-//                                 <!-- <img src="utils/phone.img.svg" alt="image"> -->
-//                                  <i class="fa-solid fa-phone"></i>
-//                             </span>
-//                             <div class="iconText1">
-//                                 <span><h4>Phone:</h4></span>
-//                                 <span><a href="#">973-475-8462</a></span>
-//                             </div>
-//                         </li>
-//                         <li>
-//                             <span class="img_span">
-//                                 <!-- <img src="utils/Email.img.svg" alt="image"> -->
-//                                  <p>@</p>
-//                             </span>
-//                             <div class="iconText1">
-//                                 <span><h4>Email:</h4></span>
-//                                 <span><a href="#">Website@gmail.com</a></span>
-//                             </div>
-//                         </li>
-//                     </ul>
+//                 <div class="Box">
+//                     <div class="iconDiv">
+//                         <div class="img_div">
+//                             <i class="fa-solid fa-location-dot"></i>
+//                         </div>
+//                         <div class="text">
+//                          <h3>Address:</h3>
+//                             <p>Street Name, NY 38954</p>
+//                         </div>
+//                     </div>
+//                     <div class="iconDiv">
+//                         <div class="img_div">
+//                         <i class="fa-solid fa-phone"></i>
+//                     </div>
+//                     <div class="iconText2 text">
+//                             <h3>Phone:</h3>
+//                     <p>973-475-8462</p>
+//                     </div>
+//                     </div>
+//                     <div class="iconDiv">
+//                         <div class="img_div">
+//                         <i class="fa-solid fa-envelope"></i>
+//                     </div>
+//                     <div class="iconText3 text">
+//                             <h3>Email:</h3>
+//                        <p>Website@gmail.com</p>
+//                     </div>
+//                     </div>
 //                 </div>
 //             </div>
 //         </div>
 //     </footer>
-//     <div class="parent5">
-//         <p>Copyright © 2025 - WordPress Theme by <a href="#">Creative Themes</a></p>
+//     <div class="footer_cantaner2">
+//          <p>Copyright © 2025 - WordPress Theme by Creative Themes</p>
 //     </div>
 //   `;
 // };

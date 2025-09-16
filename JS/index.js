@@ -9,6 +9,9 @@ const apiCall = () => {
 
 const appenddata = (data) => {
   const datashow = document.querySelector("#product");
+  const popularProducts = document.querySelector("#popular_products");
+
+  let product = data.slice(3, 7);
 
   const imageContainer = document.createElement("div");
   imageContainer.className = "imageContainer";
@@ -37,4 +40,29 @@ const appenddata = (data) => {
   }
 
   datashow.append(imageContainer);
+
+  const imageContainer1 = document.createElement("div");
+
+  product.forEach((el) => {
+    let imgBox1 = document.createElement("div");
+    let image1 = document.createElement("img");
+    let text1 = document.createElement("h5");
+    let price1 = document.createElement("p");
+    let category1 = document.createElement("p");
+    let cart1 = document.createElement("button");
+
+    imageContainer1.className = "imageContainer1";
+    imgBox1.className = "imgbox1";
+    category1.className = "category1";
+
+    image1.src = el.img;
+    text1.innerHTML = el.title;
+    price1.innerHTML = el.price;
+    category1.innerHTML = el.category;
+    cart1.innerText = "Add To Cart";
+
+    imgBox1.append(image1, text1, price1, category1, cart1);
+    imageContainer1.append(imgBox1);
+  });
+  popularProducts.append(imageContainer1);
 };
