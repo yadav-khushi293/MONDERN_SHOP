@@ -133,7 +133,7 @@ export const Navbar = () => {
                 </div>
             </div>
             <div class="parent_child2">
-                <ul>
+                <ul class="navbar_ul">
                     <li class="homePage nav-link">Home</li>
                     <select name="Shop" id="shop" class="shopPage nav-link">
                         <option value="shop">Shop</option>
@@ -159,7 +159,8 @@ export const Navbar = () => {
 export const NavStyle = () => {
   return `
  .main_parent {
-  padding: 20px 50px;
+  padding: 20px 70px;
+  background-color:#f4f4f4;
   padding-bottom:0;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -187,7 +188,7 @@ export const NavStyle = () => {
 .child3,
 .parent_child1,
 .parent_child2,
-ul {
+.navbar_ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -211,7 +212,7 @@ ul {
   width: 200px;
   height: 100px;
   object-fit: fill;
-  margin-left: 150px;
+  margin-left: 55%;
 }
 
 .child1:hover,
@@ -225,7 +226,7 @@ ul {
   margin: auto;
 }
 
-ul,
+.navbar_ul,
 li {
   list-style: none;
   gap: 30px;
@@ -236,7 +237,7 @@ li {
 
 li:hover,
 select:hover {
-  color: #f6bf54;
+  color: #fda901ff;
   cursor: pointer;
 }
 
@@ -246,6 +247,7 @@ select {
   font-size: 17px;
   font-weight: 700;
   opacity: 0.8;
+  background-color:#f4f4f4;
 }
 
 /* Battery Css */
@@ -258,7 +260,7 @@ select {
 }
 
 .battery_box {
-  border: 4px solid #00b9f5;
+  border: 3px solid #000;
   width: 35px;
   height: 15px;
   border-radius: 3px;
@@ -270,14 +272,14 @@ select {
 .battery_level {
   height: 100%;
   width: 0%;
-  background-color: #00b9f5;
+  background-color: green;
   transition: width 0.5s ease;
 }
 
 .battery_tip {
   width: 10px;
   height: 30px;
-  background-color: #00b9f5;
+  background-color: green;
   border-radius: 3px;
   position: absolute;
   right: -15px;
@@ -292,12 +294,23 @@ select {
 
 input::placeholder {
   font-size: 13px;
+  padding: 0 10px;
   font-weight: 700;
 }
 
 .nav-link.active {
-  color: #f6bf54;   /* highlight like hover */
+  color: #f8a705ff;   /* highlight like hover */
   opacity: 1;
+}
+
+#search{
+border:2px solid;
+border-radius:20px;
+height:35px;
+}
+
+#search:hover,#search:focus{
+border: 2px solid #f8a705ff;
 }
 
 /* Footer */
@@ -305,6 +318,7 @@ input::placeholder {
 };
 
 // 🔍 Placeholder Typing + Blinking Cursor
+
 let text = "🔍  Search For What You Want...";
 let input;
 let i = 0;
@@ -380,7 +394,7 @@ navigator.getBattery().then(function (battery) {
   function updateBattery() {
     const level = Math.floor(battery.level * 100);
     document.getElementById("level").style.width = level + "%";
-    document.getElementById("info").innerText = `Battery Level: ${level}% ${
+    document.getElementById("info").innerText = `${level}% ${
       battery.charging ? "Charging" : ""
     }`;
   }

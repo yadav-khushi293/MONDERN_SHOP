@@ -42,6 +42,7 @@ button {
   font-size: larger;
   font-weight: 500;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 button:hover {
@@ -132,7 +133,9 @@ button:hover {
 }
 
 .backpack > h4,
-.backpack > p {
+.feature > h4,
+.backpack > p,
+.feature > p {
   font-size: 35px;
   text-align: center;
   font-family: "Open Snas", sans-serif;
@@ -140,11 +143,13 @@ button:hover {
   padding: 5px 0;
 }
 
-.backpack > p {
+.backpack > p,
+.feature > p {
   font-size: 18px;
   font-weight: 500;
   opacity: 0.6;
   padding: 10px 0;
+  padding-bottom: 50px;
 }
 
 .discount_child2 > p {
@@ -162,47 +167,41 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 30px;
 }
 
 .backpack_child1,
 .backpack_child2,
 .backpack_child3,
 .backpack_child4 {
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 25%;
   height: 79vh;
   filter: grayscale(0.1);
   cursor: pointer;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
 }
 
 .backpack_child1:hover {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url(../Utils/BackPack_Image1.jpg) center/cover no-repeat;
 }
 
 .backpack_child2:hover {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url(../Utils/BackPack_Image2.jpg) center/cover no-repeat;
 }
 
 .backpack_child3:hover {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
     url(../Utils/BackPack_Image3.jpg) center/cover no-repeat;
 }
 
 .backpack_child4:hover {
   background: linear-gradient(
-      rgba(0, 0, 0, 0.3),
-      /* make overlay lighter */ rgba(0, 0, 0, 0.1)
+      rgba(0, 0, 0, 0.5),
+      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
     ),
     url(../Utils/BackPack_Image4.jpg) center/cover no-repeat;
 }
@@ -236,10 +235,7 @@ button:hover {
 }
 
 .backpack_child1 {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
     url("../Utils/BackPack_Image1.jpg") center/cover no-repeat;
   padding: 0 25px;
   display: flex;
@@ -250,10 +246,7 @@ button:hover {
 }
 
 .backpack_child2 {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
     url("../Utils/BackPack_Image2.jpg") center/cover no-repeat;
   padding: 0 25px;
   display: flex;
@@ -264,10 +257,7 @@ button:hover {
 }
 
 .backpack_child3 {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
     url("../Utils/BackPack_Image3.jpg") center/cover no-repeat;
   padding: 0 25px;
   display: flex;
@@ -278,10 +268,7 @@ button:hover {
 }
 
 .backpack_child4 {
-  background: linear-gradient(
-      rgba(0, 0, 0, 0.5),
-      /* bottom darker */ rgba(0, 0, 0, 0.2) /* top lighter */
-    ),
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
     url("../Utils/BackPack_Image4.jpg") center/cover no-repeat;
   padding: 0 25px;
   display: flex;
@@ -289,4 +276,129 @@ button:hover {
   justify-content: end;
   flex-direction: column;
   padding-bottom: 20px;
+}
+
+.feature > h4 {
+  font-size: 37px;
+  margin-top: 50px;
+}
+
+.imageContainer,
+#product {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#product {
+  margin: auto;
+  justify-content: center;
+}
+
+.imgbox > img {
+  width: 100%;
+  height: 400px;
+  border-radius: 5px;
+}
+
+.imgbox > h5 {
+  padding: 10px 0;
+  opacity: 1;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.imgbox > h5:hover {
+  opacity: 0.7;
+}
+
+.imgbox > p {
+  font-size: 15px;
+  font-weight: 700;
+  opacity: 0.7;
+  font-family: "Open Sans", sans-serif;
+  padding: 5px 0;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+.category:hover {
+  color: #fda901ff;
+  cursor: pointer;
+}
+
+.imgbox > button {
+  margin: 7px 0;
+  font-size: 17px;
+  width: 130px;
+  height: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+.imgbox > button:hover {
+  color: #fff;
+  background-color: rgb(207, 138, 1);
+}
+
+.deal {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../Utils/BackGround_Image1.jpg);
+  width: 95%;
+  background-position: center;
+  background-size: cover;
+  height: 55vh;
+  margin: auto;
+  padding: 0 100px;
+  margin-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.deal_child1 > h5 {
+  opacity: 1;
+  font-size: 17px;
+}
+
+.deal_child1 > h2 {
+  padding-top: 70px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.deal_child1 > button {
+  width: 220px;
+  padding: 0 15px;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.deal_child1 > button:hover {
+  background-color: rgb(207, 138, 1);
+  color: #fff;
+}
+
+.deal_child2 > h1,
+.deal_child2 > h1 > p {
+  font-size: 150px;
+}
+
+.deal_child2 > h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: 700;
+}
+
+.deal_child2 > h4 {
+  font-size: 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
 }

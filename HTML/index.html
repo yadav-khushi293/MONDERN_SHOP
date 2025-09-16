@@ -9,7 +9,7 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     </head>
-    <body>
+    <body onload="apiCall()">
         <header class="header"></header>
         <div class="parent">
             <h1>Full Set Of Great Features <br>To Make You Look Fresh</h1>
@@ -91,10 +91,30 @@
                         </p>
                     </div>
                 </div>
+                <div class="feature">
+                    <h4>Featured Products</h4>
+                    <p>Tristique senectus netus et malesuada fames.</p>
+                </div>
+            </div>
+            <div id="product"></div>
+            <div class="deal">
+                <div class="deal_child1">
+                    <h2>Deal of the Day!</h2>
+                    <h5>
+                        Fringilla urna porttitor rhoncus dolor purus non. Nulla
+                        malesuada <br> pellentesque elit eget gravida cum.
+                    </h5>
+                    <button>Grab The Deal Now</button>
+                </div>
+                <div class="deal_child2">
+                    <h1>70 <p>%</p></h1>
+                    <h4>Nulla malesuada pellentesque eget gravida</h4>
+                </div>
             </div>
             <!-- <footer class="footers"></footer> -->
         </div>
     </body>
+    <script src="../JS/index.js"></script>
     <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
