@@ -66,3 +66,22 @@ const appenddata = (data) => {
   });
   popularProducts.append(imageContainer1);
 };
+
+// Hiding Iframe Tag
+
+let playButton = document.getElementById("playButton");
+let iframeWrapper = document.getElementById("iframeWrapper");
+let iframe = document.getElementById("videoFrame");
+let closeBtn = document.getElementById("closeBtn");
+
+playButton.addEventListener("click", function () {
+  iframeWrapper.style.display = "block"; // show iframe with close button
+  iframe.src += "&autoplay=1"; // autoplay
+  playButton.style.display = "none"; // hide play button
+});
+
+closeBtn.addEventListener("click", function () {
+  iframeWrapper.style.display = "none"; // hide iframe
+  iframe.src = iframe.src.replace("&autoplay=1", ""); // stop video
+  playButton.style.display = "block"; // show play button again
+});
