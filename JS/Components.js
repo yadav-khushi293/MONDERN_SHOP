@@ -161,13 +161,16 @@ li:hover,
 select:hover {
   color: #fda901ff;
   cursor: pointer;
+  text-decoration: underline;
 }
 
 select {
   border: none;
   text-align: center;
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 700;
+    width: 95px;
+    padding: 5px 0;
   opacity: 0.8;
   background-color:#f4f4f4;
 }
