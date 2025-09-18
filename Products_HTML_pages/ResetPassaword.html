@@ -4,14 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Product_CSS_pages/Simple_Pro.css">
+    <link rel="stylesheet" href="../Product_CSS_pages/password.css">
 </head>
-<body onload="ApiCall()">
-    
-    <header class="header"></header>
-    <div id="simple_product"></div>
+<body>
+       <header class="header"></header>
 
+    <div class="main_parents1">
+        <p class="My_account_text">My account</p>
+    </div>
+
+    <div class="parents_text_div">
+
+        <div class="text_massege_div">
+          Lost your password? Please enter your username or email address. You will receive a link to create a new password via email.
+        </div>
+        <br>
+        <div class="form">
+        <label>Username or email<span>*</span></label><br>
+        <input  class="password_input"   type="text"></input>
+        </div>
+
+        <button type="submit" id="Reset_password">Reset password</button>
+
+    </div>
+
+        
 </body>
+<script src="../Product_JS_pages/My account.js"></script>
+
 <script type="module">
     import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
@@ -44,5 +64,4 @@
         setActiveNav();
     }, 100);
 </script>
-    <script src="../Product_JS_pages/Simple_Pro.js"></script>
 </html>

@@ -4,14 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../Product_CSS_pages/Simple_Pro.css">
+    <link rel="stylesheet" href="../Product_CSS_pages/My account.css">
 </head>
-<body onload="ApiCall()">
-    
-    <header class="header"></header>
-    <div id="simple_product"></div>
+<body>
+       <header class="header"></header>
+
+    <div class="main_parents1">
+        <p class="My_account_text">My account</p>
+    </div>
+
+    <div class="from_div">
+        <div class="A">
+        
+        <label>Username or email address <span>*</span></label><br>
+        <input  class="text_input"  type="text"><br>
+
+        <label>Password <span>*</span></label><br>
+        <input class="text_input" type="password"><br>
+
+
+        <div class="from">
+        <input class="checkbox_op" type="checkbox">
+        <label>Remember me</label><br>
+       </div>
+        </div>
+
+
+
+        <button id="login_button"type="submit">Login</button>
+        
+        <p class="p1">Lost your password?</p>
+    </div>
 
 </body>
+<script src="../Product_JS_pages/My account.js"></script>
+
 <script type="module">
     import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
@@ -44,5 +71,4 @@
         setActiveNav();
     }, 100);
 </script>
-    <script src="../Product_JS_pages/Simple_Pro.js"></script>
 </html>
