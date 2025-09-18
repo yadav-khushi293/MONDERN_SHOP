@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+.main_parents1{
+      background-color: #e8ecee;
+    height: 290px;
+}
+.My_account_text{
+  text-align: center;
+  font-size: 47px;
+  font-weight: bold;
+  padding: 110px 0px;
+}
+.from_div{
+  display: grid;
+  justify-content: center;
+  margin: 60px 0px;
+
+} 
+label{
+  font-size: 24px;
+  color: #7e7979;
+  text-align: start;
+}
+.text_input{
+  width:560px;
+  height: 55px;
+  margin: 20px 0px;
+  border-radius: 5px;
+  border: 2px solid  #d3d1d1;
+}
+
+span{
+  color: rgb(226, 4, 4);
+  font-size: 20px;
+}
+.checkbox_op{
+  width: 20px;
+  height: 16px; 
+
+}
+#login_button{
+  width:560px;
+  height: 55px;
+  border-radius: 5px;
+  text-align: center;
+  font-size:23px;
+  margin: 19px 0px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #0a0501;
+}
+#login_button:hover{
+  background-color: #ffcc25;
+  border: 1px solid #ffcc25;
+  }
+  .p1{
+    font-size: 24px;
+    text-decoration: underline;
+    padding: 10px 0px;
+    color: #ffcc25;
+     }

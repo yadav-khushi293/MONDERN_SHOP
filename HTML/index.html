@@ -20,15 +20,16 @@
         <footer class="footers"></footer>
     </body>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+ import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
-            document.querySelector('.header').innerHTML = Navbar();
+     document.querySelector('.header').innerHTML = Navbar();
 
     document.querySelector('body').addEventListener('load', typePlaceholder());
 
-        let styleTag = document.createElement("style");
+    let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
+
 
     document.querySelector('.footers').innerHTML = Footers();
 

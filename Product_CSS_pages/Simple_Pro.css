@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+
+.img_1{
+    width: 670px;
+
+}
+.Category_span{
+    font-weight: normal;
+    font-size: 25px;
+}
+.maindiv{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 60px;
+    gap: 60px;
+}
+.title_1{
+    font-size:38px;
+    color: #0d0806;
+}
+.price_1{
+    font-size: 30px;
+    padding: 10px 0px;
+    font-weight: bolder;
+    color: #545452;
+}
+.description_1{
+    font-size: 28px;
+    padding:35px 0px;
+    word-wrap: 19px;
+    color: #5e5f5b;
+    border: 2px solid #cdcecb;
+    border-left:none ;
+    border-right:none ;
+    border-top: none;
+}
+.category_1{
+    font-size: 25px ;
+    font-weight: bold;
+    color: #383837;
+}
+/* .informationdiv{
+    border: 1px solid black ;
+} */
+
+.info1{
+    display: flex;
+    gap: 35px;
+    padding: 40px 0px;
+}
+.add_button_1{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    width: 29%;
+    border-radius: 5px;
+    color: #5d5d5d;
+
+}
+.add_card{
+   font-size: 28px;
+   font-weight: bold;
+    border: transparent; 
+   margin: auto;
+   width: 20%;
+   height: 38px;
+   background: white;
+    color: #5d5d5d;
+
+}
+ .add_card:hover{
+    background-color:#ffcc25;border-radius: 5px;
+     color: white;
+    
+} 
+.count:hover{
+    background-color:#ffcc25;
+    /* padding:5px 0px; */
+    border-radius: 5px;
+     color: white;
+}
+.count{
+    text-align: center;
+    font-size: 25px;
+    padding:5px 0px;
+    margin: auto;
+    width: 20%;
+    height: 38px;
+   background: white;
+}
+.add_button_2{
+  width: 67%;
+  border-radius: 5px;
+  background-color: #0d0806;
+  border: transparent;
+  color: white;
+  font-size:24px;
+  height: 70px;
+}
+.add_button_2:hover{
+ background-color: #eac004;
+}
+
+.description_text{
+    padding: 10px 44px;
+    text-align: center;
+}
+.heading_1{
+    text-align: center;
+    color:#eac004;
+    text-decoration: underline;
+    font-size: 40px;
+    padding: 30px 0px;
+}
+.p1,.p2{
+      font-size: 27px;
+      color: #7a7a78;
+}
+.p2{
+    padding: 20px 0px;
+}
+
+/****************/
+.img_2{
+    width: 300px;
+    height: 420px;
+    border-radius:5px;
+}
+.title_2{
+    font-size: 19px;
+    padding: 15px 0px;
+    /* width: 95%; */
+    font-weight: bold;
+}
+.price_2{
+    font-size: 20px;
+    font-weight: bold;
+    color: #606060;
+}
+.category_2{
+    font-size: 21px;
+    color:#343433;
+    padding: 8px 0px;
+}
+.imageContainer{
+    display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 50px;
+     padding: 20px  0px;
+
+}
+.Category_span_1{
+    font-size: 22px;
+    font-weight: bold;
+     color: #606060;
+}
+.hading_3{
+    text-align: start;
+  padding-left: 49px;
+    font-size: 33px;
+    padding-top: 50px;
+    color: #090604;
+}
+.siple_pro_btn{
+    width: 180px;
+    height: 50px;
+    margin: 15px 0px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color:#0a0501;
+    border-radius: 5px;
+}
+.siple_pro_btn:hover{
+    background-color: #eac004;
+    border: 1px solid #eac004;
+}
