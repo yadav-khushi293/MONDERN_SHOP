@@ -455,22 +455,23 @@ navigator.getBattery().then(function (battery) {
   battery.addEventListener("chargingchange", updateBattery);
 });
 
-function getBasePath(path) {
-  // remove "index.html" if it exists anywhere
-  path = path.replace("index.html", "");
+function getBasePath() {
+  let path = window.location.pathname;
 
-  // find where "/pages/" starts
-  let index = path.indexOf("/pages/");
-
-  if (index !== -1) {
-    // keep everything before "/pages/"
-    path = path.substring(0, index);
-  }
-
-  // ✅ normalize multiple slashes to a single slash
+  // Normalize multiple slashes
   path = path.replace(/\/{2,}/g, "/");
 
-  // ✅ always ensure trailing slash
+  // Find "HTML" folder
+  let index = path.indexOf("/HTML/");
+  if (index !== -1) {
+    // Keep everything up to "/HTML/"
+    path = path.substring(0, index + 6); // "/HTML/"
+  } else {
+    // Fallback: current folder
+    path = "./";
+  }
+
+  // Ensure trailing slash
   if (!path.endsWith("/")) {
     path += "/";
   }
@@ -478,29 +479,26 @@ function getBasePath(path) {
   return path;
 }
 
-let fullPath = window.location.pathname;
-
-let basePath = getBasePath(fullPath);
-
 export const aboutPage = () => {
-  window.location.pathname = `${basePath}pages/about.html`;
+  window.location.pathname = getBasePath() + "about.html";
 };
 
 export const goHome = () => {
-  window.location.pathname = `${basePath}index.html`;
+  window.location.pathname = getBasePath() + "index.html";
 };
 
 export const contactPage = () => {
-  window.location.pathname = `${basePath}pages/contact.html`;
+  window.location.pathname = getBasePath() + "contact.html";
 };
 
 export const shopPage = () => {
-  window.location.pathname = `${basePath}pages/shop.html`;
+  window.location.pathname = getBasePath() + "shop.html";
 };
 
 export const productPage = () => {
-  window.location.pathname = `${basePath}pages/product.html`;
+  window.location.pathname = getBasePath() + "product.html";
 };
+
 // Highlight Active Nav Item
 export const setActiveNav = () => {
   // Get current page name (like index.html, Login.html, Cart.html)
