@@ -49,7 +49,10 @@ export const Navbar = () => {
   <!-- Left handle (arc) -->
   <path d="M10 10 a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2"/>
 </svg>
-
+        <div class="btn" id="toggleBtn">
+            <strong>🌙</strong>
+            <strong>☀️</strong>
+        </div>
                     <div class="battery">
                         <div class="battery_box">
                             <div class="battery_level" id="level"></div>
@@ -237,6 +240,129 @@ padding: 0 10px;
 
 #search:hover{
 border: 2px solid #f8a705ff;
+}
+
+/*scroll arrow*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+.fas {
+  color: #fda901ff;
+}
+
+.to-top {
+  background: black;
+  position: fixed;
+  bottom: 16px;
+  right: 32px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #fda901ff !important;
+  text-decoration: none;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s;
+}
+
+.to-top.active {
+  bottom: 32px;
+  pointer-events: auto;
+  opacity: 1;
+}
+.to-top::after {
+  content: "Back to Top";
+  position: absolute;
+  bottom: 57px;
+  right: -17px;
+  background: #fda901ff;
+  color: #000;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.to-top:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*Custom scrollbar*/
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #fda901ff;
+  border-radius: 10px;
+}
+
+/* Day-night-mode*/
+
+body {
+  background: #f8f8f8;
+  color: #000;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark {
+  background: #333; /* Dark Mode */
+  color: #fff;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  background: #fff; /* Light mode button background */
+  color: #000;
+  font-size: 1.5em;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), 5px 5px 30px rgba(0, 0, 0, 0.05),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark .btn {
+  background: #000; /* Dark mode button background */
+  color: #fff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25), 5px 5px 30px rgba(0, 0, 0, 0.25),
+    inset -2px -2px 5px rgba(0, 0, 0, 0.25),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.btn strong {
+  display: none;
+}
+
+/* 🌙 show by default (light mode) */
+.btn strong:nth-child(2) {
+  display: block;
+}
+
+/* ☀ show only in dark mode */
+body.dark .btn strong:nth-child(1) {
+  display: block;
+}
+
+body.dark .btn strong:nth-child(2) {
+  display: none;
 }
  `;
 };

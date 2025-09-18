@@ -11,6 +11,10 @@
     </head>
     <body onload="apiCall()">
         <header class="header"></header>
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
         <div class="parent">
             <div class="parent1">
                 <div class="collection_text">
@@ -243,6 +247,26 @@ document.querySelector(".shopPage").addEventListener('click',()=>{
 document.querySelector(".contactPage").addEventListener('click',()=>{
     contactPage();
 })
+
+//Day-Night-mode-code
+      const body = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      // Default: Light mode (no class)
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+      });
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
 
     setTimeout(() => {
         setActiveNav();
