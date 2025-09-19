@@ -5,25 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shop Page</title>
         <link rel="stylesheet" href="../CSS/index.css">
-        <style>
-            .adventure{
-                background-image: url(../Utils/Image-8.jpg);
-                text-align: center;
-                height: 60vh;
-                background-position: center;
-            }
-            .adventure>h1{
-                padding-top: 150px;
-                padding-left: 20px;
-                font-size: 50px;
-            }
-        </style>
+        <link rel="stylesheet" href="../CSS/shop.css">
     </head>
-    <body onload="apiCall()">
+    <body onload="apiCall()" class="shop_page">
         <header class="header"></header>
         <div class="adventure">
             <h1>Take Your Adventure To The <br> Next Level</h1>
         </div>
+        <select name="Filter" id="filter" class="filter">
+            <option value="Filter">Filter</option>
+            <option value="category">Category</option>
+            <option value="low_to_high">Low To High</option>
+            <option value="high_to_low">High To Low</option>
+        </select>
         <div id="product"></div>
     </body>
     <script src="../JS/shop.js"></script>
