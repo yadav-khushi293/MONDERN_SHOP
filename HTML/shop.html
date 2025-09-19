@@ -19,12 +19,14 @@
             }
         </style>
     </head>
-    <body>
+    <body onload="apiCall()">
         <header class="header"></header>
         <div class="adventure">
             <h1>Take Your Adventure To The <br> Next Level</h1>
         </div>
+        <div id="product"></div>
     </body>
+    <script src="../JS/shop.js"></script>
     <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
