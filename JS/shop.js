@@ -2,7 +2,7 @@ let api = "https://weather-app-6du4.onrender.com/shop";
 
 let allData = [];
 let currentPage = 1;
-let itemsperPage = 6;
+let itemsperPage = 8;
 
 const apiCall = () => {
   fetch(api)
