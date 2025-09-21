@@ -347,6 +347,18 @@ body.dark .btn {
     inset 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+body.dark .nav-link,body.dark .battery_info,body.dark .adventure > h1, body.dark .collection_text,body.dark .discount_child1{
+color:#000;
+}
+
+body.dark .imgbox>p,body.dark .imgbox1>p{
+color:#fff;
+}
+
+body.dark .nav-link.active,body.dark .category:hover,body.dark .category1:hover{
+color:#f8a705ff;
+}
+
 .btn strong {
   display: none;
 }
