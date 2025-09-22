@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.adventure {
+  background-image: url(../Utils/Image-8.jpg);
+  text-align: center;
+  height: 60vh;
+  background-position: center;
+}
+
+.adventure > h1 {
+  padding-top: 150px;
+  padding-left: 20px;
+  font-size: 50px;
+}
+
+.shop_page > #product {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  align-content: center;
+  margin: 110px 50px;
+}
+
+.filter {
+  border: 1px solid;
+  padding: 7px;
+  width: 150px;
+  float: right;
+  margin-top: 50px;
+  margin-right: 150px;
+  text-align: center;
+}
+
+.filter:hover {
+  text-decoration: none;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  gap: 10px;
+}
+
+.pagination button {
+  padding: 6px 12px;
+  border: none;
+  background: #fda901ff;
+  color: #000;
+  cursor: pointer;
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+.pagination button:hover:not(:disabled) {
+  background-color: #fda901ff;
+  color: #000;
+}
+
+.pagination button.active {
+  background-color: #000;
+  color: #fff;
+}
+
+.pagination button:disabled {
+  opacity: 0.8;
+  background-color: #9a9e99;
+  color: #000;
+  cursor: not-allowed;
+}
+
+.pageNum {
+  font-weight: 700;
+  letter-spacing: 1px;
+}

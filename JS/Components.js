@@ -347,6 +347,18 @@ body.dark .btn {
     inset 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
+body.dark .nav-link,body.dark .battery_info,body.dark .adventure > h1, body.dark .collection_text,body.dark .discount_child1{
+color:#000;
+}
+
+body.dark .imgbox>p,body.dark .imgbox1>p{
+color:#fff;
+}
+
+body.dark .nav-link.active,body.dark .category:hover,body.dark .category1:hover{
+color:#f8a705ff;
+}
+
 .btn strong {
   display: none;
 }
@@ -363,6 +375,10 @@ body.dark .btn strong:nth-child(1) {
 
 body.dark .btn strong:nth-child(2) {
   display: none;
+}
+
+.child3>#search:focus{
+border: 2px solid #f8a705ff !important;
 }
  `;
 };
@@ -455,22 +471,23 @@ navigator.getBattery().then(function (battery) {
   battery.addEventListener("chargingchange", updateBattery);
 });
 
-function getBasePath(path) {
-  // remove "index.html" if it exists anywhere
-  path = path.replace("index.html", "");
+function getBasePath() {
+  let path = window.location.pathname;
 
-  // find where "/pages/" starts
-  let index = path.indexOf("/pages/");
-
-  if (index !== -1) {
-    // keep everything before "/pages/"
-    path = path.substring(0, index);
-  }
-
-  // ✅ normalize multiple slashes to a single slash
+  // Normalize multiple slashes
   path = path.replace(/\/{2,}/g, "/");
 
-  // ✅ always ensure trailing slash
+  // Find "HTML" folder
+  let index = path.indexOf("/HTML/");
+  if (index !== -1) {
+    // Keep everything up to "/HTML/"
+    path = path.substring(0, index + 6); // "/HTML/"
+  } else {
+    // Fallback: current folder
+    path = "./";
+  }
+
+  // Ensure trailing slash
   if (!path.endsWith("/")) {
     path += "/";
   }
@@ -478,29 +495,26 @@ function getBasePath(path) {
   return path;
 }
 
-let fullPath = window.location.pathname;
-
-let basePath = getBasePath(fullPath);
-
 export const aboutPage = () => {
-  window.location.pathname = `${basePath}pages/about.html`;
+  window.location.pathname = getBasePath() + "about.html";
 };
 
 export const goHome = () => {
-  window.location.pathname = `${basePath}index.html`;
+  window.location.pathname = getBasePath() + "index.html";
 };
 
 export const contactPage = () => {
-  window.location.pathname = `${basePath}pages/contact.html`;
+  window.location.pathname = getBasePath() + "contact.html";
 };
 
 export const shopPage = () => {
-  window.location.pathname = `${basePath}pages/shop.html`;
+  window.location.pathname = getBasePath() + "shop.html";
 };
 
 export const productPage = () => {
-  window.location.pathname = `${basePath}pages/product.html`;
+  window.location.pathname = getBasePath() + "product.html";
 };
+
 // Highlight Active Nav Item
 export const setActiveNav = () => {
   // Get current page name (like index.html, Login.html, Cart.html)
@@ -533,102 +547,123 @@ export const setActiveNav = () => {
 
 // Footer
 
-// export const Footers = () => {
-//   return `
-//     <footer>
-//         <div class="footer_cantaner1">
-//             <div class="FC_child1">
-//                 <div class="FC_child1_box1 Box">
-//                     <h2>About Us</h2>
-//                     <div class="ulDiv1">
-//                         <ul>
-//                             <li>About Organization</li>
-//                             <li>Our Clients</li>
-//                             <li>Our Partners</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//                 <div class="FC_child1_box2 Box">
-//                     <h2>Quick Links</h2>
-//                     <div class="ulDiv2">
-//                         <ul>
-//                             <li>Introduction</li>
-//                             <li>Organization Team</li>
-//                             <li>Press Enquiries</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//                 <div class="FC_child1_box3 Box">
-//                     <h2>Important Links</h2>
-//                     <div class="ulDiv3">
-//                         <ul>
-//                             <li>Privacy Policy</li>
-//                             <li>Cookies Policy</li>
-//                             <li>Terms & Conditions</li>
-//                         </ul>
-//                     </div>
-//                 </div>
-//                 <div class="Box">
-//                     <h2>Contact Info</h2>
-//                     <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.
-//                     </p>
-//                 </div>
-//             </div>
-//             <!-- footer cantaner child2 -->
-//             <div class="FC_child2">
-//                 <div class="Box">
-//                     <h2>Achievements</h2>
-//                     <div>
-//                         <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
-//                     </div>
-//                 </div>
-//                 <div class="Box">
-//                     <h2>Useful Information</h2>
-//                     <div>
-//                         <p>Amet commodo nulla facilisi nullam vehicula ipsum. Faucibus pulvinar elementum integer enim.
-//                         </p>
-//                     </div>
-//                 </div>
-//                 <div class="Box">
-//                     <h2>Shipping Imformation</h2>
-//                     <div class="paragraph1">
-//                         <p>Fringilla urna porttitor rhoncus dolor purus nonulla malesuada pellentesque elit eget.</p>
-//                     </div>
-//                 </div>
-//                 <div class="Box">
-//                     <div class="iconDiv">
-//                         <div class="img_div">
-//                             <i class="fa-solid fa-location-dot"></i>
-//                         </div>
-//                         <div class="text">
-//                          <h3>Address:</h3>
-//                             <p>Street Name, NY 38954</p>
-//                         </div>
-//                     </div>
-//                     <div class="iconDiv">
-//                         <div class="img_div">
-//                         <i class="fa-solid fa-phone"></i>
-//                     </div>
-//                     <div class="iconText2 text">
-//                             <h3>Phone:</h3>
-//                     <p>973-475-8462</p>
-//                     </div>
-//                     </div>
-//                     <div class="iconDiv">
-//                         <div class="img_div">
-//                         <i class="fa-solid fa-envelope"></i>
-//                     </div>
-//                     <div class="iconText3 text">
-//                             <h3>Email:</h3>
-//                        <p>Website@gmail.com</p>
-//                     </div>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     </footer>
-//     <div class="footer_cantaner2">
-//          <p>Copyright © 2025 - WordPress Theme by Creative Themes</p>
-//     </div>
-//   `;
-// };
+export const Footers = () => {
+  return `
+    <footer>
+        <div class="footer_cantaner1">
+
+            <div class="FC_child1">
+                <div class="FC_child1_box1 Box">
+                    <h2>About Us</h2>
+                    <div class="ulDiv1">
+                        <ul>
+                            <li>About Organization</li>
+                            <li>Our Clients</li>
+                            <li>Our Partners</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="FC_child1_box2 Box">
+                    <h2>Quick Links</h2>
+                    <div class="ulDiv2">
+                        <ul>
+                            <li>Introduction</li>
+                            <li>Organization Team</li>
+                            <li>Press Enquiries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="FC_child1_box3 Box">
+                    <h2>Important Links</h2>
+                    <div class="ulDiv3">
+                        <ul>
+                            <li>Privacy Policy</li>
+                            <li>Cookies Policy</li>
+                            <li>Terms & Conditions</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="Box">
+
+                    <h2>Contact Info</h2>
+                    <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.
+                    </p>
+
+                </div>
+
+
+
+            </div>
+
+            <!-- footer cantaner child2 -->
+
+            <div class="FC_child2">
+
+                <div class="Box">
+                    <h2>Achievements</h2>
+                    <div>
+                        <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
+                    </div>
+                </div>
+
+                <div class="Box">
+                    <h2>Useful Information</h2>
+                    <div>
+                        <p>Amet commodo nulla facilisi nullam vehicula ipsum. Faucibus pulvinar elementum integer enim.
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="Box">
+                    <h2>Shipping Imformation</h2>
+                    <div class="paragraph1">
+                        <p>Fringilla urna porttitor rhoncus dolor purus nonulla malesuada pellentesque elit eget.</p>
+                    </div>
+                </div>
+
+                <div class="Box">
+
+                    <div class="iconDiv">
+                        <div class="img_div">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="text">                        
+                         <h3>Address:</h3>
+                            <p>Street Name, NY 38954</p>  
+                        </div>
+                    </div>
+
+
+                    <div class="iconDiv">
+                        <div class="img_div">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div class="iconText2 text">             
+                            <h3>Phone:</h3>
+                    <p>973-475-8462</p>
+                    </div>
+                    </div>
+
+
+                    <div class="iconDiv">
+                        <div class="img_div">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="iconText3 text">                   
+                            <h3>Email:</h3>
+                       <p>Website@gmail.com</p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer_cantaner2">
+         <p>Copyright © 2025 - WordPress Theme by Creative Themes</p>
+    </div>
+  `;
+};

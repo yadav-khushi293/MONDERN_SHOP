@@ -63,7 +63,7 @@ button {
 
 button:hover {
   color: #000;
-  background-color: #ffcd05;
+  background-color: #fda901ff;
 }
 
 #videoFrame {
@@ -351,7 +351,8 @@ button:hover {
 .imgbox1 > p {
   font-size: 15px;
   font-weight: 700;
-  opacity: 0.7;
+  opacity: 0.6;
+  color: #000;
   font-family: "Open Sans", sans-serif;
   padding: 5px 0;
   text-transform: uppercase;
@@ -360,7 +361,7 @@ button:hover {
 
 .category:hover,
 .category1:hover {
-  color: #ffcd05;
+  color: #fda901ff;
   cursor: pointer;
 }
 
@@ -376,7 +377,7 @@ button:hover {
 .imgbox > button:hover,
 .imgbox1 > button:hover {
   color: #fff;
-  background-color: #ffcd05;
+  background-color: #fda901ff;
 }
 
 .deal {
@@ -420,7 +421,7 @@ button:hover {
 }
 
 .deal_child1 > button:hover {
-  background-color: #ffcd05;
+  background-color: #fda901ff;
   color: #fff;
 }
 
@@ -525,4 +526,3 @@ button:hover {
   cursor: pointer;
   z-index: 2;
 }
-
