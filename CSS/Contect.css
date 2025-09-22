@@ -44,10 +44,6 @@ section {
 
 /* contect_parent2 start */
 
-.contect_parent2 {
-  background-color: #ffffff;
-}
-
 .cp2_child1 {
   display: flex;
   justify-content: space-evenly;
