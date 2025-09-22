@@ -8,39 +8,120 @@
  }
 const appenddata = (data) => {
 
-      
+//Code-1  
     const datashow = document.getElementById('simple_product');
 
-    let el = data[0]; 
+   let el = data[6]; 
 
     let maindiv = document.createElement('div');
     let imgdiv = document.createElement('div');
+    let imgmain_div=document.createElement('div');
     let informationdiv = document.createElement('div');
     let title = document.createElement('h3');
-    let img = document.createElement('img');
     let price = document.createElement('p');
     let description = document.createElement('p');
     let category = document.createElement('p');
 
-    img.className="img_1";
     maindiv.classList ="maindiv"
     informationdiv.className="informationdiv"
     title.className="title_1"
     price.className="price_1"
     description.className="description_1"
     category.classList="category_1"
-
+    imgmain_div.classList="imgmain_div"
 
     title.innerText = el.title;
-    img.src = el.img;
     price.innerHTML = el.price;
     description.innerHTML = el.description;
     category.innerHTML = `Category: <span class="Category_span">${el.category}</span>`;
 
-   
 
-    
-const skeletonCard = document.createElement('div'); // Ye line add karni zaroori hai agar aapne pehle declare nahi kiya
+//Code-2(thumbail-img_Code)    
+ const API_URL = `https://weather-app-6du4.onrender.com/external`;
+
+const pagi = document.createElement("div");
+const mainDiv = document.createElement("div");
+const thumbsDiv = document.createElement("div");
+
+pagi.className = "pagi";
+mainDiv.className = "main";
+thumbsDiv.className = "thumbs";
+
+let currentIndex = 0;
+
+fetch(API_URL)
+  .then(res => res.json())
+  .then(data => {
+    const leftArrow = document.createElement("div");
+    const rightArrow = document.createElement("div");
+
+    leftArrow.className = "arrow left";
+    rightArrow.className = "arrow right";
+    leftArrow.innerHTML = "&#10094;";  // ←
+    rightArrow.innerHTML = "&#10095;"; // →
+
+    // Wrapper for sliding images
+    const sliderWrapper = document.createElement("div");
+    sliderWrapper.className = "slider-wrapper";
+
+    // Create all images inside sliderWrapper
+    data.forEach((src, index) => {
+      const img = document.createElement("img");
+      img.src = src;
+      img.className = "slider-image";
+      sliderWrapper.appendChild(img);
+
+      // Thumbnail click handler
+      const thumb = document.createElement("img");
+      thumb.src = src;
+      thumb.className = "thumb-image";
+
+      thumb.addEventListener("click", () => {
+        currentIndex = index;
+        updateSlider();
+      });
+
+      thumbsDiv.appendChild(thumb);
+    });
+
+    mainDiv.appendChild(leftArrow);
+    mainDiv.appendChild(sliderWrapper);
+    mainDiv.appendChild(rightArrow);
+
+    // Update slider position
+    const updateSlider = () => {
+      // Calculate translateX based on currentIndex
+      const width = sliderWrapper.children[0].clientWidth;
+      sliderWrapper.style.transform = `translateX(${-currentIndex * width}px)`;
+      // Highlight current thumbnail (optional)
+      Array.from(thumbsDiv.children).forEach((thumb, idx) => {
+        thumb.style.opacity = idx === currentIndex ? "1" : "0.5";
+      });
+    };
+
+    leftArrow.addEventListener("click", () => {
+      currentIndex--;
+      if (currentIndex < 0) currentIndex = data.length - 1;
+      updateSlider();
+    });
+
+    rightArrow.addEventListener("click", () => {
+      currentIndex++;
+      if (currentIndex >= data.length) currentIndex = 0;
+      updateSlider();
+    });
+
+    // Initial setup
+    updateSlider();
+
+  })
+  .catch(err => {
+    console.error("API Error:", err);
+  });
+
+//End Code
+
+const skeletonCard = document.createElement('div'); 
 skeletonCard.classList.add('card_div');
 
 skeletonCard.innerHTML = `
@@ -53,14 +134,18 @@ skeletonCard.innerHTML = `
     
     </div>
 
-     <button class="add_button_2"> Add To Card</button>
+     <button class="add_button_2"> Add To Cart</button>
     </div>
     <hr>
 `;
 
+
+
+pagi.append(mainDiv,thumbsDiv);
  informationdiv.append(title, price, category, description,skeletonCard);
-    imgdiv.append(img);
-    maindiv.append(imgdiv, informationdiv);
+    imgdiv.append(pagi);
+    imgmain_div.append(imgdiv);
+    maindiv.append(imgmain_div, informationdiv);
     datashow.append(maindiv);
 
 
@@ -89,7 +174,7 @@ datashow.append(description_text);
 // ----------  New: Show next 6 images only ----------
     const imageContainer = document.createElement('div');
 
-    for (let i = 0; i <=3  && i < data.length; i++) {
+    for (let i = 9; i <=13  && i < data.length; i++) {
         let item = data[i];
         
         let maindiv_1=document.createElement('div')
@@ -117,7 +202,7 @@ datashow.append(description_text);
     //    simplepro_add_button.classList.add('card_div');
 
        simplepro_add_button.innerHTML = `
-       
+
        <button class="siple_pro_btn" type="sumbit">Add to Card</button>
 `;
 

@@ -11,7 +11,7 @@ const appenddata = (data) => {
       
     const datashow = document.getElementById('simple_product');
 
-    let el = data[0]; 
+    let el = data[8]; 
 
     let maindiv = document.createElement('div');
     let imgdiv = document.createElement('div');
@@ -89,7 +89,7 @@ datashow.append(description_text);
 // ----------  New: Show next 6 images only ----------
     const imageContainer = document.createElement('div');
 
-    for (let i = 0; i <=3  && i < data.length; i++) {
+    for (let i =6; i <=9  && i < data.length; i++) {
         let item = data[i];
         
         let maindiv_1=document.createElement('div')

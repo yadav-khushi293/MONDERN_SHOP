@@ -12,8 +12,6 @@
     <div id="simple_product">
        
     </div>
-  
-
 </body>
 <script type="module">
     import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
@@ -24,8 +22,6 @@
     let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
-    
-    
     
     document.querySelector(".homePage").addEventListener('click',()=>{
         goHome();
@@ -47,5 +43,5 @@
         setActiveNav();
     }, 100);
 </script>
-    <script src="../Product_JS_pages/Variable_Pro.js"></script>
+    <script src="../Product_JS_pages/Extenal_Pro.js"></script>
 </html>

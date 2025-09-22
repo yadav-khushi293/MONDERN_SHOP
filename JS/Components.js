@@ -91,7 +91,7 @@ export const NavStyle = () => {
   return `
  .main_parent {
   padding: 20px 70px;
-  background-color:#f4f4f4;
+  background-color:#fff;
   padding-bottom:0;
   box-shadow: 0px 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
@@ -175,7 +175,7 @@ select {
     width: 95px;
     padding: 5px 0;
   opacity: 0.8;
-  background-color:#f4f4f4;
+  background-color:#fff;
 }
 
 /* Battery Css */
@@ -312,7 +312,7 @@ html {
 /* Day-night-mode*/
 
 body {
-  background: #f8f8f8;
+   background:#fff;
   color: #000;
   transition: background 0.3s, color 0.3s;
 }

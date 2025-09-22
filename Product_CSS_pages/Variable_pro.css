@@ -7,13 +7,16 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 17px;
 }
-
-.img_1{
-     width: 670px;
+/* 
+.main>img{
+    width: 670px;
     border: 1px solid rgb(244, 239, 182); 
     border-radius: 10px;
     height: 860px;
-}
+    transition: opacity 0.5s ease-in-out;
+    display: block;
+
+} */
 .Category_span{
     font-weight: normal;
     font-size: 25px;
@@ -188,3 +191,147 @@
     background-color: #eac004;
     border: 1px solid #eac004;
 }
+
+
+
+/************/
+
+/* #main {
+      width: 500px;
+      height: 300px;
+      border: 2px dashed #ccc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    } */
+    /* #main img {
+      max-width: 100%;
+      max-height: 100%;
+    } */
+    /* .thumbs {
+      display: flex;
+      gap: 15px;
+      padding: 15px 0px;
+      flex-wrap: wrap;
+    }
+    .thumbs img {
+      width: 130px;
+      height: 120px;
+      object-fit: cover;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: 0.3s;
+      border: 2px solid #eac004;
+      border-radius:5px;
+    }
+    .thumbs img:hover {
+      border: 2px solid #eac004;
+    }
+
+    
+
+    .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 5px 10px;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+
+/* .main {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+} */
+
+/* .main img {
+  transition: opacity 0.5s ease-in-out;
+  max-width: 100%;
+  display: block;
+} */ 
+ .main {
+  position: relative;
+  width: 650px; /* change as needed */
+  overflow: hidden;
+  margin: 20px auto;
+  border: 1px solid rgb(244, 239, 182); 
+  border-radius: 10px;
+  height: 790px;
+  transition: opacity 0.5s ease-in-out;
+
+}
+
+
+
+.slider-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+  will-change: transform;
+}
+
+.slider-image {
+  width: 660px; /* same as main width */
+   height: 790px;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: black;
+  cursor: pointer;
+  user-select: none;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.arrow.left {
+  left: 10px;
+}
+
+.arrow.right {
+  right: 10px;
+}
+
+.thumbs {
+  display: flex;
+  margin-top: 10px;
+  gap: 10px;
+}
+
+.thumb-image {
+ width: 130px;
+ height: 120px;
+ object-fit: cover;
+ cursor: pointer;
+  border: 2px solid transparent;
+  transition: 0.3s;
+    border: 2px solid #eac004;
+    border-radius:5px;
+}
+
+.thumb-image:hover {
+  opacity: 1;
+}
+
