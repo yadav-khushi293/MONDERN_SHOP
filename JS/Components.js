@@ -322,6 +322,30 @@ body.dark {
   color: #fff;
 }
 
+body.dark .mc2_box1 > p{
+color:#fff;
+}
+body.dark .mcc2_box1>p{
+color:#fff;
+}
+
+body.dark .main_cantaner3{
+ background:#000;
+}
+ body.dark .mc3c2_box1>p{
+ color:#fff;
+ }
+  body.dark .main_cantaner1>.child1, body.dark .main_cantaner1>.child1>p, body.dark .cp1_child1>h1,body.dark .cp1_child1>p{
+  color:#000;
+  }
+
+  
+
+body.dark .cp2_box1>p,
+body.dark .form_box>label{
+ color:#fff;
+}
+
 .btn {
   width: 50px;
   height: 50px;
