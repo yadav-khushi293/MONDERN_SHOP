@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+section {
+  width: 100%;
+  height: auto;
+}
+
+/* contect_parent1 start */
+
+.contect_parent1 {
+  width: 100%;
+  height: 87vh;
+  background-image: url("/utils/Image-2.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cp1_child1 {
+  width: 55%;
+  text-align: center;
+  line-height: 25px;
+  font-size: 20px;
+  padding: 10px;
+}
+
+.contect_parent1 > .cp1_child1 > p {
+  font-size: 22px;
+  padding-top: 45px;
+  line-height: 30px;
+  opacity: 0.7;
+}
+
+.contect_parent1 > .cp1_child1 > h1 {
+  font-size: 65px;
+  font-weight: 800;
+}
+
+/* contect_parent2 start */
+
+.contect_parent2 {
+  background-color: #ffffff;
+}
+
+.cp2_child1 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 125px 80px;
+}
+.cp2_box1 {
+  width: 380px;
+  height: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.cp2_box1:hover {
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.cp2_box1 > p {
+  font-size: 21px;
+  padding: 0px 30px;
+  line-height: 40px;
+  opacity: 0.7;
+}
+
+.cp2_box1 > h2 {
+  font-size: 25px;
+}
+
+.cp2_box1_icondiv {
+  width: 80px;
+  height: 80px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffcc06;
+}
+
+.cp2_box1_icondiv > i {
+  font-size: 30px;
+}
+
+.cp2_child2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 150px 0px;
+  gap: 50px;
+}
+
+.cp2_child2_mapDiv {
+  width: 40%;
+}
+
+.cp2_child2_formDiv {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  background-size: cover;
+}
+
+.cp2_child2_formDiv > form > h1 {
+  font-size: 37px;
+  font-weight: 800;
+  margin: 0px 0px 50px 0px;
+}
+
+.form_box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+   color: #4c5258;
+}
+
+.form_box > label {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px 0px;
+  border: none;
+  outline: none;
+}
+
+.form_box > label>span{
+  font-size: 25px;
+  color: #e91309;
+  font-weight:normal;
+}
+
+.form_box > input {
+  font-size: 22px;
+  padding: 12px 12px;
+  outline: none;
+  color: #6a625a;
+  border: 3px solid #dddde2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.form_box > input:focus,.form_box > textarea:focus{
+  border: 3px solid #f5cb2a;
+  opacity: 1;
+}
+
+form {
+  width: 100%;
+}
+
+.form_box > textarea {
+  height: 250px;
+  font-size: 22px;
+  padding: 12px 12px;
+  color: #6a625a;;
+  outline: none;
+  border: 3px solid #dddde2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.form_box >span{
+  font-size: 20px;
+  margin-top:10px ;
+}
+
+
+.cp2_child2_formDiv > form > button {
+  padding: 15px 40px;
+  font-size: 23px;
+  font-weight: 550;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #e8e5e4;
+  background-color: #0a0501;
+}
+
+.cp2_child2_formDiv > form > button:hover {
+  background-color: #ffcc06;
+}
