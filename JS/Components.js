@@ -347,7 +347,11 @@ body.dark .btn {
     inset 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-body.dark .nav-link,body.dark .battery_info,body.dark .adventure > h1, body.dark .collection_text,body.dark .discount_child1{
+body.dark .nav-link,
+body.dark .battery_info,
+body.dark .adventure > h1,
+body.dark .collection_text,
+body.dark .discount_child1{
 color:#000;
 }
 
@@ -375,10 +379,6 @@ body.dark .btn strong:nth-child(1) {
 
 body.dark .btn strong:nth-child(2) {
   display: none;
-}
-
-.child3>#search:focus{
-border: 2px solid #f8a705ff !important;
 }
  `;
 };
@@ -504,7 +504,7 @@ export const goHome = () => {
 };
 
 export const contactPage = () => {
-  window.location.pathname = getBasePath() + "contact.html";
+  window.location.pathname = getBasePath() + "contect.html";
 };
 
 export const shopPage = () => {
@@ -535,7 +535,7 @@ export const setActiveNav = () => {
     if (
       (currentPage === "index.html" && item.classList.contains("homePage")) ||
       (currentPage === "about.html" && item.classList.contains("aboutPage")) ||
-      (currentPage === "contact.html" &&
+      (currentPage === "contect.html" &&
         item.classList.contains("contactPage")) ||
       (currentPage === "shop.html" && item.classList.contains("shopPage")) ||
       (currentPage === "product.html" && item.classList.contains("productPage"))

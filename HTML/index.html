@@ -215,8 +215,8 @@
                     </div>
                 </div>
             </div>
-            <!-- <footer class="footers"></footer> -->
         </div>
+        <!-- <footer class="footers"></footer> -->
     </body>
     <script src="../JS/index.js"></script>
     <script type="module">
@@ -230,7 +230,7 @@
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
 
-    // document.querySelector('.footers').innerHTML = Footers();
+    document.querySelector('.footers').innerHTML = Footers();
 
 document.querySelector(".homePage").addEventListener('click',()=>{
     goHome();
