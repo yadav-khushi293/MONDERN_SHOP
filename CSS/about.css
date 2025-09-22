@@ -194,8 +194,8 @@ main {
 }
 
 .mc3c2_box1 > img {
-  width: 480px;
-  height: 570px;
+  width: 450px;
+  height: 550px;
   margin-bottom: 70px;
   border-radius: 5px;
 }
@@ -220,6 +220,7 @@ h4 {
 .mc3c2_box1 > i {
   font-size: 25px;
   margin: 10px;
+  color:black;
 }
 
 .mc3c2_box1 > i:hover {
@@ -233,7 +234,6 @@ h4 {
   align-items: center;
   /* height: 400px; */
   margin: 0px 0px 50px 0px;
-  border: 2px solid red;
 }
 
 .mc4_child1 {
@@ -241,4 +241,66 @@ h4 {
   display: flex;
   height: 400px;
   border: 2px solid blue;
+}
+
+.main_cantaner4 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 400px; */
+  margin: 150px 0px 50px 0px;
+}
+
+.mc4_child1 {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  background-image: url("../Utils/BackGround_Image1.jpg");
+  background-size: cover;
+  align-items: center;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  height: 400px;
+  gap: 300px;
+  /* border: 2px solid blue; */
+}
+
+.mc4_c1_box{
+  width: 550px;
+  height: 200px;
+  color:#fafafa ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.mc4_c1_box>h1{
+  font-size: 50px;
+  font-weight: 800;
+  /* color: #fafafa; */
+}
+
+.mc4_c1_box>p{
+font-size: 22px;
+line-height: 40px;
+font-weight:600 ;
+}
+
+.mc4_child1>button{
+  padding: 23px 35px;
+  cursor: pointer;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: #040403;
+  background-color: #ffffff;
+}
+
+.mc4_child1>button:hover{
+background-color: #ffcc06;
+color: #fafafa;
 }

@@ -551,7 +551,6 @@ export const Footers = () => {
   return `
     <footer>
         <div class="footer_cantaner1">
-
             <div class="FC_child1">
                 <div class="FC_child1_box1 Box">
                     <h2>About Us</h2>
@@ -563,7 +562,6 @@ export const Footers = () => {
                         </ul>
                     </div>
                 </div>
-
                 <div class="FC_child1_box2 Box">
                     <h2>Quick Links</h2>
                     <div class="ulDiv2">
@@ -574,7 +572,6 @@ export const Footers = () => {
                         </ul>
                     </div>
                 </div>
-
                 <div class="FC_child1_box3 Box">
                     <h2>Important Links</h2>
                     <div class="ulDiv3">
@@ -585,30 +582,20 @@ export const Footers = () => {
                         </ul>
                     </div>
                 </div>
-
                 <div class="Box">
-
                     <h2>Contact Info</h2>
                     <p>Nunc lobortis mattis aliquam faucibus purus in massa arcu odio ut sem nulla pharetra diam amet.
                     </p>
-
                 </div>
-
-
-
             </div>
-
             <!-- footer cantaner child2 -->
-
             <div class="FC_child2">
-
                 <div class="Box">
                     <h2>Achievements</h2>
                     <div>
                         <p>Massa sed elementum tempus egestas sed sed risus at ultrices mi tempus imperdiet nulla.</p>
                     </div>
                 </div>
-
                 <div class="Box">
                     <h2>Useful Information</h2>
                     <div>
@@ -616,44 +603,36 @@ export const Footers = () => {
                         </p>
                     </div>
                 </div>
-
-
                 <div class="Box">
                     <h2>Shipping Imformation</h2>
                     <div class="paragraph1">
                         <p>Fringilla urna porttitor rhoncus dolor purus nonulla malesuada pellentesque elit eget.</p>
                     </div>
                 </div>
-
                 <div class="Box">
-
                     <div class="iconDiv">
                         <div class="img_div">
                             <i class="fa-solid fa-location-dot"></i>
                         </div>
-                        <div class="text">                        
+                        <div class="text">
                          <h3>Address:</h3>
-                            <p>Street Name, NY 38954</p>  
+                            <p>Street Name, NY 38954</p>
                         </div>
                     </div>
-
-
                     <div class="iconDiv">
                         <div class="img_div">
                         <i class="fa-solid fa-phone"></i>
                     </div>
-                    <div class="iconText2 text">             
+                    <div class="iconText2 text">
                             <h3>Phone:</h3>
                     <p>973-475-8462</p>
                     </div>
                     </div>
-
-
                     <div class="iconDiv">
                         <div class="img_div">
                         <i class="fa-solid fa-envelope"></i>
                     </div>
-                    <div class="iconText3 text">                   
+                    <div class="iconText3 text">
                             <h3>Email:</h3>
                        <p>Website@gmail.com</p>
                     </div>
