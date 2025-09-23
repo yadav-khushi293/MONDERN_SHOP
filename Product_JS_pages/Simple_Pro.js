@@ -18,9 +18,9 @@ const appenddata = (data) => {
     let informationdiv = document.createElement('div');
     let title = document.createElement('h3');
     let img = document.createElement('img');
-    let price = document.createElement('p');
-    let description = document.createElement('p');
-    let category = document.createElement('p');
+    let price = document.createElement('div');
+    let description = document.createElement('div');
+    let category = document.createElement('div');
 
     img.className="img_1";
     maindiv.classList ="maindiv"
@@ -73,9 +73,9 @@ description_text.innerHTML = `
 
     <h1 class="heading_1">DISCRIPTION</h1>
     <div class="description_text_1">
-    <p class="p1">Morbi tincidunt ornare massa eget egestas purus viverra. In vitae turpis massa sed elementum tempus egestas sed. Euismod in pellentesque massa placerat duis ultricies. Justo donec enim diam vulputate ut pharetra sit. At auctor urna nunc id cursus metus aliquam eleifend. Ipsum nunc aliquet bibendum enim. Et malesuada fames ac turpis egestas sed tempus.</p>
+    <div class="p1">Morbi tincidunt ornare massa eget egestas purus viverra. In vitae turpis massa sed elementum tempus egestas sed. Euismod in pellentesque massa placerat duis ultricies. Justo donec enim diam vulputate ut pharetra sit. At auctor urna nunc id cursus metus aliquam eleifend. Ipsum nunc aliquet bibendum enim. Et malesuada fames ac turpis egestas sed tempus.</div>
 
-    <p class="p2">Nisi scelerisque eu ultrices vitae auctor. Sodales ut etiam sit amet nisl purus in mollis. Turpis tincidunt id aliquet risus. Aliquet sagittis id consectetur purus.</p>
+    <div class="p2">Nisi scelerisque eu ultrices vitae auctor. Sodales ut etiam sit amet nisl purus in mollis. Turpis tincidunt id aliquet risus. Aliquet sagittis id consectetur purus.</div>
     </div>
 
     <h3 class="hading_3">Related products</h3>
@@ -95,9 +95,9 @@ datashow.append(description_text);
         let maindiv_1=document.createElement('div')
         let imgBox = document.createElement('div');
         let image = document.createElement('img');
-        let title=document.createElement('p');
-        let price=document.createElement('p');
-        let category=document.createElement('p');
+        let title=document.createElement('div');
+        let price=document.createElement('div');
+        let category=document.createElement('div');
 
         imgBox.className="imgBox";
         image.classList="img_2";
