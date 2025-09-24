@@ -17,7 +17,35 @@ const apiCall = () => {
 
 const appenddata = (data) => {
   const datashow = document.querySelector("#product");
+  const top_rated_products = document.querySelector("#top_rated_products");
   datashow.innerHTML = "";
+  top_rated_products.innerHTML = "";
+
+  let product = data.slice(4, 9);
+
+  for (let i = 4; i <= 8 && i < data.length; i++) {
+    let item = data[i];
+
+    let gridDiv = document.createElement("div");
+    let flexDiv = document.createElement("div");
+    let productImg = document.createElement("img");
+    let title = document.createElement("h5");
+    let price = document.createElement("p");
+
+    gridDiv.className = "gridDiv";
+    productImg.className = "productImg";
+    title.className = "productTitle";
+    price.className = "productPrice";
+    flexDiv.className = "flexDiv";
+
+    productImg.src = item.img;
+    title.innerHTML = item.title;
+    price.innerHTML = item.price;
+
+    gridDiv.append(title, price);
+    flexDiv.append(productImg, gridDiv);
+    top_rated_products.append(flexDiv);
+  }
 
   data.forEach((el) => {
     const imageContainer = document.createElement("div");

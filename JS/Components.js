@@ -66,19 +66,23 @@ export const Navbar = () => {
             <div class="parent_child2">
                 <ul class="navbar_ul">
                     <li class="homePage nav-link">Home</li>
-                    <select name="Shop" id="shop" class="shopPage nav-link">
-                        <option value="shop">Shop</option>
-                        <option value="right">Right Sidebar</option>
-                        <option value="left">Left Sidebar</option>
-                    </select>
-                    <select name="Products" id="products" class="productPage nav-link">
-                        <option value="product">Products</option>
-                        <option value="simple">Simple Product</option>
-                        <option value="variable">Variable Product</option>
-                        <option value="grouped">Grouped Product</option>
-                        <option value="external">Extrenal Product</option>
-                        <option value="account">My Account</option>
-                    </select>
+                    <div class="menu">
+                        <a id="shop" class="shopPage nav-link">Shop ▼</a>
+                        <div class="dropdown-content">
+                          <a>Right Sidebar</a>
+                          <a>Left Sidebar</a>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <a  id="products" class="productPage nav-link">Products ▼</a>
+                        <div class="dropdown-content">
+                          <a >Simple Product</a>
+                          <a>Variable Product</a>
+                          <a>Grouped Product</a>
+                          <a>Extrenal Product</a>
+                          <a>My Account</a>
+                        </div>
+                      </div>
                     <li class="aboutPage nav-link">About</li>
                     <li class="contactPage nav-link">Contact</li>
                 </ul>
@@ -404,6 +408,60 @@ body.dark .btn strong:nth-child(1) {
 body.dark .btn strong:nth-child(2) {
   display: none;
 }
+
+ .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu > a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      padding: 10px 15px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .menu > a:hover {
+    color: orange;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background: #111;
+      min-width: 170px;
+      top: 50px;
+      left: -10px;
+      z-index: 99;
+      border-radius: 3px;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown-content a {
+      font-size:15px;
+      padding: 12px 15px;
+      color: #fff;
+      display: block;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background: #f8a705ff;
+      cursor:pointer;
+    }
+
+    /* Show on hover */
+    .menu:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
  `;
 };
 
