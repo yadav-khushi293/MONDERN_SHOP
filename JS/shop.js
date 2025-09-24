@@ -18,12 +18,14 @@ const apiCall = () => {
 const appenddata = (data) => {
   const datashow = document.querySelector("#product");
   const top_rated_products = document.querySelector("#top_rated_products");
+  const top_rated_products1 = document.querySelector("#top_rated_products1");
   datashow.innerHTML = "";
   top_rated_products.innerHTML = "";
+  top_rated_products1.innerHTML = "";
 
-  let product = data.slice(4, 9);
+  let product = data.slice(1, 13);
 
-  for (let i = 4; i <= 8 && i < data.length; i++) {
+  for (let i = 3; i <= 10 && i < data.length; i++) {
     let item = data[i];
 
     let gridDiv = document.createElement("div");
@@ -45,6 +47,30 @@ const appenddata = (data) => {
     gridDiv.append(title, price);
     flexDiv.append(productImg, gridDiv);
     top_rated_products.append(flexDiv);
+  }
+
+  for (let i = 3; i <= 13 && i < data.length; i++) {
+    let item = data[i];
+
+    let gridDiv1 = document.createElement("div");
+    let flexDiv1 = document.createElement("div");
+    let productImg1 = document.createElement("img");
+    let title1 = document.createElement("h5");
+    let price1 = document.createElement("p");
+
+    gridDiv1.className = "gridDiv1";
+    productImg1.className = "productImg1";
+    title1.className = "productTitle1";
+    price1.className = "productPrice1";
+    flexDiv1.className = "flexDiv1";
+
+    productImg1.src = item.img;
+    title1.innerHTML = item.title;
+    price1.innerHTML = item.price;
+
+    gridDiv1.append(title1, price1);
+    flexDiv1.append(productImg1, gridDiv1);
+    top_rated_products1.append(flexDiv1);
   }
 
   data.forEach((el) => {

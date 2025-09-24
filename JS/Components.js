@@ -69,8 +69,8 @@ export const Navbar = () => {
                     <div class="menu">
                         <a id="shop" class="shopPage nav-link">Shop ▼</a>
                         <div class="dropdown-content">
-                          <a>Right Sidebar</a>
-                          <a>Left Sidebar</a>
+                          <a id="right">Right Sidebar</a>
+                          <a id="left">Left Sidebar</a>
                         </div>
                     </div>
                     <div class="menu">
@@ -727,4 +727,31 @@ export const Footers = () => {
          <p>Copyright © 2025 - WordPress Theme by Creative Themes</p>
     </div>
   `;
+};
+
+export const Shop = () => {
+  const productParent = document.querySelector(".product_child2");
+  const product = document.querySelector(".product_parent");
+  const filter = document.querySelector("#filter");
+
+  // When clicking Shop ▼ → hide products
+  document.querySelector("#shop").addEventListener("click", (e) => {
+    e.preventDefault(); // stop default link behavior
+    productParent.style.display = "none";
+    filter.style.marginRight = "73px";
+  });
+
+  // When clicking Right Sidebar → show products
+  document.querySelector("#right").addEventListener("click", (e) => {
+    e.preventDefault(); // stop default link behavior
+    productParent.style.display = "block";
+  });
+
+  // When clicking Left Sidebar → show products
+  document.querySelector("#left").addEventListener("click", (e) => {
+    e.preventDefault(); // stop default link behavior
+    productParent.style.display = "block";
+    product.style.flexDirection = "column-reverse";
+    product.style.marginLeft = "50px";
+  });
 };

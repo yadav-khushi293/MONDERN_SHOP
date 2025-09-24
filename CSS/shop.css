@@ -31,7 +31,7 @@
   width: 150px;
   float: right;
   margin-top: 50px;
-  margin-right: 50px;
+  margin-right: 55px;
   text-align: center;
 }
 
@@ -83,6 +83,11 @@
   letter-spacing: 1px;
 }
 
+.product_parent2 {
+  display: block;
+  transition: all 0.7s ease-in-out;
+}
+
 .product_child2 {
   width: 33%;
   padding-top: 27px;
@@ -97,41 +102,62 @@
 }
 
 .product_parent,
-.flexDiv {
+.flexDiv,
+.flexDiv1 {
   display: flex;
   gap: 20px;
 }
 
-#top_rated_products {
+#top_rated_products1 {
+  margin-bottom: 50px;
+}
+
+#top_rated_products,
+#top_rated_products1 {
   gap: 50px;
 }
 
 #top_rated_products,
-.gridDiv {
+.gridDiv,
+#top_rated_products1,
+.gridDiv1 {
   display: grid;
   justify-items: start;
   align-content: center;
 }
 
 .gridDiv > h5,
-.gridDiv > p {
+.gridDiv > p,
+.gridDiv1 > h5,
+.gridDiv1 > p {
   padding: 0;
   text-transform: capitalize;
 }
 
-.gridDiv > h5 {
+.gridDiv > h5:hover,
+.gridDiv1 > h5:hover {
+  color: #fda901ff;
+  cursor: pointer;
+}
+
+.gridDiv > h5,
+.gridDiv1 > h5 {
+  transition: all 0.3s ease-in-out;
   font-size: large;
   opacity: 0.7;
 }
 
-.gridDiv > p {
+.gridDiv > p,
+.gridDiv1 > p {
   padding-top: 5px;
 }
 
-.productImg {
+.productImg,
+.productImg1 {
   width: 80px;
   height: 80px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .product_child2 > input {
