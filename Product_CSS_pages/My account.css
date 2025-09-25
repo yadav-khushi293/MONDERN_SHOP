@@ -35,6 +35,9 @@ label{
   border-radius: 5px;
   border: 2px solid  #d3d1d1;
 }
+.text_input:active{
+  border: 1px solid #ffcc25;
+}
 
 span{
   color: rgb(226, 4, 4);
