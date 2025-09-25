@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../Product_CSS_pages/password.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
 </head>
 <body>
        <header class="header"></header>
@@ -27,41 +30,63 @@
         <button type="submit" id="Reset_password">Reset password</button>
 
     </div>
-
+ 
+    
+    <footer class="footers"></footer>
         
 </body>
 <script src="../Product_JS_pages/My account.js"></script>
-
 <script type="module">
-    import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
-    document.querySelector('.header').innerHTML = Navbar();
+     document.querySelector('.header').innerHTML = Navbar();
+
     document.querySelector('body').addEventListener('load', typePlaceholder());
-    
+
     let styleTag = document.createElement("style");
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
-    
-    
-    
-    document.querySelector(".homePage").addEventListener('click',()=>{
-        goHome();
-    })
-    document.querySelector(".aboutPage").addEventListener('click',()=>{
-        aboutPage();
-    })
-    document.querySelector(".productPage").addEventListener('click',()=>{
-        productPage();
-    })
-    document.querySelector(".shopPage").addEventListener('click',()=>{
-        shopPage();
-    })
-    document.querySelector(".contactPage").addEventListener('click',()=>{
-        contactPage();
-    })
-    
+
+    document.querySelector('.footers').innerHTML = Footers();
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+//Day-Night-mode-code
+      const body = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      // Default: Light mode (no class)
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+      });
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
     setTimeout(() => {
         setActiveNav();
     }, 100);
-</script>
+    </script>
 </html>
