@@ -339,6 +339,9 @@ body.dark .main_cantaner3{
   color:#000;
   }
 
+  body.dark .add_button_1{
+  background-color:#fff;
+  }
   
 
 body.dark .cp2_box1>p,
@@ -371,11 +374,11 @@ body.dark .btn {
     inset 2px 2px 5px rgba(0, 0, 0, 0.25);
 }
 
-body.dark .nav-link,body.dark .battery_info,body.dark .adventure > h1, body.dark .collection_text,body.dark .discount_child1{
+body.dark .nav-link,body.dark .battery_info,body.dark .adventure > h1, body.dark .collection_text,body.dark .discount_child1 {
 color:#000;
 }
 
-body.dark .imgbox>p,body.dark .imgbox1>p{
+body.dark .imgbox>p,body.dark .imgbox1>p,body.dark .description_1,body.dark .Category_span,body.dark .category_1,body.dark .title_1, body.dark .price_1,body.dark .p1, .p2,body.dark .hading_3, body.dark .price_2 ,body.dark .price_2 ,body.dark .Category_span_1, body.dark  .category_2  {
 color:#fff;
 }
 
