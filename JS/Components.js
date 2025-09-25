@@ -378,7 +378,7 @@ body.dark .nav-link,body.dark .battery_info,body.dark .adventure > h1, body.dark
 color:#000;
 }
 
-body.dark .imgbox>p,body.dark .imgbox1>p,body.dark .description_1,body.dark .Category_span,body.dark .category_1,body.dark .title_1, body.dark .price_1,body.dark .p1, .p2,body.dark .hading_3, body.dark .price_2 ,body.dark .price_2 ,body.dark .Category_span_1, body.dark  .category_2  {
+body.dark .imgbox>p,body.dark .imgbox1>p,body.dark .description_1,body.dark .Category_span,body.dark .category_1,body.dark .title_1, body.dark .price_1,body.dark .p1, .p2,body.dark .hading_3, body.dark .price_2 ,body.dark .price_2 ,body.dark .Category_span_1, body.dark  .category_2 ,body.dark .text_massege_div,body.dark label  {
 color:#fff;
 }
 
