@@ -67,21 +67,37 @@ const appenddata = (data) => {
   popularProducts.append(imageContainer1);
 };
 
-// Hiding Iframe Tag
+const Video_modal = () => {
+  const modal = document.createElement("div");
+  modal.classList.add("modal");
+  modal.style.display = "block"; // show it
+  const modal_content = document.querySelector(".modal-content");
 
-let playButton = document.getElementById("playButton");
-let iframeWrapper = document.getElementById("iframeWrapper");
-let iframe = document.getElementById("videoFrame");
-let closeBtn = document.getElementById("closeBtn");
+  // modal content
+  modal.innerHTML = `
+      <div class="modal-content">
+        <span class="close">&times;</span>
+                    <div class="iframeWrapper" id="iframeWrapper">
+                        <iframe id="videoFrame"
+                            src="https://www.youtube.com/embed/bjJnb5xqwHE?si=ZKLYzPwCOm1aSycS"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+`;
 
-playButton.addEventListener("click", function () {
-  iframeWrapper.style.display = "block"; // show iframe with close button
-  iframe.src += "&autoplay=1"; // autoplay
-  playButton.style.display = "none"; // hide play button
-});
+  // add modal to body
+  document.body.appendChild(modal);
 
-closeBtn.addEventListener("click", function () {
-  iframeWrapper.style.display = "none"; // hide iframe
-  iframe.src = iframe.src.replace("&autoplay=1", ""); // stop video
-  playButton.style.display = "block"; // show play button again
-});
+  // close when clicking X
+  modal.querySelector(".close").onclick = () => modal.remove();
+
+  // close when clicking outside the box
+  modal_content.onclick = (event) => {
+    if (event.target === modal) {
+      modal.remove();
+    }
+  };
+};

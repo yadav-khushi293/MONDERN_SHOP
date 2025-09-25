@@ -31,7 +31,7 @@
   width: 150px;
   float: right;
   margin-top: 50px;
-  margin-right: 55px;
+  margin-right: 70px;
   text-align: center;
 }
 
@@ -83,12 +83,9 @@
   letter-spacing: 1px;
 }
 
-.product_parent2 {
-  display: block;
-  transition: all 0.7s ease-in-out;
-}
-
 .product_child2 {
+  display: none;
+  transition: all 0.7s ease-in-out;
   width: 33%;
   padding-top: 27px;
   padding-right: 15px;
@@ -166,4 +163,11 @@
   height: 40px;
   border-radius: 5px;
   margin: 20px 0;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.product_child2 > input:hover,
+.product_child2 > input:focus {
+  border: 2px solid #fda901ff;
 }

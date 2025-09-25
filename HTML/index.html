@@ -27,23 +27,14 @@
                         quisquam voluptatibus ex soluta.</h5>
                     <button>See Collection</button>
                 </div>
-                <div class="video_container">
+                <div class="video_container" onclick="Video_modal()">
                     <svg class="ugb-custom-icon" id="playButton"
                         viewBox="0 0 80 80"
-                        xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        xmlns="http://www.w3.org/2000/svg"
+                        aria-hidden="true">
                         <path
                             d="M40 0c22.091 0 40 17.909 40 40S62.091 80 40 80 0 62.091 0 40 17.909 0 40 0Zm-6.756 28c-.681 0-1.238.562-1.238 1.25H32v21.5h.006c0 .687.556 1.25 1.238 1.25.256 0 .469-.088.7-.213l17.381-10.343a1.883 1.883 0 0 0 0-2.888L33.925 28.2a1.312 1.312 0 0 0-.681-.2Z"></path>
                     </svg>
-                    <div class="iframeWrapper" id="iframeWrapper">
-                        <span id="closeBtn">close</span>
-                        <iframe width="530" height="330" id="videoFrame"
-                            src="https://www.youtube.com/embed/bjJnb5xqwHE?si=ZKLYzPwCOm1aSycS"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allowfullscreen>
-                        </iframe>
-                    </div>
                 </div>
             </div>
             <div class="hot_discount">
@@ -156,8 +147,10 @@
                 <div class="clients_parent">
                     <div class="clients_child1">
                         <p>
-                            Sagittis nisl rhoncus mattis rhoncus urna <br>neque
-                            viverra. In iaculis nunc sed augue <br>lacus viverra
+                            Sagittis nisl rhoncus mattis rhoncus urna
+                            <br>neque
+                            viverra. In iaculis nunc sed augue <br>lacus
+                            viverra
                             vitae congue.
                         </p>
                         <div class="client_profile">
@@ -216,11 +209,11 @@
                 </div>
             </div>
         </div>
-        <!-- <footer class="footers"></footer> -->
+        <footer class="footers"></footer>
     </body>
     <script src="../JS/index.js"></script>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage, Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
 
@@ -230,7 +223,7 @@
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
 
-    // document.querySelector('.footers').innerHTML = Footers();
+    document.querySelector('.footers').innerHTML = Footers();
 
 document.querySelector(".homePage").addEventListener('click',()=>{
     goHome();
