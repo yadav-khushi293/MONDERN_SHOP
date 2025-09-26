@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Dropdown</title>
+  <style>
+   
+    .menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .menu > a {
+      text-decoration: none;
+      color: #222;
+      font-weight: bold;
+      padding: 10px 15px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .menu > a:hover {
+      color: orange;
+    }
+
+    .dropdown-content {
+      position: absolute;
+      background: #111;
+      min-width: 200px;
+      top: 50px;
+      left: 0;
+      z-index: 99;
+      border-radius: 5px;
+      overflow: hidden;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown-content a {
+      padding: 12px 15px;
+      color: #fff;
+      display: block;
+      font-weight: normal;
+      text-decoration: none;
+    }
+
+    .dropdown-content a:hover {
+      background: #333;
+    }
+
+    /* Show on hover */
+    .menu:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="menu">
+    <a href="#">PRODUCT ▼</a>
+    <div class="dropdown-content">
+      <a href="#">Simple Product</a>
+      <a href="#">Variable Product</a>
+      <a href="#">Grouped Product</a>
+      <a href="#">External Product</a>
+      <a href="#">My Account</a>
+    </div>
+  </div>
+
+</body>
+</html>
