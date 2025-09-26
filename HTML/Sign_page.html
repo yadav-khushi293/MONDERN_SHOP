@@ -3,15 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Login/Registration</title>
     <link rel="stylesheet" href="../CSS/Sign_page.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+         <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
 </head>
+
 <body>
+     <header class="header"></header>
 
-    <div class="form_div">
+     <!------------------From-------div------Main-------------------->
+       <main class="main-content">
 
-        <label
-    </div>
+       <div class="login-page">
+
+        <!---Div-1-->
+        <form action="#" class="login-form">
+            <h2 class="heding">Create Acount</h2>
+
+        
+        <div class="input-box">
+            <input type="text" id="text" required>
+             <label for="text">Your Name</label>
+        </div>
+
+        <div class="input-box">
+            <input type="email" id="Email" required>
+             <label for="Email">Email</label>
+        </div>
+
+      <div class="input-box">
+          <input type="password" id="password" required>
+          <label for="password">Password</label>
+      </div>
+
+      <div class="input-box">
+          <input type="password" id="password" required>
+          <label for="password">Conform Password</label>
+      </div>
+
+
+
+      <button type="submit">Login</button>
     
+            <p class="message">Do You have an account? Pls <a href="#">Login In</a></p>
+        </form>
+    </div>
+</main>
+
+  <!------------------From-------div------Main--------End------------>
+    
+ <footer class="footers"></footer>
+
 </body>
+<script type="module">
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+
+     document.querySelector('.header').innerHTML = Navbar();
+
+    document.querySelector('body').addEventListener('load', typePlaceholder());
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('.footers').innerHTML = Footers();
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+//Day-Night-mode-code
+      const body = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      // Default: Light mode (no class)
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+      });
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100);
+    </script>
 </html>
