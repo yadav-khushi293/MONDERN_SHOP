@@ -787,3 +787,13 @@ export const Shop = () => {
     product.style.marginLeft = "50px";
   });
 };
+
+const updateCartCount = async () => {
+  try {
+    let res = await fetch(apiCart);
+    let cartItems = await res.json();
+    document.querySelector("#cart_count").innerText = cartItems.length;
+  } catch (err) {
+    console.log(err);
+  }
+};

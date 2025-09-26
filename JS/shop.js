@@ -1,4 +1,5 @@
 let api = "https://weather-app-6du4.onrender.com/shop";
+let apiCart = "https://weather-app-6du4.onrender.com/cart";
 
 let allData = [];
 let currentPage = 1;
@@ -93,6 +94,8 @@ const appenddata = (data) => {
     category.innerHTML = el.category;
     cart.innerHTML = "Add To Cart";
 
+    cart.addEventListener("click", () => addToCart(el.id));
+
     imgBox.append(image, text, price, category, cart);
     imageContainer.append(imgBox);
     datashow.append(imageContainer);
@@ -147,4 +150,48 @@ const renderPagination = () => {
     }
   });
   pagination.appendChild(nextBtn);
+};
+
+// Add To Cart
+
+const addToCart = async (id) => {
+  // find the product by id from allData
+  let product = allData.find((el) => el.id === id);
+
+  if (!product) {
+    alert("Product not found!");
+    return;
+  }
+
+  try {
+    // check if product already exists in cart
+    let res = await fetch(`${apiCart}?id=${id}`);
+    let data = await res.json();
+
+    if (data.length > 0) {
+      // already in cart → increment count
+      let existing = data[0];
+      await fetch(`${apiCart}/${existing.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ count: (existing.count || 1) + 1 }),
+      });
+      alert("Quantity updated ✔");
+    } else {
+      // not in cart → add new with count = 1
+      await fetch(apiCart, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...product, count: 1 }),
+      });
+
+      alert("Added to cart ✔");
+    }
+  } catch (error) {
+    console.log("🚀 ~ error:", error);
+  }
 };
