@@ -38,7 +38,7 @@ export const Navbar = () => {
                     </svg>
                 </div>
                 <div class="child2">
-                    <img src="../Utils/Logo.svg" alt="Company Logo">
+                    <img src="../../Utils/Logo.svg" alt="Company Logo">
                 </div>
                 <div class="child3">
                     <input type="text" name="search" id="search">
