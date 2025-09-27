@@ -10,7 +10,7 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     </head>
-    <body>
+    <body onload="apiCall()">
         <!-- Scroll_arrow -->
         <a href="#" class="to-top">
             <i class="fas fa-chevron-up"></i>
@@ -18,10 +18,12 @@
         <header class="header"></header>
         <div class="cart_page">
             <h3>Cart</h3>
+            <div id="pagination"></div>
             <div id="cart_Products"></div>
         </div>
         <footer class="footers"></footer>
     </body>
+    <script src="../JS/Cart.js"></script>
     <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 

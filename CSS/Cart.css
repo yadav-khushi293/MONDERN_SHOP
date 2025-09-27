@@ -9,3 +9,20 @@
   font-size: xx-large;
   padding: 70px 0;
 }
+
+.prevBtn,
+.nextBtn {
+  font-weight: 700;
+  font-size: medium;
+  margin: 0 10px;
+  width: 50px;
+  height: 40px;
+}
+
+.pageNum {
+  font-weight: 700;
+}
+
+#pagination {
+  margin: 0 50px;
+}
