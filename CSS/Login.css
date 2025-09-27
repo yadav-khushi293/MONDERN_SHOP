@@ -10,12 +10,12 @@
 
 .login-page{
     width: 500px;
-    height: 450px;
+    height: 420px;
     position: absolute;
-    top: 50%;
+    top: 77%;
     left: 50%;
     transform: translate(-50%,-50%);
-    padding: 40px;
+    padding: 30px 40px;
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.2), 
     0 5px 5px 0 rgb(0, 0, 0, 0.24) ;
     background: #ffff;
@@ -32,45 +32,51 @@
 }
 
 
+
 .input-box {
-    position: relative;
-    margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .input-box input {
-    width: 100%;
-    height: 65px;
-    padding: 20px 15px 10px;
-    margin: 4px 0px;
-    font-size: 22px;
-    border-radius: 5px;
-    border: none;
-    background: #f2f2f2;
-    outline: none;
+  width: 100%;
+  height: 60px;
+  padding: 20px 15px 10px;
+  font-size: 22px;
+  border-radius: 5px;
+  border: none;
+  background: #f2f2f2;
+  outline: none;
+  transition: border 0.2s ease;
 }
 
+/* Label design */
 .input-box label {
-    position: absolute;
-    top: 22px;
-    left: 20px;
-    color: #6a6969;
-    font-size: 24px;
-    pointer-events: none;
-    transition: 0.2s ease all;
-}
-.input-box input:focus{
-    border: 1px solid  #fda901ff;;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: #6a6969;
+  font-size: 20px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: transparent;
+  padding: 0 5px;
 }
 
-/* When input is focused OR not empty */
+/* Floating label on focus or if value is entered */
 .input-box input:focus + label,
-.input-box input:valid + label {
-    top: -12px;
-    background-color: #f0eded;
-    left: 6px;
-    font-size:22px;
-    word-wrap: 6px;
-    color: rgb(70, 69, 69);
+.input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 1px;
+  white-space: 5px;
+  font-size: 20px;
+  background-color:  #f7f4f4;
+  color: #333;
+}
+
+
+.input-box input:focus {
+  border: 1px solid #fda901ff;
 }
 
 
@@ -126,11 +132,10 @@ span {
    background-color: black;
    border-radius: 2px;
 }
-.message.active {
+ .message.active {
   background-color: #fda901ff !important;
   color: white;
-  transition: all 0.3s ease-in-out;
-}
+} 
 
 .extra_div{
     display: flex;
@@ -139,9 +144,9 @@ span {
 }
 
 .admin_login_page{
-    /* border: 1px solid black; */
     height: 600px;
     width: 40%;
     margin: auto;
-    padding-top: 60px;
+    padding-top: 73px;
+
 }
