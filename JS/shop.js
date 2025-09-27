@@ -90,11 +90,18 @@ const appenddata = (data) => {
 
     image.src = el.img;
     text.innerHTML = el.title;
-    price.innerHTML = el.price;
+    price.innerHTML = `$${el.price}`;
     category.innerHTML = el.category;
     cart.innerHTML = "Add To Cart";
 
-    cart.addEventListener("click", () => addToCart(el.id));
+    cart.addEventListener("click", () => {
+      addToCart(el.id);
+      cart.innerHTML = "View Cart";
+
+      cart.onclick = () => {
+        window.location.href = "Cart.html";
+      };
+    });
 
     imgBox.append(image, text, price, category, cart);
     imageContainer.append(imgBox);
@@ -178,7 +185,6 @@ const addToCart = async (id) => {
         },
         body: JSON.stringify({ count: (existing.count || 1) + 1 }),
       });
-      alert("Quantity updated ✔");
     } else {
       // not in cart → add new with count = 1
       await fetch(apiCart, {

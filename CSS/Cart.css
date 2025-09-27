@@ -97,3 +97,17 @@ tr {
   border-radius: 3px;
   padding: 5px;
 }
+
+.upadteButton {
+  text-align: right;
+  width: 62%;
+  margin-top: 10px;
+}
+
+.upadteButton > button {
+  width: 150px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: large;
+  font-weight: 700;
+}
