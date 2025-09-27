@@ -103,13 +103,46 @@
     padding: 9px 0px;
 }
 
-.login-page p a{
+span {
     text-decoration: none;
     font-weight: bold;
     font-size: 19px;
     color: #ef7036;
 }
-
+.message_forsignin
+{
+   color: #696969;
+   font-size: 18px;
+   padding:10px 0px;
+}
 .Admin-form{
     display: none;
+}
+.message{
+    width: 40% !important;
+    border: none;
+    height: 70px;
+    font-size: 20px !important;
+    font-weight: bold;
+    color: #fff;
+   background-color: black;
+   border-radius: 2px;
+}
+.message:hover{
+background:  #fda901ff !important; 
+transition: all 0.3s ease-in-out;
+}
+
+.extra_div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.admin_login_page{
+    /* border: 1px solid black; */
+    height: 600px;
+    width: 40%;
+    margin: auto;
+    padding-top: 60px;
 }

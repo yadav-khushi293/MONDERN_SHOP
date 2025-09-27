@@ -10,10 +10,18 @@
 </head>
 
 <body>
-    <div class="login-page">
 
+    <div class="admin_login_page">
+
+        <div class="extra_div">
+            <button class="message">User login  </button>
+            <button class="message">Admin login </button>
+            </div>
+    <div class="login-page">
+         
         <!---Div-1-->
         <form action="#" class="login-form">
+
             <h2>Login User</h2>
 
         <div class="input-box">
@@ -26,14 +34,20 @@
           <label for="password">Password</label>
       </div>
 
-      <button type="submit">Login</button>
+      <button type="submit" class="Login_1">Login</button>
     
-            <p class="message">Don't have an account? <a href="#">Sign Up</a></p>
+            <p class="message_forsignin">Don't have an account? <span>Sign Up</span></p>
         </form>
     
          <!---Div-2-->
          
         <form action="#" class="Admin-form">
+           
+            <!-- <div class="extra_div">
+            <button class="message">User login  </button>
+            <button class="message">Admin login </button>
+            </div> -->
+            
             <h2>Login Admin</h2>
 
         <div class="input-box">
@@ -45,10 +59,11 @@
            <input type="password" id="password" required>
              <label for="password">Password</label>
       </div>
-            <button type="submit">Login</button>
+            <button type="submit" class="Login_1">Login</button>
     
-            <p class="message">Don't have an account? <a href="#">Register now</a></p>
+            <!-- <p class="message">Don't have an account? <a href="#">Register now</a></p> -->
         </form>
+    </div>
     </div>
     
     <script src="../JS/Login.js"></script>
