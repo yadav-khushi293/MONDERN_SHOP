@@ -19,7 +19,6 @@
     box-shadow: 0 0 20px rgb(0, 0, 0, 0.2), 
     0 5px 5px 0 rgb(0, 0, 0, 0.24) ;
     background: #ffff;
-    
 }
 
 .login-page h2{
@@ -62,7 +61,6 @@
 .input-box input:focus{
     border: 1px solid  #fda901ff;;
 }
-
 
 /* When input is focused OR not empty */
 .input-box input:focus + label,
@@ -122,15 +120,16 @@ span {
     width: 40% !important;
     border: none;
     height: 70px;
-    font-size: 20px !important;
+    font-size: 23px !important;
     font-weight: bold;
     color: #fff;
    background-color: black;
    border-radius: 2px;
 }
-.message:hover{
-background:  #fda901ff !important; 
-transition: all 0.3s ease-in-out;
+.message.active {
+  background-color: #fda901ff !important;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .extra_div{

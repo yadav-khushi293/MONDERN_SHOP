@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 20px; /* adds spacing from nav and footer */
+  padding: 40px 20px; 
 }
 
 .login-page {
@@ -37,48 +37,53 @@ body {
 }
 
 
-
 .input-box {
-    position: relative;
-    margin-bottom: 20px;
+  position: relative;
+  margin-bottom: 20px;
 }
 
 .input-box input {
-    width: 100%;
-    height: 60px;
-    padding: 20px 15px 10px;
-    margin: 2px 0px;
-    font-size: 22px;
-    border-radius: 5px;
-    border: none;
-    background: #f2f2f2;
-    outline: none;
+  width: 100%;
+  height: 60px;
+  padding: 20px 15px 10px;
+  font-size: 22px;
+  border-radius: 5px;
+  border: none;
+  background: #f2f2f2;
+  outline: none;
+  transition: border 0.2s ease;
 }
 
+/* Label design */
 .input-box label {
-    position: absolute;
-    top: 16px;
-    left: 20px;
-    color: #6a6969;
-    font-size: 24px;
-    pointer-events: none;
-    transition: 0.2s ease all;
-}
-.input-box input:focus{
-    border: 1px solid  #fda901ff;;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: #6a6969;
+  font-size: 20px;
+  pointer-events: none;
+  transition: 0.2s ease all;
+  background-color: transparent;
+  padding: 0 5px;
 }
 
-
-/* When input is focused OR not empty */
+/* Floating label on focus or if value is entered */
 .input-box input:focus + label,
-.input-box input:valid + label {
-    top: -12px;
-    background-color: #f0eded;
-    left: 6px;
-    font-size:22px;
-    word-wrap: 6px;
-    color: rgb(70, 69, 69);
+.input-box input:not(:placeholder-shown) + label {
+  top: -10px;
+  left: 1px;
+  white-space: 5px;
+  font-size: 20px;
+  background-color:  #f7f4f4;
+  color: #333;
 }
+
+
+.input-box input:focus {
+  border: 1px solid #fda901ff;
+}
+
+
 
 
 .login-page button{
@@ -114,7 +119,4 @@ body {
     font-size: 19px;
     color: #ef7036;
 }
-
-.Admin-form{
-    display: none;
-}
+ 
