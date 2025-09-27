@@ -67,6 +67,7 @@ export const Navbar = () => {
   <!-- Left handle (arc) -->
   <path d="M10 10 a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2"/>
 </svg>
+<span class="cart_num" id="cart_count"></span>
         <div class="btn" id="toggleBtn">
             <strong>🌙</strong>
             <strong>☀️</strong>
@@ -332,6 +333,20 @@ html {
   border-radius: 10px;
 }
 
+.cart_num{
+position: absolute;
+right: 203px;
+top: 57px;
+  border-radius: 50%;
+  background-color: #fda901ff;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  padding: 2px;
+  width: 17px;
+  height: 17px;
+}
+
 /* Day-night-mode*/
 
 body {
@@ -398,6 +413,7 @@ body.dark .form_box>label{
   cursor: pointer;
   border-radius: 50%;
   transition: background 0.3s, color 0.3s;
+  margin: 0 3px;
 }
 
 // body.dark .btn {
@@ -805,4 +821,5 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "Cart.html";
     });
   }
+  updateCartCount();
 });

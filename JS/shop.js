@@ -185,6 +185,7 @@ const addToCart = async (id) => {
         },
         body: JSON.stringify({ count: (existing.count || 1) + 1 }),
       });
+      updateCartCount();
     } else {
       // not in cart → add new with count = 1
       await fetch(apiCart, {
@@ -194,10 +195,21 @@ const addToCart = async (id) => {
         },
         body: JSON.stringify({ ...product, count: 1 }),
       });
-
-      alert("Added to cart ✔");
+      updateCartCount();
     }
   } catch (error) {
     console.log("🚀 ~ error:", error);
+  }
+};
+
+// Cart Number
+
+const updateCartCount = async () => {
+  try {
+    let res = await fetch(apiCart);
+    let cartItems = await res.json();
+    document.querySelector("#cart_count").innerText = cartItems.length;
+  } catch (err) {
+    console.log(err);
   }
 };

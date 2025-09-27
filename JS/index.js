@@ -1,4 +1,5 @@
 let api = "https://weather-app-6du4.onrender.com/shop";
+let apiCart = "https://weather-app-6du4.onrender.com/cart";
 
 const apiCall = () => {
   fetch(api)
@@ -100,4 +101,21 @@ const Video_modal = () => {
       modal.remove();
     }
   };
+};
+
+// Cart Number
+
+const updateCartCount = async () => {
+  try {
+    let res = await fetch(apiCart);
+    let cartItems = await res.json();
+    document.querySelector("#cart_count").innerText = cartItems.length;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+window.onload = () => {
+  apiCall();
+  updateCartCount();
 };

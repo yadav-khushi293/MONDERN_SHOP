@@ -91,6 +91,7 @@ const incrementCount = async (id, count) => {
         "Content-Type": "application/json",
       },
     });
+    updateCartCount();
     apiCall();
   } catch (error) {
     console.log("🚀 ~ error:", error);
@@ -105,6 +106,7 @@ const decrementCount = async (id, count) => {
       method: "DELETE",
     });
     apiCall();
+    updateCartCount();
     alert(`your items delete id number is ${id}`);
     return;
   }
@@ -118,6 +120,7 @@ const decrementCount = async (id, count) => {
       },
     });
     apiCall();
+    updateCartCount();
   } catch (error) {
     console.log("🚀 ~ error:", error);
   }
@@ -134,6 +137,7 @@ const deleteToCart = async (id) => {
       },
     });
     apiCall();
+    updateCartCount();
   } catch (error) {
     console.log("🚀 ~ error:", error);
   }
@@ -181,4 +185,16 @@ const renderPagination = () => {
     }
   });
   pagination.appendChild(nextBtn);
+};
+
+// Cart Number
+
+const updateCartCount = async () => {
+  try {
+    let res = await fetch(apiCart);
+    let cartItems = await res.json();
+    document.querySelector("#cart_count").innerText = cartItems.length;
+  } catch (err) {
+    console.log(err);
+  }
 };

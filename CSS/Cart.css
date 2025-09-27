@@ -8,6 +8,8 @@
   text-align: center;
   font-size: xx-large;
   padding: 70px 0;
+  height: 35vh;
+  background-color: #f4f4f4;
 }
 
 .prevBtn,
@@ -17,6 +19,7 @@
   margin: 0 10px;
   width: 50px;
   height: 40px;
+  padding: 5px;
 }
 
 .pageNum {
@@ -43,7 +46,9 @@ tr {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 25px 90px;
+  margin: 15px 90px;
+  padding: 10px 0;
+  border-bottom: 3px solid #f4f4f4;
 }
 
 .imgBox {
