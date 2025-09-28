@@ -25,7 +25,7 @@
     </body>
     <script src="../JS/Cart.js"></script>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, contactPage, goHome, aboutPage,shopPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
 
@@ -48,6 +48,9 @@ document.querySelector(".productPage").addEventListener('click',()=>{
 })
 document.querySelector(".contactPage").addEventListener('click',()=>{
     contactPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
 })
 
 //Day-Night-mode-code

@@ -293,6 +293,7 @@ html {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;
+  z-index: 100;
 }
 
 .to-top.active {
@@ -376,7 +377,7 @@ body.dark .main_cantaner3{
  body.dark .mc3c2_box1>p{
  color:#fff;
  }
-  body.dark .main_cantaner1>.child1, body.dark .main_cantaner1>.child1>p, body.dark .cp1_child1>h1,body.dark .cp1_child1>p{
+  body.dark .main_cantaner1>.child1, body.dark .main_cantaner1>.child1>p, body.dark .cp1_child1>h1,body.dark .cp1_child1>p,body.dark .adventure > h1{
   color:#000;
   }
 

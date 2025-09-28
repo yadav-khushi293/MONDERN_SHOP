@@ -1,6 +1,8 @@
 let apiCart = "https://weather-app-6du4.onrender.com/cart";
 
 let allData = [];
+let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
+console.log(cartItems);
 let currentPage = 1;
 let itemsperPage = 5;
 
@@ -9,6 +11,7 @@ const apiCall = () => {
     .then((res) => res.json())
     .then((res) => {
       allData = res;
+      sessionStorage.setItem("cartItems", JSON.stringify(allData));
       showPage(currentPage);
       renderPagination();
     })
@@ -17,7 +20,10 @@ const apiCall = () => {
 
 const appenddata = (data) => {
   const datashow = document.querySelector("#cart_Products");
+  const cart_flex = document.createElement("div");
+  cart_flex.className = "cart_flex";
   datashow.innerHTML = "";
+  cart_flex.innerHTML = "";
 
   const table = document.createElement("table");
   table.innerHTML = `
@@ -33,6 +39,8 @@ const appenddata = (data) => {
 
   const tbody = table.querySelector("tbody");
 
+  let total = 0;
+
   data.forEach((el) => {
     const imageContainer = document.createElement("div");
     imageContainer.className = "imageContainer";
@@ -42,6 +50,9 @@ const appenddata = (data) => {
 
     const price = parseInt(el.price);
     const count = parseInt(el.count);
+    const subTotal = price * count;
+
+    total += subTotal;
 
     imgBox.innerHTML = `
     <img src="${el.img}" alt="Product Image" class="cart_img"/>
@@ -67,9 +78,34 @@ const appenddata = (data) => {
 <path d="M9.6,0l0,1.2H1.2v2.4h21.6V1.2h-8.4l0-1.2H9.6z M2.8,6l1.8,15.9C4.8,23.1,5.9,24,7.1,24h9.9c1.2,0,2.2-0.9,2.4-2.1L21.2,6H2.8z"></path>
 </svg>
       `;
+
     tbody.appendChild(imgBox);
-    datashow.append(table, tbody);
   });
+
+  let overallTotal = allData.reduce((acc, el) => {
+    return acc + parseFloat(el.price) * parseInt(el.count);
+  }, 0);
+
+  // reduce goes item by item, multiplies price × count, and adds it to a running total.
+
+  const cart_total = document.createElement("div");
+  cart_total.className = "cart_total";
+
+  cart_total.innerHTML = `
+  <h6>Cart Totals</h6>
+  <div class="subTotal">
+    <p>Subtotal</p>
+    <p>$${overallTotal}</p>
+  </div>
+  <div class="total">
+    <p>Total</p>
+    <p class="color">$${overallTotal}</p>
+  </div>
+  <button class="proceed">Proceed To Checkout</button>
+  `;
+
+  cart_flex.append(tbody, cart_total);
+  datashow.append(table, cart_flex);
 };
 
 const showPage = (page) => {
@@ -196,5 +232,19 @@ const updateCartCount = async () => {
     document.querySelector("#cart_count").innerText = cartItems.length;
   } catch (err) {
     console.log(err);
+  }
+};
+
+// Session Storage
+
+window.onload = () => {
+  let storedCart = sessionStorage.getItem("cartItems");
+  if (storedCart) {
+    allData = JSON.parse(storedCart);
+    showPage(currentPage);
+    renderPagination();
+    updateCartCount();
+  } else {
+    apiCall(); // if nothing stored, fetch from API
   }
 };
