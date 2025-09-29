@@ -1,0 +1,206 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* ==== start checkout_Contener1 ==== */
+
+.checkout_Contener1 {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 27px;
+  background-color: #f3f3f3;
+  margin-bottom: 50px;
+}
+
+/* ==== start checkout_Contener2 ==== */
+
+.checkout_Contener2 {
+  width: 100%;
+  display: flex;
+}
+
+/* ==== start checkout_Contener2 childDiv1 ==== */
+
+.childDiv1 {
+  width: 50%;
+  margin: 50px 20px;
+}
+
+.childDiv1 > h4,
+.checkoutForm > h4 {
+  font-size: 25px;
+  margin: 20px 0px;
+}
+
+.nameDiv {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nameDiv > span > label,
+.checkoutForm > label {
+  font-size: 20px;
+  font-weight: 600;
+  color: #8a8888;
+}
+
+.checkoutForm > label > span,
+.name_span > label > span {
+  font-size: 23px;
+  color: #e91309;
+  font-weight: bolder;
+}
+
+.checkoutForm > input,
+.name_span > input,
+.checkoutForm > select {
+  width: 100%;
+  font-size: 20px;
+  padding: 10px 10px;
+  outline: none;
+  color: #6a625a;
+  border: 3px solid #dddde2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.checkoutForm>select>option{
+    color: #fff;
+    background-color:#f5cb2a;
+}
+
+.name_span > input {
+  width: 380px;
+}
+
+.checkoutForm > input::placeholder,
+.checkoutForm > textarea::placeholder {
+  opacity: 0.7;
+}
+
+.checkoutForm > textarea {
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+  padding: 12px 12px;
+  color: #6a625a;
+  outline: none;
+  border: 3px solid #dddde2;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.checkoutForm > input:focus,
+.name_span > input:focus,
+.checkoutForm > textarea:focus,
+.checkoutForm > select:focus {
+  border: 3px solid #f5cb2a;
+  opacity: 1;
+}
+
+
+/* ==== start checkout_Contener2 childDiv2 ==== */
+
+.childDiv2 {
+  width: 50%;
+  height: 900px;
+  margin: 50px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid #dddde2;
+  position: sticky;
+  top: 0px;
+ 
+}
+
+.childDiv2>span{
+    width: 90%;
+  margin:20px 20px 20px 20px;
+}
+
+.childDiv2>span>h3{
+    font-size: 21px;
+    font-weight: bold;
+    color: #000;
+    margin:50px 0px 10px 0px;
+}
+
+.spanBox{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 600;
+    color: #464443; 
+     border-bottom: 3px solid #dddde2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0px;
+}
+
+.childDiv2>span>.Box_2, .Box_3, .Box_4, .Box_5{
+  color: #777876;
+}
+
+.childDiv2>span>.Box_2, .Box_3{
+  font-weight: normal;
+}
+
+.childDiv2>span>.Box_2, .Box_3, .Box_4{
+  border-bottom: 3px dotted #dddde2;
+}
+
+.childDiv2>span>.Box_5{
+  border: none;
+}
+
+.massageDiv{
+  width: 100%;
+  font-size: 20px;
+  color: #656565;
+  display: flex;
+  justify-content: space-between;
+  text-align: start;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: #f0f1f3;
+}
+
+.massageDiv>i{
+  font-size: 25px;
+  margin: 0px 20px;
+}
+
+.buttonDiv{
+  width: 100%;
+  font-size: 20px;
+  color: #656565;
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.buttonDiv>button{
+  width: 100%;
+  font-size:20px;
+  border-radius: 3px;
+  border: none;
+  padding: 15px;
+  margin-top: 30px;
+  color: #fffff3;
+  background-color: #000;
+}
+
+.buttonDiv>button:hover{
+  background-color: #e7b901;
+}
+
+.buttonDiv>p>a{
+    color:#e7b901 ;
+    text-decoration: none;
+}

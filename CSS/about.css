@@ -47,10 +47,6 @@ main {
 
 /* main contaner2 start */
 
-.main_cantaner2 {
-  background-color: #ffffff;
-}
-
 .m_cont2_child1 {
   display: flex;
   justify-content: space-evenly;
