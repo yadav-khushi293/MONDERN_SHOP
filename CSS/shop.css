@@ -17,7 +17,7 @@
   font-size: 50px;
 }
 
-.shop_page > #product {
+.product_child1 > #product {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
@@ -31,7 +31,7 @@
   width: 150px;
   float: right;
   margin-top: 50px;
-  margin-right: 150px;
+  margin-right: 70px;
   text-align: center;
 }
 
@@ -81,4 +81,93 @@
 .pageNum {
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.product_child2 {
+  display: none;
+  transition: all 0.7s ease-in-out;
+  width: 33%;
+  padding-top: 27px;
+  padding-right: 15px;
+}
+
+.product_child2 > h5 {
+  font-size: large;
+  opacity: 1;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.product_parent,
+.flexDiv,
+.flexDiv1 {
+  display: flex;
+  gap: 20px;
+}
+
+#top_rated_products1 {
+  margin-bottom: 50px;
+}
+
+#top_rated_products,
+#top_rated_products1 {
+  gap: 50px;
+}
+
+#top_rated_products,
+.gridDiv,
+#top_rated_products1,
+.gridDiv1 {
+  display: grid;
+  justify-items: start;
+  align-content: center;
+}
+
+.gridDiv > h5,
+.gridDiv > p,
+.gridDiv1 > h5,
+.gridDiv1 > p {
+  padding: 0;
+  text-transform: capitalize;
+}
+
+.gridDiv > h5:hover,
+.gridDiv1 > h5:hover {
+  color: #fda901ff;
+  cursor: pointer;
+}
+
+.gridDiv > h5,
+.gridDiv1 > h5 {
+  transition: all 0.3s ease-in-out;
+  font-size: large;
+  opacity: 0.7;
+}
+
+.gridDiv > p,
+.gridDiv1 > p {
+  padding-top: 5px;
+}
+
+.productImg,
+.productImg1 {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.product_child2 > input {
+  border: 2px solid #9a9e99;
+  width: 80%;
+  height: 40px;
+  border-radius: 5px;
+  margin: 20px 0;
+  padding: 0 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.product_child2 > input:hover,
+.product_child2 > input:focus {
+  border: 2px solid #fda901ff;
 }

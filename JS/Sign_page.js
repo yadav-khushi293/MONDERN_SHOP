@@ -1,10 +1,39 @@
 
-function myform(e) {
+const myform =async (e)=> {
     e.preventDefault();
      let userName = document.getElementById("user").value;
     let  email  = document.getElementById("email").value;
     let  password = document.getElementById("pass").value;
     let confirmPassword= document.getElementById("confpass").value;
+
+    const apiLogin = `https://weather-app-6du4.onrender.com/user`;
+
+
+    let userData = {
+       userName:userName,
+        email: email,
+        password: password,
+        confirmPassword:confirmPassword
+
+    }
+
+    try {
+        let res = await fetch(apiLogin, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        });
+        let data = await res.json();
+
+        if (data.accessToken) window.location.href = 'Login.html';
+
+    } catch (error) {
+        console.log('🚀 ~ error:', error);
+    }
+
+
 
 
 

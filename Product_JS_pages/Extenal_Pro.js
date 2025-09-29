@@ -138,8 +138,6 @@ skeletonCard.innerHTML = `
     <hr>
 `;
 
-
-
 pagi.append(mainDiv,thumbsDiv);
  informationdiv.append(title, price, category, description,skeletonCard);
     imgdiv.append(pagi);
@@ -163,12 +161,10 @@ description_text.innerHTML = `
     </div>
 
     <h3 class="hading_3">Related products</h3>
+    
 `;
 
 datashow.append(description_text);
-
-
-
 
 // ----------  New: Show next 6 images only ----------
     const imageContainer = document.createElement('div');

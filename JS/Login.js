@@ -33,11 +33,43 @@ $(document).ready(function () {
 
 ///vailidation
 
-function validateUserForm(e) {
+const validateUserForm=async(e)=> {
   e.preventDefault();
 
   let email = document.getElementById("user_email").value;
   let password = document.getElementById("user_pass").value;
+
+    const apiLogin = `https://weather-app-6du4.onrender.com/user`;
+
+
+    let userData = {
+        email,
+        password
+    }
+
+    try {
+        let res = await fetch(apiLogin, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(userData)
+        });
+        let data = await res.json();
+
+        if (token) {
+            alert('you have token please go to home page...')
+            return;
+        }
+        else if (data.accessToken) {
+            sessionStorage.setItem("token", JSON.stringify(data.accessToken));
+            window.location.href = `index.html`;
+        }
+        else if (data === 'Cannot find user') { alert("data coudn't found"); window.location = 'Sign_page.html' }
+
+    } catch (error) {
+        console.log('🚀 ~ error:', error);
+    }
 
   // Email validation
   if (email == "") {
