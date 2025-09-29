@@ -340,16 +340,17 @@ html {
 
 .cart_num{
 position: absolute;
-right: 203px;
+right: 203.5px;
 top: 57px;
   border-radius: 50%;
   background-color: #fda901ff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
-  padding: 2px;
+  padding: 1px;
   width: 17px;
   height: 17px;
+  color: #000;
 }
 
 /* Day-night-mode*/
