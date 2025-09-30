@@ -29,7 +29,7 @@
 
 .childDiv1 {
   width: 50%;
-  margin: 50px 20px;
+  margin: 50px 0px 0px 80px;
 }
 
 .childDiv1 > h4,
@@ -70,13 +70,19 @@
   font-weight: 500;
 }
 
-.checkoutForm>select>option{
-    color: #fff;
-    background-color:#f5cb2a;
+.checkoutForm > select:hover{
+  text-decoration: none;
+  color: #6a625a;
+}
+
+
+.checkoutForm > select > option {
+  color:#6a625a;
+   text-align: start;
 }
 
 .name_span > input {
-  width: 380px;
+  width: 350px;
 }
 
 .checkoutForm > input::placeholder,
@@ -104,63 +110,67 @@
   opacity: 1;
 }
 
-
 /* ==== start checkout_Contener2 childDiv2 ==== */
 
 .childDiv2 {
   width: 50%;
-  height: 900px;
-  margin: 50px 20px;
+  height: 1000px;
+  margin: 50px 80px;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 3px solid #dddde2;
   position: sticky;
   top: 0px;
- 
 }
 
-.childDiv2>span{
-    width: 90%;
-  margin:20px 20px 20px 20px;
+.childDiv2 > span {
+  width: 90%;
+  margin: 20px;
 }
 
-.childDiv2>span>h3{
-    font-size: 21px;
-    font-weight: bold;
-    color: #000;
-    margin:50px 0px 10px 0px;
+.childDiv2 > span > h3 {
+  font-size: 21px;
+  font-weight: bold;
+  color: #000;
+  margin: 50px 0px 10px 0px;
 }
 
-.spanBox{
-    width: 100%;
-    font-size: 20px;
-    font-weight: 600;
-    color: #464443; 
-     border-bottom: 3px solid #dddde2;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 0px;
+.spanBox {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  color: #464443;
+  border-bottom: 3px solid #dddde2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0px;
 }
 
-.childDiv2>span>.Box_2, .Box_3, .Box_4, .Box_5{
+.childDiv2 > span > .Box_2,
+.Box_3,
+.Box_4,
+.Box_5 {
   color: #777876;
 }
 
-.childDiv2>span>.Box_2, .Box_3{
+.childDiv2 > span > .Box_2,
+.Box_3 {
   font-weight: normal;
 }
 
-.childDiv2>span>.Box_2, .Box_3, .Box_4{
+.childDiv2 > span > .Box_2,
+.Box_3,
+.Box_4 {
   border-bottom: 3px dotted #dddde2;
 }
 
-.childDiv2>span>.Box_5{
+.childDiv2 > span > .Box_5 {
   border: none;
 }
 
-.massageDiv{
+.massageDiv {
   width: 100%;
   font-size: 20px;
   color: #656565;
@@ -172,12 +182,12 @@
   background-color: #f0f1f3;
 }
 
-.massageDiv>i{
+.massageDiv > i {
   font-size: 25px;
   margin: 0px 20px;
 }
 
-.buttonDiv{
+.buttonDiv {
   width: 100%;
   font-size: 20px;
   color: #656565;
@@ -185,22 +195,22 @@
   margin: 30px 0px;
 }
 
-.buttonDiv>button{
+.buttonDiv > button {
   width: 100%;
-  font-size:20px;
-  border-radius: 3px;
+  font-size: 20px;
+  border-radius:3px;
   border: none;
   padding: 15px;
-  margin-top: 30px;
+  margin: 30px 0px 0px 0px;
   color: #fffff3;
   background-color: #000;
 }
 
-.buttonDiv>button:hover{
+.buttonDiv > button:hover {
   background-color: #e7b901;
 }
 
-.buttonDiv>p>a{
-    color:#e7b901 ;
-    text-decoration: none;
+.buttonDiv > p > a {
+  color: #e7b901;
+  text-decoration: none;
 }

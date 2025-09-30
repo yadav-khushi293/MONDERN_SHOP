@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+     <link rel="stylesheet" href="../CSS/footer.css">
     <link rel="stylesheet" href="../CSS/checkout.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 </head>
 
 <body>
+     <header class="header"></header>
     <div class="checkoutMainDiv">
         <div class="checkout_Contener1">
             <h2>Checkout</h2>
@@ -109,12 +111,60 @@
                 </span>
             </div>
         </div>
-
-
-
-
     </div>
-
+    <footer class="footers"></footer>
 </body>
+<script type="module">
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
+     document.querySelector('.header').innerHTML = Navbar();
+
+    document.querySelector('body').addEventListener('load', typePlaceholder());
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('.footers').innerHTML = Footers();
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+//Day-Night-mode-code
+      const body = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      // Default: Light mode (no class)
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+      });
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100);
+    </script>
 </html>
