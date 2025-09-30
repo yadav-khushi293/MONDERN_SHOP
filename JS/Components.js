@@ -60,15 +60,17 @@ export const Navbar = () => {
                 </div>
                 <div class="child3">
                     <input type="text" name="search" id="search">
+<div class="cart_login">
   <a href="../HTML/Login.html">
    <svg class="icon profile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+   </a>
 <svg class="icon cart" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <!-- Rectangle for main bag shape -->
   <rect x="6" y="10" width="20" height="16" rx="2" fill="currentColor"/>
   <!-- Left handle (arc) -->
   <path d="M10 10 a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2"/>
 </svg>
-</a>
+</div>
 <span class="cart_num" id="cart_count"></span>
         <div class="btn" id="toggleBtn">
             <strong>🌙</strong>
@@ -340,7 +342,7 @@ html {
 
 .cart_num{
 position: absolute;
-right: 203.5px;
+right: 247px;
 top: 57px;
   border-radius: 50%;
   background-color: #fda901ff;
@@ -419,7 +421,7 @@ body.dark .form_box>label{
   cursor: pointer;
   border-radius: 50%;
   transition: background 0.3s, color 0.3s;
-  margin: 0 3px;
+  margin: 0 5px;
 }
 
 // body.dark .btn {
