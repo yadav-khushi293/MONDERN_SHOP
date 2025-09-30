@@ -1,0 +1,191 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cart_page > h3 {
+  text-align: center;
+  font-size: xx-large;
+  padding: 70px 0;
+  height: 35vh;
+  margin-bottom: 50px;
+  background-color: #f4f4f4;
+}
+
+.prevBtn,
+.nextBtn {
+  font-weight: 700;
+  font-size: medium;
+  margin: 0 10px;
+  width: 50px;
+  height: 40px;
+  padding: 5px;
+}
+
+.pageNum {
+  font-weight: 700;
+}
+
+#pagination {
+  margin: 50px;
+}
+
+#cart_Products,
+.cart_desc {
+  display: grid;
+  align-content: center;
+}
+
+.cart_desc {
+  gap: 10px;
+  width: 40%;
+}
+
+tr {
+  width: 61.5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 15px 50px;
+  gap: 210px;
+  padding: 10px 0;
+  border-bottom: 3px solid #f4f4f4;
+}
+
+.imgBox {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 20px;
+  margin-left: 50px;
+  padding: 10px 0;
+  width: 75%;
+}
+
+.imgBox > p {
+  text-align: center;
+  margin-left: 160px;
+  margin-right: 15px;
+  color: #000;
+}
+
+.delete_img,
+.cart_img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.delete_img {
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+.delete_img:hover {
+  fill: red;
+}
+
+.btns {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+  color: #000;
+  padding: 0;
+}
+
+.btn_border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 2px solid #000;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.upadteButton {
+  text-align: right;
+  width: 62%;
+  margin-top: 10px;
+}
+
+.upadteButton > button {
+  width: 150px;
+  height: 50px;
+  padding: 10px 20px;
+  font-size: large;
+  font-weight: 700;
+}
+
+.cart_flex {
+  display: flex;
+  align-items: start;
+}
+
+tbody {
+  /* border: 2px solid red; */
+  width: 70%;
+}
+
+.cart_total {
+  width: 27%;
+  border: 3px solid #f5f5f7;
+  margin-right: 60px;
+  display: grid;
+  align-content: center;
+  gap: 20px;
+  padding: 25px;
+  position: relative;
+  top: -61px;
+}
+
+.cart_total > h6 {
+  margin-bottom: 10px;
+}
+
+.subTotal,
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subTotal {
+  padding: 20px 0;
+  border-bottom: 2px solid #f4f4f4;
+}
+
+.total {
+  margin-bottom: 30px;
+}
+
+.subTotal > p,
+.total > p {
+  color: #000;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.color {
+  opacity: 1 !important;
+}
+
+.proceed {
+  text-align: center;
+  width: 100%;
+  height: 45px;
+}
+
+#pagination button.active {
+  background-color: #000;
+  color: #fff;
+}
+
+#pagination button:disabled {
+  opacity: 0.8;
+  background-color: #9a9e99;
+  color: #000;
+  cursor: not-allowed;
+}

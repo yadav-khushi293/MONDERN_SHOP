@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Product_CSS_pages/Simple_Pro.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-      <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-</head>
-<body onload="ApiCall()">
-    
-    <header class="header"></header>
-    <div id="simple_product"></div>
-
-      <footer class="footers"></footer>
-
-</body>
-<script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shop Page</title>
+        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../CSS/footer.css">
+        <link rel="stylesheet" href="../CSS/Cart.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    </head>
+    <body onload="apiCall()">
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <header class="header"></header>
+        <div class="cart_page">
+            <h3>Cart</h3>
+            <div id="cart_Products"></div>
+            <div id="pagination"></div>
+        </div>
+        <footer class="footers"></footer>
+    </body>
+    <script src="../JS/Cart.js"></script>
+    <script type="module">
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, contactPage, goHome, aboutPage,shopPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
 
@@ -38,11 +46,11 @@ document.querySelector(".aboutPage").addEventListener('click',()=>{
 document.querySelector(".productPage").addEventListener('click',()=>{
     productPage();
 })
-document.querySelector(".shopPage").addEventListener('click',()=>{
-    shopPage();
-})
 document.querySelector(".contactPage").addEventListener('click',()=>{
     contactPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
 })
 
 //Day-Night-mode-code
@@ -69,5 +77,4 @@ const toTop = document.querySelector(".to-top");
         setActiveNav();
     }, 100);
     </script>
-    <script src="../Product_JS_pages/Grouped_Pro.js"></script>
 </html>

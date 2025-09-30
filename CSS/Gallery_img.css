@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Dancing+Script:wght@400..700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pacifico&family=Playwrite+HU:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+}
+.masonry_container {
+  width: 1450px;
+  margin: 20px auto;
+  column-count: 3;
+  column-gap: 10px;
+}
+
+/* Image wrapper */
+.img_div {
+  break-inside: avoid;
+  margin-bottom: 20px;
+}
+
+/* Default image size */
+.img_1 {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  border: 1px solid rgb(241, 197, 212);
+}
+
+/* Extra size classes for variation */
+.img_small {
+  height: 500px;
+  object-fit: cover;
+}
+
+.img_medium {
+  height: 600px;
+  object-fit: cover;
+}
+
+.img_large {
+  height: 700px;
+  object-fit: cover;
+}
+
+/* Add smooth hover effect to images */
+.img_1 {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.img_1:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  opacity: 0.6;
+}
