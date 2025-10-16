@@ -71,40 +71,16 @@ function formFunc(e) {
   }
 }
 
-// Search Function
+// Cart Number
 
-let api = "https://weather-app-6du4.onrender.com/shop";
+let apiCart = "https://weather-app-6du4.onrender.com/cart";
 
-const searchFunc = async () => {
-  const query = document.querySelector("#search").value.trim().toLowerCase();
-  if (!query) return;
-
+const updateCartCount = async () => {
   try {
-    let [searchFetch] = await Promise.all([fetch(api)]);
-    const filter = document.querySelector("#filter");
-    filter.style.display = "none";
-    const pagination = document.querySelector("#pagination");
-    pagination.style.display = "none";
-    const [data1] = await Promise.all([searchFetch.json()]);
-
-    const filtered = await data1.filter(
-      (item) =>
-        item.title.toLowerCase().includes(query) ||
-        item.category.toLowerCase().includes(query) ||
-        item.description.toLowerCase().includes(query)
-    );
-    appenddata(filtered);
-    document.querySelector("#search").value = "";
+    let res = await fetch(apiCart);
+    let cartItems = await res.json();
+    document.querySelector("#cart_count").innerText = cartItems.length;
   } catch (err) {
-    console.error("Search failed:", err);
+    console.log(err);
   }
 };
-
-window.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.querySelector("#search");
-  if (searchInput) {
-    searchInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") searchFunc();
-    });
-  }
-});
