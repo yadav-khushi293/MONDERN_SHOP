@@ -539,6 +539,10 @@ body.dark .btn strong:nth-child(2) {
   margin: 0;
   box-shadow: none;
   }
+  .cart_num.not-charging {
+    right: 0;
+    top: 21px;
+  }
     .child1,
     #search,
     .profile,
@@ -548,68 +552,6 @@ body.dark .btn strong:nth-child(2) {
     .video_container,
     .deal_child2{
     display: none;
-    }
-    .parent_child1{
-    height: 80px;
-    padding: 15px;
-    border-bottom: 1px solid rgb(222, 220, 220);
-    }
-    .child2{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    }
-    .cart_num.not-charging{
-    right: 0;
-    top: 21px;
-    }
-    .parent1{
-    padding: 15px;
-    gap: 0;
-    height: auto;
-    }
-    .hot_discount{
-    top: 0;
-    padding: 0;
-    z-index: 0;
-    display: grid;
-    height: auto;
-    }
-    .backpack_parent, .imageContainer, .imageContainer1, .clients_parent,.discount_child1d{
-    display: grid;
-    }
-    .deal{
-    height: auto;
-    width: 100%;
-    margin: 20px;
-    }
-    .deal_child1{
-    margin: 20px;
-    }
-    .clients_parent{
-    gap: 10px;
-    }
-    .clients_child1, .clients_child2, .clients_child3{
-    margin: 20px 0;
-    }
-    .clients_child3{
-    margin-bottom: 70px;
-    }
-    h1{
-    padding-top: 50px;
-    font-size: 29px;
-    text-align: center;
-    }
-    h5{
-    text-align: center;
-    }
-    button, .child2 > svg{
-    width: 60%;
-    display: block;
-    margin: auto;
-    }
-    .hot_discount{
-    width: 100%;
     }
     }
  `;
