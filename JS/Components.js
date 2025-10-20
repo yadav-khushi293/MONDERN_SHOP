@@ -38,6 +38,7 @@ export const Navbar = () => {
                     </svg>
                 </div>
                 <div class="child2">
+                  <img src="../Utils/Menu.svg" alt="Menu" class="nav_menu">
                 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 191 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
@@ -116,6 +117,9 @@ export const Navbar = () => {
 
 export const NavStyle = () => {
   return `
+  .nav_menu{
+  display: none;
+  }
  .main_parent {
   padding: 20px 70px;
   background-color:#fff;
@@ -355,6 +359,11 @@ top: 57px;
   color: #000;
 }
 
+.cart_num.not-charging{
+  right: 209px;
+  top: 55px;
+}
+
 /* Day-night-mode*/
 
 body {
@@ -520,6 +529,89 @@ body.dark .btn strong:nth-child(2) {
       visibility: visible;
       transform: translateY(0);
     }
+
+    @media (max-width: 320px){
+    .nav_menu{
+  display: inline-block;
+    }
+  .main_parent{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  }
+    .child1,
+    #search,
+    .profile,
+    .battery,
+    #toggleBtn,
+    .parent_child2,
+    .video_container,
+    .deal_child2{
+    display: none;
+    }
+    .parent_child1{
+    height: 80px;
+    padding: 15px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+    }
+    .child2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .cart_num.not-charging{
+    right: 0;
+    top: 21px;
+    }
+    .parent1{
+    padding: 15px;
+    gap: 0;
+    height: auto;
+    }
+    .hot_discount{
+    top: 0;
+    padding: 0;
+    z-index: 0;
+    display: grid;
+    height: auto;
+    }
+    .backpack_parent, .imageContainer, .imageContainer1, .clients_parent,.discount_child1d{
+    display: grid;
+    }
+    .deal{
+    height: auto;
+    width: 100%;
+    margin: 20px;
+    }
+    .deal_child1{
+    margin: 20px;
+    }
+    .clients_parent{
+    gap: 10px;
+    }
+    .clients_child1, .clients_child2, .clients_child3{
+    margin: 20px 0;
+    }
+    .clients_child3{
+    margin-bottom: 70px;
+    }
+    h1{
+    padding-top: 50px;
+    font-size: 29px;
+    text-align: center;
+    }
+    h5{
+    text-align: center;
+    }
+    button, .child2 > svg{
+    width: 60%;
+    display: block;
+    margin: auto;
+    }
+    .hot_discount{
+    width: 100%;
+    }
+    }
  `;
 };
 
@@ -599,10 +691,16 @@ export const typePlaceholder = () => {
 navigator.getBattery().then(function (battery) {
   function updateBattery() {
     const level = Math.floor(battery.level * 100);
+    const cartNum = document.querySelector(".cart_num");
     document.getElementById("level").style.width = level + "%";
     document.getElementById("info").innerText = `${level}% ${
       battery.charging ? "Charging" : ""
     }`;
+    if (battery.charging) {
+      cartNum.classList.remove("not-charging");
+    } else {
+      cartNum.classList.add("not-charging");
+    }
   }
   updateBattery();
 
