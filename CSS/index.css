@@ -549,18 +549,15 @@ button:hover {
   .discount_child2 > p > br {
     display: none;
   }
-  .parent_child1 {
-    height: 80px;
-    padding: 15px;
-    border-bottom: 1px solid rgb(222, 220, 220);
-  }
   .child2 {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
   }
   .parent1 {
-    padding: 150px 15px;
+    padding: 100px 15px;
+    padding-bottom: 150px;
     gap: 0;
     height: auto;
   }
@@ -605,8 +602,7 @@ button:hover {
   h5 {
     text-align: center;
   }
-  button,
-  .child2 > svg {
+  button {
     width: 60%;
     display: block;
     margin: auto;

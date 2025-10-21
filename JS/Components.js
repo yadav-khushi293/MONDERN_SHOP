@@ -58,6 +58,7 @@ export const Navbar = () => {
         </g>
     </g>
 </svg>
+<img src="../Utils/Logo(320px).svg" alt="Logo" class="logo_mobile"/>
                 </div>
                 <div class="child3">
                     <input type="text" name="search" id="search">
@@ -209,6 +210,10 @@ select {
     padding: 5px 0;
   opacity: 0.8;
   background-color:#fff;
+}
+
+.logo_mobile{
+display: none;
 }
 
 /* Battery Css */
@@ -531,17 +536,19 @@ body.dark .btn strong:nth-child(2) {
     }
 
     @media (max-width: 320px){
-    .nav_menu{
+    .nav_menu,.logo_mobile{
   display: inline-block;
     }
   .main_parent{
   padding: 0;
   margin: 0;
   box-shadow: none;
+  height: auto;
+  width: 100%;
   }
   .cart_num.not-charging {
-    right: 0;
-    top: 21px;
+    right: 3px;
+    top: 19px;
   }
     .child1,
     #search,
@@ -550,10 +557,22 @@ body.dark .btn strong:nth-child(2) {
     #toggleBtn,
     .parent_child2,
     .video_container,
-    .deal_child2{
+    .deal_child2,
+    .child2 > svg{
     display: none;
     }
-    }
+  .logo_mobile {
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: 35px;
+  }
+  .parent_child1 {
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+  }
+  }
  `;
 };
 
