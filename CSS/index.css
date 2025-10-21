@@ -545,7 +545,8 @@ button:hover {
 @media (max-width: 320px) {
   .parent_child2,
   .video_container,
-  .deal_child2 {
+  .deal_child2,
+  .discount_child2 > p > br {
     display: none;
   }
   .parent_child1 {
@@ -559,7 +560,7 @@ button:hover {
     align-items: center;
   }
   .parent1 {
-    padding: 15px;
+    padding: 150px 15px;
     gap: 0;
     height: auto;
   }
@@ -612,5 +613,97 @@ button:hover {
   }
   .hot_discount {
     width: 100%;
+  }
+  .discount_child1,
+  .discount_child2 {
+    width: 90%;
+    margin: auto;
+    /* border: 2px solid red; */
+  }
+  .discount_child1 {
+    margin-top: -70px;
+    padding: 30px 20px;
+  }
+  .discount_child1d {
+    justify-items: center;
+    align-content: center;
+  }
+  .discount_child1a {
+    width: 100%;
+  }
+  .discount_child1a > img {
+    display: block;
+    width: 45%;
+    margin: auto;
+    object-fit: fill;
+    /* border: 2px solid red; */
+    height: auto;
+  }
+  .discount_child1b {
+    text-align: center;
+    padding-top: 5px;
+  }
+  .discount_child1b > h5 {
+    font-size: 19px;
+    padding: 5px 0;
+  }
+  .discount_child1b > p {
+    color: #000;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+  }
+  .discount_child1c > h3 {
+    padding: 0;
+    padding-top: 30px;
+    font-size: 29px;
+    text-align: center;
+  }
+  .discount_child1c > p {
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.8;
+  }
+  .discount_child2 {
+    height: 75vh;
+    padding: 33px;
+    background-position: right;
+  }
+  .discount_child2 > h3 {
+    font-size: 30px;
+    font-weight: 900;
+    text-align: center;
+  }
+  .discount_child2 > p {
+    font-size: 19px;
+    text-align: center;
+    font-weight: 100;
+  }
+  .discount_child2 > button {
+    padding: 15px 41px;
+    font-size: 19px;
+    width: 90%;
+    height: auto;
+  }
+  .backpack > h4 {
+    padding-top: 50px;
+    font-size: 27px;
+  }
+  .backpack > p {
+    font-size: 17px;
+    color: #000;
+    opacity: 0.7;
+    padding: 5px 0;
+    padding-bottom: 35px;
+  }
+  .backpack_parent {
+    padding: 0 21px;
+  }
+  .backpack_child1,
+  .backpack_child2,
+  .backpack_child3,
+  .backpack_child4 {
+    width: 100%;
+    height: 95vh;
+    background-size: auto;
   }
 }
