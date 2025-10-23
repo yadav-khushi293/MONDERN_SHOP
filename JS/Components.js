@@ -292,7 +292,7 @@ html {
 }
 
 .to-top {
-  background: black;
+  background: #000;
   position: fixed;
   bottom: 16px;
   right: 32px;
@@ -307,7 +307,7 @@ html {
   text-decoration: none;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.4s;
+  transition: all 0.2s ease-in-out;
   z-index: 100;
 }
 
@@ -411,6 +411,10 @@ body.dark #M{
 fill: #000;
 }
 
+// body.dark  .to-top{
+// background: #fff;
+// }
+
 body.dark #search{
 border: 3px solid #fda901ff;
 }
@@ -447,7 +451,9 @@ body.dark .form_box>label{
 body.dark .nav-link
 body.dark .adventure > h1,
 body.dark .collection_text,
-body.dark .discount_child1{
+body.dark .discount_child1
+// body.dark .fas
+{
 color:#000;
 }
 
@@ -535,7 +541,7 @@ body.dark .btn strong:nth-child(2) {
       transform: translateY(0);
     }
 
-    @media (max-width: 320px){
+@media (max-width: 320px){
     .nav_menu,.logo_mobile{
   display: inline-block;
     }
@@ -572,6 +578,93 @@ body.dark .btn strong:nth-child(2) {
     padding: 20px;
     border-bottom: 1px solid rgb(222, 220, 220);
   }
+    .to-top{
+    right: 13px;
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 430px){
+    .nav_menu,.logo_mobile{
+  display: inline-block;
+    }
+  .main_parent{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  height: auto;
+  width: 100%;
+  }
+  .cart_num.not-charging {
+    right: 3px;
+    top: 19px;
+  }
+    .child1,
+    #search,
+    .profile,
+    .battery,
+    #toggleBtn,
+    .parent_child2,
+    .video_container,
+    .deal_child2,
+    .child2 > svg{
+    display: none;
+    }
+  .logo_mobile {
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: 35px;
+  }
+  .parent_child1 {
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+  }
+    .to-top{
+    right: 13px;
+    }
+  }
+
+  @media (min-width: 431px) and (max-width: 840px){
+    .nav_menu,.logo_mobile{
+  display: inline-block;
+    }
+  .main_parent{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  height: auto;
+  width: 100%;
+  }
+  .cart_num.not-charging {
+    right: 3px;
+    top: 19px;
+  }
+    .child1,
+    #search,
+    .profile,
+    .battery,
+    #toggleBtn,
+    .parent_child2,
+    .video_container,
+    .deal_child2,
+    .child2 > svg{
+    display: none;
+    }
+  .logo_mobile {
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: 35px;
+  }
+  .parent_child1 {
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+  }
+    .to-top{
+    right: 13px;
+    }
   }
  `;
 };
