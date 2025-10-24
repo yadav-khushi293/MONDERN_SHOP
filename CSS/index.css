@@ -1087,16 +1087,19 @@ button:hover {
   .backpack_parent,
   .imageContainer,
   .imageContainer1,
-  .clients_parent,
-  .client_profile {
+  .clients_parent {
     display: grid;
   }
+  .imageContainer,
+  .imageContainer1 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
   .deal {
-    height: 80vh;
     width: 90%;
     margin: 50px auto;
     display: block;
-    padding: 30px 30px;
+    padding: 30px;
   }
   .deal_child1 {
     margin: 20px 15px;
@@ -1108,7 +1111,7 @@ button:hover {
   .clients_child1,
   .clients_child2,
   .clients_child3 {
-    text-align: center;
+    height: auto;
     padding: 20px 30px;
     padding-top: 50px;
     margin: auto;
@@ -1121,9 +1124,6 @@ button:hover {
   }
   .clients_child3 {
     margin-bottom: 70px;
-  }
-  .client_profile {
-    justify-content: center;
   }
   h1 {
     padding: 11px 50px;
@@ -1195,10 +1195,24 @@ button:hover {
     height: 12vh;
     margin: auto 60px;
   }
-  .backpack > h4 {
+  .backpack > h4,
+  .feature > h4,
+  .popular > h4,
+  .clients > h4 {
     padding-top: 70px;
     font-size: 40px;
   }
+  .feature > h4,
+  .popular > h4,
+  .clients > h4 {
+    margin-top: 0;
+  }
+  .popular > h4 {
+    padding-top: 30px;
+  }
+  .feature > p,
+  .popular > p,
+  .clients > p,
   .backpack > p {
     font-size: 17px;
     color: #000;
@@ -1243,30 +1257,14 @@ button:hover {
   }
   .feature {
     margin: 15px 0;
-    margin-top: 100px;
     padding: 0;
-  }
-  .feature > h4,
-  .popular > h4,
-  .clients > h4 {
-    font-size: 29px;
-  }
-  .feature > p,
-  .popular > p,
-  .clients > p {
-    font-size: 19px;
-    color: #000;
-    opacity: 0.75;
-    letter-spacing: 0.5px;
-    margin: auto;
-    display: block;
-    width: 90%;
   }
   #product,
   #popular_products {
     display: grid;
     justify-items: center;
     align-content: center;
+    margin: 0;
     gap: 20px;
   }
   .imgbox > h5,
@@ -1285,20 +1283,22 @@ button:hover {
     padding: 0;
   }
   .deal_child1 > h5 {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 400;
     padding: 30px 0;
   }
   .deal_child1 > button {
-    width: 100%;
-    height: 15vh;
-    padding: 15px 30px;
+    width: 37%;
+    height: 11vh;
+    font-size: medium;
+  }
+  .clients {
+    margin-top: 30px;
   }
   .clients_child1 > p,
-  .client_child1 > p,
   .client_text > p {
     font-weight: normal;
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0.5px;
   }
 }
