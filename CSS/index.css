@@ -17,6 +17,7 @@
   justify-content: left;
   align-items: center;
   gap: 220px;
+  background-repeat: no-repeat;
 }
 
 .ugb-custom-icon {
@@ -142,7 +143,6 @@ button:hover {
   padding-left: 70px;
   display: flex;
   justify-content: center;
-  align-items: left;
   flex-direction: column;
   gap: 20px;
 }
@@ -433,7 +433,6 @@ button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-style: 700;
 }
 
 .deal_child2 > h4 {
@@ -1300,5 +1299,168 @@ button:hover {
     font-weight: normal;
     font-size: 17px;
     letter-spacing: 0.5px;
+  }
+}
+
+@media (min-width: 841px) and (max-width: 1340px) {
+  .collection_text > h1 > br,
+  .collection_text > h5 > br,
+  .discount_child1c > h3 > br,
+  .discount_child1c > p > br,
+  .discount_child2 > p > br,
+  .deal_child1 > h5 > br {
+    display: none;
+  }
+  .child2 > svg {
+    margin: 0;
+  }
+  .parent1 {
+    gap: 50px;
+    justify-content: center;
+    height: 170vh;
+    padding: 150px 50px;
+    background-size: cover;
+  }
+  .collection_text > h1 {
+    margin-right: 50px;
+  }
+  .collection_text > h5 {
+    margin-right: 110px;
+    font-size: 17px;
+  }
+  .video_container {
+    margin: 0;
+    margin-right: 140px;
+    margin-top: -130px;
+  }
+  .hot_discount {
+    top: -70px;
+    padding: 0 50px;
+    height: auto;
+  }
+  .discount_child1 {
+    padding: 70px 30px;
+  }
+  .discount_child1d {
+    gap: 21px;
+    padding-bottom: 40px;
+  }
+  .discount_child1a > img {
+    width: 45px;
+    height: 45px;
+  }
+  .discount_child1b > h5 {
+    font-size: 19px;
+  }
+  .discount_child1b > p {
+    color: #000;
+    font-size: 19px;
+    opacity: 0.7;
+    margin-right: 50px;
+  }
+  .discount_child1c > p {
+    margin-right: 40px;
+    font-weight: 500;
+    letter-spacing: 0.2px;
+  }
+  .discount_child2 {
+    padding-top: 5px;
+    background-position: right;
+  }
+  .discount_child2 > p {
+    font-size: 17px;
+    padding-right: 70px;
+    padding-top: 5px;
+    font-weight: 400;
+  }
+  .discount_child2 > button {
+    font-size: large;
+    padding: 0;
+  }
+  .backpack {
+    margin-top: 50px;
+  }
+  .backpack > h4,
+  .popular > h4,
+  .clients > h4,
+  .feature > h4 {
+    font-size: 41px;
+  }
+  .clients > p,
+  .popular > p,
+  .backpack > p,
+  .feature > p {
+    font-size: 19px;
+    color: #000;
+    opacity: 0.8;
+  }
+  .backpack_parent {
+    padding: 0;
+    margin: auto;
+    width: 90%;
+  }
+  .backpack_child1,
+  .backpack_child2,
+  .backpack_child3,
+  .backpack_child4 {
+    padding: 25px;
+    height: 95vh;
+  }
+  .backpack_child1 > h5,
+  .backpack_child2 > h5,
+  .backpack_child3 > h5,
+  .backpack_child4 > h5 {
+    font-size: larger;
+    padding: 0 15px;
+  }
+  .backpack_child1 > p,
+  .backpack_child2 > p,
+  .backpack_child3 > p,
+  .backpack_child4 > p {
+    font-size: medium;
+    letter-spacing: 0.3px;
+    padding: 15px;
+  }
+  .imageContainer,
+  .imageContainer1,
+  #product,
+  #popular_products {
+    margin: auto;
+    width: 95%;
+  }
+  .imgbox > img,
+  .imgbox1 > img {
+    height: 277px;
+  }
+  .imgbox > button,
+  .imgbox1 > button {
+    width: 119px;
+    height: 40px;
+    font-size: 15px;
+    padding: 5px 15px;
+  }
+  .deal {
+    height: 75vh;
+    width: 90%;
+    padding: 0 75px;
+  }
+  .deal_child1 > h2 {
+    padding-top: 20px;
+  }
+  .deal_child1 > h5 {
+    padding-top: 30px;
+    padding-right: 90px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+  }
+  .deal_child1 > button {
+    font-size: 19px;
+    width: 225px;
+    height: 57px;
+    padding: 13px 21px;
+    font-weight: 500;
+  }
+  .deal_child2 > h4 {
+    font-size: 15px;
   }
 }
