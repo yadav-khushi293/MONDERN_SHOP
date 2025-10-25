@@ -1463,4 +1463,72 @@ button:hover {
   .deal_child2 > h4 {
     font-size: 15px;
   }
+  .clients_parent {
+    width: 90%;
+    margin: auto;
+  }
+  .client_img > img {
+    width: 30px;
+    height: 30px;
+  }
+  .client_text > p {
+    font-size: 17px;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 2560px) {
+  p {
+    color: #000;
+    opacity: 0.7;
+  }
+  .parent1 {
+    padding: 0;
+    width: 100%;
+    height: 63vh;
+    background-size: cover;
+    background-position: left;
+    justify-content: center;
+  }
+  .collection_text {
+    margin-top: -170px;
+    margin-left: -150px;
+  }
+  .collection_text > h1 {
+    padding: 50px 0;
+    padding-bottom: 30px;
+  }
+  .collection_text > h5 {
+    font-weight: 700;
+    color: #000;
+    opacity: 0.7;
+  }
+  .collection_text > button {
+    margin: 30px 0;
+  }
+  .video_container {
+    margin-top: -250px;
+  }
+  .hot_discount {
+    height: 45vh;
+    padding: 0;
+    margin: auto;
+    width: 55%;
+  }
+  .discount_child1 {
+    padding: 50px;
+  }
+  .discount_child1d {
+    padding: 30px;
+  }
+  .discount_child1c > h3 {
+    padding: 20px 37px;
+  }
+  .discount_child1c > p {
+    padding: 15px 30px;
+    padding-top: 7px;
+  }
+  .discount_child2 {
+    background-position: right;
+  }
 }
