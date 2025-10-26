@@ -189,3 +189,7 @@ tbody {
   color: #000;
   cursor: not-allowed;
 }
+
+.footers {
+  display: none;
+}

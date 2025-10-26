@@ -829,6 +829,7 @@ export const productPage = () => {
 };
 
 // Highlight Active Nav Item
+
 export const setActiveNav = () => {
   // Get current page name (like index.html, Login.html, Cart.html)
   let currentPage = window.location.pathname.split("/").pop().toLowerCase();
@@ -962,26 +963,42 @@ export const Shop = () => {
   const productParent = document.querySelector(".product_child2");
   const product = document.querySelector(".product_parent");
   const filter = document.querySelector("#filter");
+  const adventure = document.querySelector(".adventure");
+
+  const resetLayout = () => {
+    productParent.style.display = "block";
+    adventure.style.display = "none";
+    product.style.flexDirection = "row";
+    product.style.marginLeft = "0";
+    filter.style.marginRight = "0";
+  };
 
   // When clicking Shop ▼ → hide products
   document.querySelector("#shop").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
     productParent.style.display = "none";
+    adventure.style.display = "block";
     filter.style.marginRight = "73px";
   });
 
   // When clicking Right Sidebar → show products
   document.querySelector("#right").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
+    resetLayout();
     productParent.style.display = "block";
+    adventure.style.display = "none";
+    filter.style.marginRight = "55px";
   });
 
   // When clicking Left Sidebar → show products
   document.querySelector("#left").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
+    resetLayout();
+    adventure.style.display = "none";
     productParent.style.display = "block";
     product.style.flexDirection = "row-reverse";
     product.style.marginLeft = "50px";
+    filter.style.marginRight = "55px";
   });
 };
 

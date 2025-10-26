@@ -171,3 +171,7 @@
 .product_child2 > input:focus {
   border: 2px solid #fda901ff;
 }
+
+.footers {
+  display: none;
+}

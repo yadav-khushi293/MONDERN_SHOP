@@ -207,11 +207,11 @@
                 </div>
             </div>
         </div>
-        <!-- <footer class="footers"></footer> -->
+        <footer class="footers"></footer>
     </body>
     <script src="../JS/index.js"></script>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage, Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
 
@@ -221,7 +221,7 @@
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
 
-    // document.querySelector('.footers').innerHTML = Footers();
+     document.querySelector('.footers').innerHTML = Footers();
 
 document.querySelector(".homePage").addEventListener('click',()=>{
     goHome();
