@@ -647,6 +647,28 @@ footer {
     padding-left: 0px !important;
     padding-top: 40px !important;
 }
+.arrow {
+    font-size: 1rem;
+    color: black;
+}
+
+.main {
+    width: 380px;
+    height: 580px;
+}
+
+.slider-image {
+  width: 380px;
+  height: 580px;
+}
+
+.thumb-image {
+    width: 66px;
+    height: 61px;
+}
+.thumbs {
+    justify-content: center;
+}
 }
 @media(min-width:841px) and (max-width:1340px){
 
