@@ -70,10 +70,10 @@ span{
     color: #ffcc25;
      }
 
-    /* @media(max-width:320px){
-      .child1,#search,.battery,a,.cart_num  {
-        display: none;
-      }
+    @media(max-width:320px){
+     .child1,#search,.battery,.icon,.cart_num,.FC_child2 {
+    display: none !important;
+}
       
 .child2 > svg {
     width: 200px;
@@ -85,4 +85,324 @@ span{
 .main_parent {
     padding: 20px 15px;
 }
-    } */
+
+.menu > a {
+    font-size: 13px;
+    width: 80px;
+    text-align:center !important;
+    padding: 10px 0px;
+}
+.navbar_ul, li {
+    list-style: none;
+    gap: 7px  !important;
+    font-size: 13px !important;
+ padding: 17px 0px;
+    height: 50px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.Box > h2 {
+    padding:0px;
+    font-size: 15px !important;
+}
+
+.ulDiv1 > ul > li, .ulDiv2 > ul > li, .ulDiv3 > ul > li {
+    font-size: 13px !important;
+    line-height:2 !important; 
+}
+
+p, i {
+    line-height: 20px !important;
+    font-size: 10px !important;
+}
+footer {
+    width: 100%;
+    height: 300px !important; 
+}
+
+.footer_cantaner2 {
+    height: 50px !important;
+    font-size: 13px;
+    padding-left: 60px;
+    margin: 80px 0px !important;
+}
+
+.text_input {
+    width: 250px !important;
+    height: 40px;
+    margin: 10px 0px;
+}
+#login_button {
+    width: 250px !important;
+    height: 40px;
+    font-size: 15px !important;
+    margin: 10px 0px;
+}
+label {
+    font-size: 19px;
+}
+.from_div {
+    margin: 26px 0px;
+}
+
+.My_account_text {
+    font-size: 20px !important;
+}
+    } 
+
+    @media (min-width:321px) and (max-width:380px){
+
+       .child1,#search,.battery,.icon,.cart_num,.FC_child2 {
+    display: none !important;
+}
+      
+.child2 > svg {
+    width: 200px;
+    height: 100px;
+    object-fit: fill;
+    margin-left:0px !important;
+}
+
+.main_parent {
+    padding: 0px 15px !important;
+}
+
+.menu > a {
+    font-size: 13px;
+    width: 80px;
+    text-align:center !important;
+    padding: 10px 0px;
+}
+.navbar_ul, li {
+    list-style: none;
+    gap: 7px  !important;
+    font-size: 13px !important;
+ padding: 17px 0px;
+    height: 50px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.Box > h2 {
+    padding:0px;
+    font-size: 15px !important;
+}
+
+.ulDiv1 > ul > li, .ulDiv2 > ul > li, .ulDiv3 > ul > li {
+    font-size: 13px !important;
+    line-height:2 !important; 
+}
+
+p, i {
+    line-height: 20px !important;
+    font-size: 10px !important;
+}
+footer {
+    width: 100%;
+    height: 300px !important; 
+}
+
+.footer_cantaner2 {
+    height: 50px !important;
+    font-size: 13px;
+    padding-left: 60px;
+    margin: 80px 0px !important;
+}
+
+.text_input {
+    width: 250px !important;
+    height: 40px;
+    margin: 10px 0px;
+}
+#login_button {
+    width: 250px !important;
+    height: 40px;
+    font-size: 15px !important;
+    margin: 10px 0px;
+}
+label {
+    font-size: 19px;
+}
+.from_div {
+    margin: 26px 0px;
+}
+
+.My_account_text {
+    font-size: 20px !important;
+}
+
+    }
+
+
+    @media(min-width:421px) and (max-width:440px){
+
+       .child1,#search,.battery,.icon,.cart_num,.FC_child2 {
+    display: none !important;
+}
+      
+.child2 > svg {
+    width: 200px;
+    height: 100px;
+    object-fit: fill;
+    margin-left:0px !important;
+}
+
+.main_parent {
+    padding: 0px 15px !important;
+}
+
+.menu > a {
+    font-size: 13px;
+    width: 80px;
+    text-align:center !important;
+    padding: 10px 0px;
+}
+.navbar_ul, li {
+    list-style: none;
+    gap: 7px  !important;
+    font-size: 13px !important;
+ padding: 17px 0px;
+    height: 50px;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.Box > h2 {
+    padding:0px;
+    font-size: 15px !important;
+}
+
+.ulDiv1 > ul > li, .ulDiv2 > ul > li, .ulDiv3 > ul > li {
+    font-size: 13px !important;
+    line-height:2 !important; 
+}
+
+p, i {
+    line-height: 20px !important;
+    font-size: 10px !important;
+}
+footer {
+    width: 100%;
+    height: 300px !important; 
+}
+
+.footer_cantaner2 {
+    height: 50px !important;
+    font-size: 13px;
+    padding-left: 60px;
+    margin: 80px 0px !important;
+}
+
+.text_input {
+    width: 250px !important;
+    height: 40px;
+    margin: 10px 0px;
+}
+#login_button {
+    width: 250px !important;
+    height: 40px;
+    font-size: 15px !important;
+    margin: 10px 0px;
+}
+label {
+    font-size: 19px;
+}
+.from_div {
+    margin: 26px 0px;
+}
+
+.My_account_text {
+    font-size: 20px !important;
+}
+
+    }
+
+    @media(min-width:431px) and (max-width:840px){
+         .maindiv {
+     display:grid;
+    justify-content:center;
+    align-items: center;
+    padding: 40px 60px;
+    gap: 40px;
+}
+.parent_child1{
+    justify-content: center !important;
+    gap: 20px !important;
+}
+.cart_num {
+  right: 187px !important;
+  top: 50px !important;
+}
+.main_parent {
+    padding: 20px 24px !important;
+}
+.child1 {
+    display: none;
+}
+.child2 > svg {
+    width: 200px;
+    height: 100px;
+    margin-left: 0%;
+}
+
+
+.cart_num {
+    right: 199px;
+    top: 48px;
+}
+
+footer{
+    width: 100%;
+   height: 530px !important; 
+}
+.footer_cantaner2 {
+    height: 50px !important;
+    font-size: 13px;
+    padding-left: 60px;
+    margin: 110px 0px !important;
+}
+.Box > .iconDiv {
+    display: none !important; 
+}
+.FC_child2 {
+    display: flex;
+    justify-content: center;
+    gap: 50px !important;
+    padding: 0 50px !important;
+    align-items: center;
+}
+.hading_3 {
+
+    padding-left: 0px !important;
+    padding-top: 40px !important;
+}
+    }
+
+ @media(min-width:841px) and (max-width:1340px){
+      footer {
+    width: 100%;
+   height: 530px !important; 
+}
+.footer_cantaner2 {
+    height: 50px !important;
+    font-size: 13px;
+    padding-left: 60px;
+    margin: 110px 0px !important;
+}
+.Box > .iconDiv {
+    display: none !important; 
+}
+.FC_child2 {
+    display: flex;
+    justify-content: center;
+    gap: 50px !important;
+    padding: 0 50px !important;
+    align-items: center;
+}
+.hading_3 {
+
+    padding-left: 0px !important;
+    padding-top: 40px !important;
+}
+    }
