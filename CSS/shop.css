@@ -175,3 +175,29 @@
 .footers {
   display: none;
 }
+
+@media (max-width: 320px) {
+  .adventure > h1 > br,
+  .pageNum,
+  .product_child2 {
+    display: none !important;
+  }
+  .adventure {
+    height: 40vh;
+    background-size: cover;
+    background-position: bottom;
+  }
+  .adventure > h1 {
+    font-size: 25px;
+    padding: 50px 20px;
+  }
+  .product_child1 > #product {
+    grid-template-columns: repeat(1, 1fr);
+    margin: 30px auto;
+    margin-top: 110px;
+    width: 87%;
+  }
+  .filter {
+    margin-right: 25px;
+  }
+}
