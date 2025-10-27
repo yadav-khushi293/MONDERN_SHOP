@@ -69,3 +69,20 @@ span{
     padding: 10px 0px;
     color: #ffcc25;
      }
+
+    /* @media(max-width:320px){
+      .child1,#search,.battery,a,.cart_num  {
+        display: none;
+      }
+      
+.child2 > svg {
+    width: 200px;
+    height: 100px;
+    object-fit: fill;
+    margin-left:0px !important;
+}
+
+.main_parent {
+    padding: 20px 15px;
+}
+    } */
