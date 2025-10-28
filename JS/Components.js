@@ -990,9 +990,6 @@ export const Shop = () => {
     document.body.classList.remove("sidebar-active");
     adventure.style.display = "block";
     filter.style.marginRight = "73px";
-    updateItemsPerPage();
-    showPage(1);
-    renderPagination();
   });
 
   // When clicking Right Sidebar → show products
@@ -1003,9 +1000,6 @@ export const Shop = () => {
     document.body.classList.add("sidebar-active");
     adventure.style.display = "none";
     filter.style.marginRight = "55px";
-    updateItemsPerPage();
-    showPage(1);
-    renderPagination();
   });
 
   // When clicking Left Sidebar → show products
@@ -1018,9 +1012,6 @@ export const Shop = () => {
     product.style.flexDirection = "row-reverse";
     product.style.marginLeft = "50px";
     filter.style.marginRight = "55px";
-    updateItemsPerPage();
-    showPage(1);
-    renderPagination();
   });
 };
 

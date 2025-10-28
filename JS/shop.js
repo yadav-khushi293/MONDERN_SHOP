@@ -43,7 +43,7 @@ const appenddata = (data) => {
 
     productImg.src = item.img;
     title.innerHTML = item.title;
-    price.innerHTML = item.price;
+    price.innerHTML = `$${item.price}`;
 
     gridDiv.append(title, price);
     flexDiv.append(productImg, gridDiv);
@@ -67,7 +67,7 @@ const appenddata = (data) => {
 
     productImg1.src = item.img;
     title1.innerHTML = item.title;
-    price1.innerHTML = item.price;
+    price1.innerHTML = `$${item.price}`;
 
     gridDiv1.append(title1, price1);
     flexDiv1.append(productImg1, gridDiv1);
