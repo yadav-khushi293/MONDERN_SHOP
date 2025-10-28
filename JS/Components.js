@@ -351,7 +351,7 @@ html {
 
 .cart_num{
 position: absolute;
-right: 255px;
+right: 248px;
 top: 57px;
   border-radius: 50%;
   background-color: #fda901ff;
@@ -976,6 +976,7 @@ export const Shop = () => {
 
   const resetLayout = () => {
     productParent.style.display = "block";
+    document.body.classList.add("sidebar-active");
     adventure.style.display = "none";
     product.style.flexDirection = "row";
     product.style.marginLeft = "0";
@@ -986,8 +987,12 @@ export const Shop = () => {
   document.querySelector("#shop").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
     productParent.style.display = "none";
+    document.body.classList.remove("sidebar-active");
     adventure.style.display = "block";
     filter.style.marginRight = "73px";
+    updateItemsPerPage();
+    showPage(1);
+    renderPagination();
   });
 
   // When clicking Right Sidebar → show products
@@ -995,8 +1000,12 @@ export const Shop = () => {
     e.preventDefault(); // stop default link behavior
     resetLayout();
     productParent.style.display = "block";
+    document.body.classList.add("sidebar-active");
     adventure.style.display = "none";
     filter.style.marginRight = "55px";
+    updateItemsPerPage();
+    showPage(1);
+    renderPagination();
   });
 
   // When clicking Left Sidebar → show products
@@ -1004,10 +1013,14 @@ export const Shop = () => {
     e.preventDefault(); // stop default link behavior
     resetLayout();
     adventure.style.display = "none";
+    document.body.classList.add("sidebar-active");
     productParent.style.display = "block";
     product.style.flexDirection = "row-reverse";
     product.style.marginLeft = "50px";
     filter.style.marginRight = "55px";
+    updateItemsPerPage();
+    showPage(1);
+    renderPagination();
   });
 };
 
