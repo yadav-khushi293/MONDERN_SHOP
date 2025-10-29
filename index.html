@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+      <!-- <link rel="stylesheet" href="./CSS/footer.css"> -->
+     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
     <style>
-/* Masonry layout setup */
+
 .masonry_container {
   width: 1500px;
   margin: 20px auto;
@@ -14,21 +16,18 @@
   column-gap: 20px;
 }
 
-/* Image wrapper */
 .img_div {
   break-inside: avoid;
   margin-bottom: 20px;
 }
 
-/* Default image size */
+ Default image size 
 .img_1 {
   width: 100%;
   border-radius: 10px;
   display: block;
   border: 1px solid rgb(241, 197, 212);
 }
-
-/* Extra size classes for variation */
 .img_small {
   height: 500px;
   object-fit: cover;
@@ -44,7 +43,6 @@
   object-fit: cover;
 }
 
-/* Add smooth hover effect to images */
 .img_1 {
   width: 100%;
   border-radius: 10px;
@@ -52,7 +50,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
+ Hover effect 
 .img_1:hover {
   transform: scale(1.05);
   filter: brightness(1.1);
@@ -64,9 +62,70 @@
     </style>
 
 </head>
+
 <body onload="ApiCall()">
+      <!-- <header class="header"></header> -->
       <div id="simple_product" class="masonry_container"></div>
+<!-- 
+        <footer class="footers"></footer> -->
+        <div class="khushi">khushi</div>
 </body>
+
+
+<script type="module">
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
+
+     document.querySelector('.header').innerHTML = Navbar();
+
+    document.querySelector('body').addEventListener('load', typePlaceholder());
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+    document.querySelector('.footers').innerHTML = Footers();
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+//Day-Night-mode-code
+      const body = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      // Default: Light mode (no class)
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+      });
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100);
+    </script>
+
 <script src="./index.js"></script>
 
 </html>
