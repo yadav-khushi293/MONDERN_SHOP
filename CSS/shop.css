@@ -176,11 +176,29 @@
   display: none;
 }
 
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50vh;
+}
+
+.result > h3 {
+  text-align: center;
+  font-size: xx-large;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
 @media (max-width: 320px) {
   .adventure > h1 > br,
-  .pageNum,
   .product_child2 {
     display: none !important;
+  }
+  .pageNum {
+    font-size: 15px;
   }
   .adventure {
     height: 40vh;
@@ -197,6 +215,10 @@
     margin-top: 110px;
     width: 87%;
   }
+  .result > h3 {
+    font-size: larger;
+    font-weight: 700;
+  }
   .filter {
     margin-right: 25px !important;
   }
@@ -207,9 +229,11 @@
 
 @media (min-width: 321px) and (max-width: 430px) {
   .adventure > h1 > br,
-  .pageNum,
   .product_child2 {
     display: none !important;
+  }
+  .pageNum {
+    font-size: 15px;
   }
   .adventure {
     height: 40vh;
@@ -225,19 +249,31 @@
     margin: 30px auto;
     margin-top: 110px;
   }
+  .iamgeContainer {
+    width: 90%;
+    display: block;
+    margin: auto;
+    /* border: 2px solid; */
+  }
   .filter {
     margin-right: 25px !important;
   }
   .product_parent {
     margin-left: 0 !important;
   }
+  .result > h3 {
+    font-size: larger;
+    font-weight: 700;
+  }
 }
 
 @media (min-width: 431px) and (max-width: 840px) {
   .adventure > h1 > br,
-  .pageNum,
   .product_child2 {
     display: none !important;
+  }
+  .pageNum {
+    font-size: 15px;
   }
   .adventure {
     height: 40vh;
@@ -254,11 +290,21 @@
     margin-top: 110px;
     gap: 0 !important;
   }
+  .iamgeContainer {
+    width: 90%;
+    display: block;
+    margin: auto;
+    /* border: 2px solid; */
+  }
   .filter {
     margin-right: 25px !important;
   }
   .product_parent {
     margin-left: 0 !important;
+  }
+  .result > h3 {
+    font-size: x-large;
+    font-weight: 700;
   }
 }
 
@@ -269,7 +315,8 @@
   .product_parent {
     gap: 50px;
   }
-  .productTitle {
+  .productTitle,
+  .productTitle1 {
     font-size: medium !important;
   }
   .product_child1 > #product {
@@ -277,5 +324,31 @@
   }
   .sidebar-active .product_child1 > #product {
     grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .result > h3 {
+    font-size: x-large;
+    font-weight: 700;
+  }
+}
+
+@media (min-width: 2560px) {
+  .adventure {
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .product_parent {
+    justify-content: center;
+    align-items: center;
+  }
+  .sidebar-active .product_parent {
+    align-items: flex-start;
+  }
+  .product_child2 {
+    width: 19%;
+  }
+  .result > h3 {
+    font-size: 55px;
+    font-weight: 700;
   }
 }

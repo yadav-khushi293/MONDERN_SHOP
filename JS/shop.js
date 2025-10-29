@@ -232,9 +232,26 @@ const searchFunc = async () => {
     const filtered = await data1.filter(
       (item) =>
         item.title.toLowerCase().includes(query) ||
-        item.category.toLowerCase().includes(query) ||
-        item.description.toLowerCase().includes(query)
+        item.category.toLowerCase().includes(query)
     );
+
+    // ✅ If no result found
+    if (filtered.length === 0) {
+      const datashow = document.querySelector("#product");
+      const img = document.querySelector(".adventure");
+      const parent = document.querySelector(".product_parent");
+      img.style.display = "none";
+      datashow.style.display = "block";
+      parent.style.justifyContent = "center";
+      datashow.innerHTML = `
+    <div class="result">
+      <h3>No results found. Please try a different keyword.</h3>
+    </div>
+  `;
+      document.querySelector("#search").value = "";
+      return;
+    }
+
     appenddata(filtered);
     document.querySelector("#search").value = "";
   } catch (err) {
