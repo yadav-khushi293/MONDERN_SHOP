@@ -30,8 +30,8 @@ const appenddata = (data) => {
       <thead>
         <tr>
           <th>Product</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
+          <th class="quantity">Quantity</th>
+          <th class="subtotal">Subtotal</th>
         </tr>
       </thead>
       <tbody></tbody>
