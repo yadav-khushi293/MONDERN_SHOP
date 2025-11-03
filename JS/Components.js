@@ -40,7 +40,7 @@ export const Navbar = () => {
                 <div class="child2">
                   <img src="../Utils/Menu.svg" alt="Menu" class="nav_menu">
                 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 191 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 191 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="logo">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
     <title>logo copy</title>
     <desc>Created with Sketch.</desc>

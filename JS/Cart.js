@@ -58,8 +58,32 @@ const appenddata = (data) => {
     <img src="${el.img}" alt="Product Image" class="cart_img"/>
       <div class="cart_desc">
             <td><h6>${el.title}</h6></td>
-            <td>$${el.price}</td>
-        </div>
+            <td><p class="grid_price">$${el.price}</p></td>
+            <div class="button_flex">
+            <div class="btn_border1">
+              <td>
+                <button class="btns neg" onclick="decrementCount(${el.id}, ${
+      el.count
+    })">-</button>
+                <p class="button_count">${el.count}</p>
+                <button class="btns pos" onclick="incrementCount(${el.id}, ${
+      el.count
+    })">+</button>
+                </td>
+              </div>
+            <td>
+          <div class="price_delete">
+              <p class="1">$${price * count}</p>
+            <svg class="delete_img1"  onclick="deleteToCart(${
+              el.id
+            })" xmlns="http://www.w3.org/2000/svg" class="ct-icon" viewBox="0 0 24 24">
+<path d="M9.6,0l0,1.2H1.2v2.4h21.6V1.2h-8.4l0-1.2H9.6z M2.8,6l1.8,15.9C4.8,23.1,5.9,24,7.1,24h9.9c1.2,0,2.2-0.9,2.4-2.1L21.2,6H2.8z"></path>
+</svg>
+            </div>
+          </div>
+          </div>
+
+
         <div class="btn_border">
               <td>
                 <button class="btns neg" onclick="decrementCount(${el.id}, ${
@@ -71,7 +95,9 @@ const appenddata = (data) => {
     })">+</button>
                 </td>
               </div>
-            <td><p>$${price * count}</p></td>
+            <td>
+              <p class="grid_price">$${price * count}</p>
+            </td>
             <svg class="delete_img"  onclick="deleteToCart(${
               el.id
             })" xmlns="http://www.w3.org/2000/svg" class="ct-icon" viewBox="0 0 24 24">
