@@ -22,8 +22,8 @@
         <div class="product_parent">
             <div class="product_child1">
                 <select name="Filter" id="filter" class="filter">
-                    <option value="Filter">Filter</option>
-                    <option value="category">Category</option>
+                    <option value="Filter" selected disabled
+                        hidden>Filter</option>
                     <option value="low_to_high">Low To High</option>
                     <option value="high_to_low">High To Low</option>
                 </select>
@@ -56,22 +56,22 @@
 
     document.querySelector('.footers').innerHTML = Footers();
 
-document.querySelector(".homePage").addEventListener('click',()=>{
+document.querySelectorAll(".homePage").addEventListener('click',()=>{
     goHome();
 })
-document.querySelector(".logo").addEventListener('click',()=>{
+document.querySelectorAll(".logo").addEventListener('click',()=>{
     goHome();
 })
-document.querySelector(".logo_mobile").addEventListener('click',()=>{
+document.querySelectorAll(".logo_mobile").addEventListener('click',()=>{
     goHome();
 })
-document.querySelector(".aboutPage").addEventListener('click',()=>{
+document.querySelectorAll(".aboutPage").addEventListener('click',()=>{
     aboutPage();
 })
-document.querySelector(".productPage").addEventListener('click',()=>{
+document.querySelectorAll(".productPage").addEventListener('click',()=>{
     productPage();
 })
-document.querySelector(".contactPage").addEventListener('click',()=>{
+document.querySelectorAll(".contactPage").addEventListener('click',()=>{
     contactPage();
 })
 

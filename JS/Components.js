@@ -88,6 +88,29 @@ export const Navbar = () => {
                     </div>
                 </div>
             </div>
+            <div class="mobile_sidebar">
+  <ul>
+    <li class="homePage nav-link">Home</li> <div class="menu">
+                        <a id="shop" class="shopPage nav-link">Shop ▼</a>
+                        <div class="dropdown-content">
+                          <a id="right">Right Sidebar</a>
+                          <a id="left">Left Sidebar</a>
+                        </div>
+                    </div>
+                    <div class="menu">
+                        <a  id="products" class="productPage nav-link">Products ▼</a>
+                        <div class="dropdown-content">
+                          <a  href="../Products_HTML_pages/Simple_pro.html">Simple Product</a>
+                          <a  href="../Products_HTML_pages/Variable_pro.html">Variable Product</a>
+                          <a href= "../Products_HTML_pages/Grouped_Pro.html">Grouped Product</a>
+                          <a href="../Products_HTML_pages/External_Pro.html">Extrenal Product</a>
+                          <a href="../Products_HTML_pages/My_account.html">My Account</a>
+                        </div>
+                      </div>
+                    <li class="aboutPage nav-link">About</li>
+    <li class="contactPage nav-link">Contact</li>
+  </ul>
+</div>
             <div class="parent_child2">
                 <ul class="navbar_ul">
                     <li class="homePage nav-link">Home</li>
@@ -369,6 +392,43 @@ top: 57px;
   top: 55px;
 }
 
+.mobile_sidebar {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 70%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 30px 20px;
+  transition: left 0.3s ease-in-out;
+  z-index: 11;
+  color: #fff;
+}
+
+.mobile_sidebar.active {
+  left: 0;
+}
+
+.mobile_sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  justify-items: left;
+}
+
+.mobile_sidebar li,.productPage,.shopPage,.menu > a {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+  cursor: pointer;
+  color: #fff;
+}
+
+.mobile_sidebar li:hover {
+  color: #fda901ff;
+}
+
 /* Day-night-mode*/
 
 body {
@@ -588,12 +648,26 @@ body.dark .btn strong:nth-child(2) {
     .to-top::after{
     right: -11px;
     }
+    .menu > a {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+  cursor: pointer;
+  color: #fff;
+}
   }
 
   @media (min-width: 321px) and (max-width: 430px){
     .nav_menu,.logo_mobile{
   display: inline-block;
     }
+  .menu > a {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+  cursor: pointer;
+  color: #fff;
+}
   .main_parent{
   padding: 0;
   margin: 0;
@@ -678,6 +752,13 @@ body.dark .btn strong:nth-child(2) {
     .to-top::after{
     right: -11px;
     }
+    .menu > a {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 15px 0;
+  cursor: pointer;
+  color: #fff;
+}
   }
     
 @media (min-width: 841px) and (max-width: 1340px){
@@ -1025,6 +1106,70 @@ const updateCartCount = async () => {
   }
 };
 
+// Sidebar Js
+
+document.addEventListener("DOMContentLoaded", () => {
+  const ham = document.querySelector(".nav_menu");
+  const sidebar = document.querySelector(".mobile_sidebar");
+
+  if (ham && sidebar) {
+    ham.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+
+      // Hide hamburger when sidebar is active
+      if (sidebar.classList.contains("active")) {
+        ham.style.display = "none";
+        if (overlay) overlay.classList.add("active");
+      } else {
+        ham.style.display = "inline-block";
+        if (overlay) overlay.classList.remove("active");
+      }
+    });
+
+    // Close sidebar on outside click
+    document.addEventListener("click", (e) => {
+      if (
+        !sidebar.contains(e.target) &&
+        !ham.contains(e.target) &&
+        sidebar.classList.contains("active")
+      ) {
+        sidebar.classList.remove("active");
+        ham.style.display = "inline-block"; // show again
+        if (overlay) overlay.classList.remove("active");
+      }
+    });
+  }
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const home = document.querySelectorAll(".homePage");
+  const about = document.querySelectorAll(".aboutPage");
+  const contact = document.querySelectorAll(".contactPage");
+  const shop = document.querySelectorAll(".shopPage");
+  const product = document.querySelectorAll(".productPage");
+
+  const sidebar = document.querySelector(".mobile_sidebar");
+  const ham = document.querySelector(".nav_menu");
+
+  const addNavAction = (elements, action) => {
+    elements.forEach((el) => {
+      el.addEventListener("click", () => {
+        action(); // Go to page
+        setTimeout(() => setActiveNav(), 300); // Highlight after navigation delay
+
+        // Close sidebar if open (mobile)
+        if (sidebar) sidebar.classList.remove("active");
+        if (ham) ham.style.display = "inline-block";
+      });
+    });
+  };
+
+  addNavAction(home, goHome);
+  addNavAction(about, aboutPage);
+  addNavAction(contact, contactPage);
+  addNavAction(shop, shopPage);
+  addNavAction(product, productPage);
+});
+
 document.addEventListener("DOMContentLoaded", function () {
   const cart_Page = document.querySelector(".cart");
   if (cart_Page) {
@@ -1033,4 +1178,5 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
   updateCartCount();
+  setActiveNav();
 });
