@@ -1,10 +1,15 @@
 let api = "https://weather-app-6du4.onrender.com/shop";
 let apiCart = "https://weather-app-6du4.onrender.com/cart";
 
+let allData = [];
+
 const apiCall = () => {
   fetch(api)
     .then((res) => res.json())
-    .then((res) => appenddata(res))
+    .then((res) => {
+      allData = res;
+      appenddata(res);
+    })
     .catch((err) => console.log(err));
 };
 
@@ -36,6 +41,15 @@ const appenddata = (data) => {
     category.innerHTML = item.category;
     cart.innerText = "Add To Cart";
 
+    cart.addEventListener("click", () => {
+      addToCart(item.id);
+      cart.innerHTML = "View Cart";
+
+      cart.onclick = () => {
+        window.location.href = "Cart.html";
+      };
+    });
+
     imgBox.append(image, text, price, category, cart);
     imageContainer.append(imgBox);
   }
@@ -61,6 +75,15 @@ const appenddata = (data) => {
     price1.innerHTML = el.price;
     category1.innerHTML = el.category;
     cart1.innerText = "Add To Cart";
+
+    cart1.addEventListener("click", () => {
+      addToCart(el.id);
+      cart1.innerHTML = "View Cart";
+
+      cart1.onclick = () => {
+        window.location.href = "Cart.html";
+      };
+    });
 
     imgBox1.append(image1, text1, price1, category1, cart1);
     imageContainer1.append(imgBox1);
@@ -112,6 +135,81 @@ const updateCartCount = async () => {
     document.querySelector("#cart_count").innerText = cartItems.length;
   } catch (err) {
     console.log(err);
+  }
+};
+
+// Search Function
+
+const searchFunc = async () => {
+  const query = document.querySelector("#search").value.trim().toLowerCase();
+  if (!query) return;
+
+  try {
+    let [searchFetch] = await Promise.all([fetch(api)]);
+    const [data1] = await Promise.all([searchFetch.json()]);
+
+    const filtered = await data1.filter(
+      (item) =>
+        item.title.toLowerCase().includes(query) ||
+        item.category.toLowerCase().includes(query) ||
+        item.description.toLowerCase().includes(query)
+    );
+    appenddata(filtered);
+    document.querySelector("#search").value = "";
+  } catch (err) {
+    console.error("Search failed:", err);
+  }
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector("#search");
+  if (searchInput) {
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") searchFunc();
+    });
+  }
+});
+
+// Add To Cart
+
+const addToCart = async (id) => {
+  // find the product by id from allData
+  let product = allData.find((el) => el.id === id);
+
+  if (!product) {
+    alert("Product not found!");
+    return;
+  }
+
+  try {
+    // check if product already exists in cart
+    let res = await fetch(`${apiCart}?id=${id}`);
+    let data = await res.json();
+
+    if (data.length > 0) {
+      // already in cart → increment count
+      let existing = data[0];
+      await fetch(`${apiCart}/${existing.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ count: (existing.count || 1) + 1 }),
+      });
+      updateCartCount();
+    } else {
+      // not in cart → add new with count = 1
+      await fetch(apiCart, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...product, count: 1 }),
+      });
+      updateCartCount();
+    }
+  } catch (error) {
+    console.log("🚀 ~ error:", error);
   }
 };
 

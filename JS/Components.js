@@ -38,8 +38,9 @@ export const Navbar = () => {
                     </svg>
                 </div>
                 <div class="child2">
+                  <img src="../Utils/Menu.svg" alt="Menu" class="nav_menu">
                 <?xml version="1.0" encoding="UTF-8"?>
-<svg viewBox="0 0 191 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg viewBox="0 0 191 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="logo">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
     <title>logo copy</title>
     <desc>Created with Sketch.</desc>
@@ -57,18 +58,21 @@ export const Navbar = () => {
         </g>
     </g>
 </svg>
+<img src="../Utils/Logo(320px).svg" alt="Logo" class="logo_mobile"/>
                 </div>
                 <div class="child3">
                     <input type="text" name="search" id="search">
+<div class="cart_login">
   <a href="../HTML/Login.html">
    <svg class="icon profile" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor"><path d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Z"/></svg>
+   </a>
 <svg class="icon cart" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
   <!-- Rectangle for main bag shape -->
   <rect x="6" y="10" width="20" height="16" rx="2" fill="currentColor"/>
   <!-- Left handle (arc) -->
   <path d="M10 10 a6 6 0 0 1 12 0" fill="none" stroke="currentColor" stroke-width="2"/>
 </svg>
-</a>
+</div>
 <span class="cart_num" id="cart_count"></span>
         <div class="btn" id="toggleBtn">
             <strong>🌙</strong>
@@ -114,6 +118,9 @@ export const Navbar = () => {
 
 export const NavStyle = () => {
   return `
+  .nav_menu{
+  display: none;
+  }
  .main_parent {
   padding: 20px 70px;
   background-color:#fff;
@@ -205,6 +212,10 @@ select {
   background-color:#fff;
 }
 
+.logo_mobile{
+display: none;
+}
+
 /* Battery Css */
 
 .battery {
@@ -281,7 +292,7 @@ html {
 }
 
 .to-top {
-  background: black;
+  background: #000;
   position: fixed;
   bottom: 16px;
   right: 32px;
@@ -296,7 +307,7 @@ html {
   text-decoration: none;
   opacity: 0;
   pointer-events: none;
-  transition: all 0.4s;
+  transition: all 0.2s ease-in-out;
   z-index: 100;
 }
 
@@ -340,16 +351,22 @@ html {
 
 .cart_num{
 position: absolute;
-right: 203px;
+right: 248px;
 top: 57px;
   border-radius: 50%;
   background-color: #fda901ff;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 700;
   text-align: center;
-  padding: 2px;
+  padding: 1px;
   width: 17px;
   height: 17px;
+  color: #000;
+}
+
+.cart_num.not-charging{
+  right: 209px;
+  top: 55px;
 }
 
 /* Day-night-mode*/
@@ -381,7 +398,7 @@ body.dark .main_cantaner3{
  body.dark .mc3c2_box1>p{
  color:#fff;
  }
-  body.dark .main_cantaner1>.child1, body.dark .main_cantaner1>.child1>p, body.dark .cp1_child1>h1,body.dark .cp1_child1>p,body.dark .adventure > h1{
+  body.dark .main_cantaner1>.child1, body.dark .main_cantaner1>.child1>p, body.dark .cp1_child1>h1,body.dark .cp1_child1>p,body.dark .adventure > h1,body.dark .collection_text > h1,body.dark .collection_text > h5,body.dark .discount_child1b > h5,body.dark .discount_child1c > h3{
   color:#000;
   }
 
@@ -393,6 +410,10 @@ body.dark .main_cantaner3{
 body.dark #M{
 fill: #000;
 }
+
+// body.dark  .to-top{
+// background: #fff;
+// }
 
 body.dark #search{
 border: 3px solid #fda901ff;
@@ -418,7 +439,7 @@ body.dark .form_box>label{
   cursor: pointer;
   border-radius: 50%;
   transition: background 0.3s, color 0.3s;
-  margin: 0 3px;
+  margin: 0 5px;
 }
 
 // body.dark .btn {
@@ -430,7 +451,9 @@ body.dark .form_box>label{
 body.dark .nav-link
 body.dark .adventure > h1,
 body.dark .collection_text,
-body.dark .discount_child1{
+body.dark .discount_child1
+// body.dark .fas
+{
 color:#000;
 }
 
@@ -448,6 +471,10 @@ color:#f8a705ff;
 
 .btn strong {
   display: none;
+}
+
+body.dark .clients_parent{
+background-color: #333;
 }
 
 /* 🌙 show by default (light mode) */
@@ -517,6 +544,158 @@ body.dark .btn strong:nth-child(2) {
       visibility: visible;
       transform: translateY(0);
     }
+
+@media (max-width: 320px){
+    .nav_menu,.logo_mobile{
+  display: inline-block;
+    }
+  .main_parent{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  height: auto;
+  width: 100%;
+  }
+  .cart_num.not-charging,.cart_num {
+    right: 3px;
+    top: 19px;
+  }
+    .child1,
+    #search,
+    .profile,
+    .battery,
+    #toggleBtn,
+    .parent_child2,
+    .video_container,
+    .deal_child2,
+    .child2 > svg{
+    display: none;
+    }
+  .logo_mobile {
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: 35px;
+  }
+  .parent_child1 {
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+  }
+    .to-top{
+    right: 13px;
+    }
+    .to-top::after{
+    right: -11px;
+    }
+  }
+
+  @media (min-width: 321px) and (max-width: 430px){
+    .nav_menu,.logo_mobile{
+  display: inline-block;
+    }
+  .main_parent{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  height: auto;
+  width: 100%;
+  }
+  .cart_num.not-charging,.cart_num {
+    right: 3px;
+    top: 19px;
+  }
+    .child1,
+    #search,
+    .profile,
+    .battery,
+    #toggleBtn,
+    .parent_child2,
+    .video_container,
+    .deal_child2,
+    .child2 > svg{
+    display: none;
+    }
+  .logo_mobile {
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: 35px;
+  }
+  .parent_child1 {
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+  }
+    .to-top{
+    right: 13px;
+    }
+    .to-top::after{
+    right: -11px;
+    }
+  }
+
+  @media (min-width: 431px) and (max-width: 840px){
+    .nav_menu,.logo_mobile{
+  display: inline-block;
+    }
+  .main_parent{
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  height: auto;
+  width: 100%;
+  }
+  .cart_num.not-charging,.cart_num {
+    right: 3px;
+    top: 19px;
+  }
+    .child1,
+    #search,
+    .profile,
+    .battery,
+    #toggleBtn,
+    .parent_child2,
+    .video_container,
+    .deal_child2,
+    .child2 > svg{
+    display: none;1
+    }
+  .logo_mobile {
+    width: 60%;
+    display: block;
+    margin: auto;
+    height: 35px;
+  }
+  .parent_child1 {
+    height: 70px;
+    padding: 20px;
+    border-bottom: 1px solid rgb(222, 220, 220);
+  }
+    .to-top{
+    right: 13px;
+    }
+    .to-top::after{
+    right: -11px;
+    }
+  }
+    
+@media (min-width: 841px) and (max-width: 1340px){
+  .child2 > svg {
+    margin: 0;
+  }
+}
+
+
+@media (min-width: 2560px) {
+ .main_parent{
+ width: 60%;
+ margin: auto;
+ }
+ .cart_num.not-charging,.cart_num{
+ right: 720px;
+ }
+}
  `;
 };
 
@@ -596,10 +775,16 @@ export const typePlaceholder = () => {
 navigator.getBattery().then(function (battery) {
   function updateBattery() {
     const level = Math.floor(battery.level * 100);
+    const cartNum = document.querySelector(".cart_num");
     document.getElementById("level").style.width = level + "%";
     document.getElementById("info").innerText = `${level}% ${
       battery.charging ? "Charging" : ""
     }`;
+    if (battery.charging) {
+      cartNum.classList.remove("not-charging");
+    } else {
+      cartNum.classList.add("not-charging");
+    }
   }
   updateBattery();
 
@@ -653,6 +838,7 @@ export const productPage = () => {
 };
 
 // Highlight Active Nav Item
+
 export const setActiveNav = () => {
   // Get current page name (like index.html, Login.html, Cart.html)
   let currentPage = window.location.pathname.split("/").pop().toLowerCase();
@@ -786,26 +972,46 @@ export const Shop = () => {
   const productParent = document.querySelector(".product_child2");
   const product = document.querySelector(".product_parent");
   const filter = document.querySelector("#filter");
+  const adventure = document.querySelector(".adventure");
+
+  const resetLayout = () => {
+    productParent.style.display = "block";
+    document.body.classList.add("sidebar-active");
+    adventure.style.display = "none";
+    product.style.flexDirection = "row";
+    product.style.marginLeft = "0";
+    filter.style.marginRight = "0";
+  };
 
   // When clicking Shop ▼ → hide products
   document.querySelector("#shop").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
     productParent.style.display = "none";
+    document.body.classList.remove("sidebar-active");
+    adventure.style.display = "block";
     filter.style.marginRight = "73px";
   });
 
   // When clicking Right Sidebar → show products
   document.querySelector("#right").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
+    resetLayout();
     productParent.style.display = "block";
+    document.body.classList.add("sidebar-active");
+    adventure.style.display = "none";
+    filter.style.marginRight = "55px";
   });
 
   // When clicking Left Sidebar → show products
   document.querySelector("#left").addEventListener("click", (e) => {
     e.preventDefault(); // stop default link behavior
+    resetLayout();
+    adventure.style.display = "none";
+    document.body.classList.add("sidebar-active");
     productParent.style.display = "block";
     product.style.flexDirection = "row-reverse";
     product.style.marginLeft = "50px";
+    filter.style.marginRight = "55px";
   });
 };
 

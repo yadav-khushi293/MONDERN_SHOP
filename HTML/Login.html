@@ -1,78 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+  <head>
     <meta charset="UTF-8">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel="stylesheet" href="../CSS/Login.css">
     <link rel="stylesheet" href="../CSS/footer.css">
-     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
     <title>Login/Registration</title>
-</head>
+  </head>
 
-<body>
+  <body>
 
-         <header class="header"></header>
+    <header class="header"></header>
 
     <div class="admin_login_page">
 
-        <div class="extra_div">
-            <button class="message">User login  </button>
-            <button class="message">Admin login </button>
-            </div>
-    <div class="login-page">
-         
+      <div class="extra_div">
+        <button class="message">User login </button>
+        <button class="message">Admin login </button>
+      </div>
+      <div class="login-page">
+
         <!---Div-1-->
-       <!-- USER FORM -->
-<form action="#" onsubmit="validateUserForm(event)" class="login-form">
-  <h2>Login User</h2>
-  <div class="input-box">
-    <input type="email" id="user_email" placeholder=" " />
-    <label for="user_email">Email</label>
-    <span id="user_email_msg"></span>
-  </div>
+        <!-- USER FORM -->
+        <form action="#" onsubmit="validateUserForm(event)" class="login-form">
+          <h2>Login User</h2>
+          <div class="input-box">
+            <input type="email" id="user_email" placeholder=" " />
+            <label for="user_email">Email</label>
+            <span id="user_email_msg"></span>
+          </div>
 
-  <div class="input-box">
-    <input type="password" id="user_pass" placeholder=" " />
-    <label for="user_pass">Password</label>
-    <span id="user_pass_msg"></span>
-  </div>
+          <div class="input-box">
+            <input type="password" id="user_pass" placeholder=" " />
+            <label for="user_pass">Password</label>
+            <span id="user_pass_msg"></span>
+          </div>
 
-  
-  <button type="submit" class="Login_1">Login</button>
+          <button type="submit" class="Login_1">Login</button>
 
-   <p class="message_forsignin">Don't have an account? <a href="../HTML/Sign_page.html"><span>Sign Up</span></a></p>
-</form>
+          <p class="message_forsignin">Don't have an account? <a
+              href="../HTML/Sign_page.html"><span>Sign Up</span></a></p>
+        </form>
 
-<!-- ADMIN FORM -->
-<form action="#" onsubmit="validateAdminForm(event)" class="Admin-form">
-  <h2>Login Admin</h2>
-  <div class="input-box">
-    <input type="email" id="admin_email" placeholder=" " />
-    <label for="admin_email">Email</label>
-    <span id="admin_email_msg"></span>
-  </div>
+        <!-- ADMIN FORM -->
+        <form action="#" onsubmit="validateAdminForm(event)" class="Admin-form">
+          <h2>Login Admin</h2>
+          <div class="input-box">
+            <input type="email" id="admin_email" placeholder=" " />
+            <label for="admin_email">Email</label>
+            <span id="admin_email_msg"></span>
+          </div>
 
-  <div class="input-box">
-    <input type="password" id="admin_pass" placeholder=" " />
-    <label for="admin_pass">Password</label>
-    <span id="admin_pass_msg"></span>
-  </div>
+          <div class="input-box">
+            <input type="password" id="admin_pass" placeholder=" " />
+            <label for="admin_pass">Password</label>
+            <span id="admin_pass_msg"></span>
+          </div>
 
-  <button type="submit" class="Login_1">Login</button>
-</form>
+          <button type="submit" class="Login_1">Login</button>
+        </form>
 
       </div>
-</div>
+    </div>
 
- <footer class="footers"></footer>
-    
+    <footer class="footers"></footer>
 
-</body>
- <script src="../JS/Login.js"></script>
+  </body>
+  <script src="../JS/Login.js"></script>
 
- <script type="module">
+  <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
@@ -86,6 +87,12 @@
     document.querySelector('.footers').innerHTML = Footers();
 
 document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".logo").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".logo_mobile").addEventListener('click',()=>{
     goHome();
 })
 document.querySelector(".aboutPage").addEventListener('click',()=>{
@@ -109,17 +116,6 @@ document.querySelector(".contactPage").addEventListener('click',()=>{
       btn.addEventListener("click", () => {
         body.classList.toggle("dark");
       });
-
-    //Scroll-Arrow-code
-const toTop = document.querySelector(".to-top");
-
-    window.addEventListener("scroll", () => {
-        if (window.pageYOffset > 100) {
-            toTop.classList.add("active");
-        } else {
-            toTop.classList.remove("active");
-        }
-    });
 
     setTimeout(() => {
         setActiveNav();

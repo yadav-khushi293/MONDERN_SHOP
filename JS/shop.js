@@ -43,7 +43,7 @@ const appenddata = (data) => {
 
     productImg.src = item.img;
     title.innerHTML = item.title;
-    price.innerHTML = item.price;
+    price.innerHTML = `$${item.price}`;
 
     gridDiv.append(title, price);
     flexDiv.append(productImg, gridDiv);
@@ -67,7 +67,7 @@ const appenddata = (data) => {
 
     productImg1.src = item.img;
     title1.innerHTML = item.title;
-    price1.innerHTML = item.price;
+    price1.innerHTML = `$${item.price}`;
 
     gridDiv1.append(title1, price1);
     flexDiv1.append(productImg1, gridDiv1);
@@ -110,6 +110,7 @@ const appenddata = (data) => {
 };
 
 const showPage = (page) => {
+  updateItemsPerPage();
   let start = (page - 1) * itemsperPage;
   let end = page * itemsperPage;
   let paginatedItems = allData.slice(start, end);
@@ -213,3 +214,70 @@ const updateCartCount = async () => {
     console.log(err);
   }
 };
+
+// Search Function
+
+const searchFunc = async () => {
+  const query = document.querySelector("#search").value.trim().toLowerCase();
+  if (!query) return;
+
+  try {
+    let [searchFetch] = await Promise.all([fetch(api)]);
+    const filter = document.querySelector("#filter");
+    filter.style.display = "none";
+    const pagination = document.querySelector("#pagination");
+    pagination.style.display = "none";
+    const [data1] = await Promise.all([searchFetch.json()]);
+
+    const filtered = await data1.filter(
+      (item) =>
+        item.title.toLowerCase().includes(query) ||
+        item.category.toLowerCase().includes(query)
+    );
+
+    // ✅ If no result found
+    if (filtered.length === 0) {
+      const datashow = document.querySelector("#product");
+      const img = document.querySelector(".adventure");
+      const parent = document.querySelector(".product_parent");
+      img.style.display = "none";
+      datashow.style.display = "block";
+      parent.style.justifyContent = "center";
+      datashow.innerHTML = `
+    <div class="result">
+      <h3>No results found. Please try a different keyword.</h3>
+    </div>
+  `;
+      document.querySelector("#search").value = "";
+      return;
+    }
+
+    appenddata(filtered);
+    document.querySelector("#search").value = "";
+  } catch (err) {
+    console.error("Search failed:", err);
+  }
+};
+
+// Pagination Is Changing On Media-Query (min-width: 841px) and (max-width: 1340px) With Sidebar
+
+const updateItemsPerPage = () => {
+  const width = window.innerWidth;
+  const isSidebarActive = document.body.classList.contains("sidebar-active");
+
+  // ✅ When sidebar active + within 841–1340px → show 6 items
+  if (isSidebarActive && width >= 841 && width <= 1340) {
+    itemsperPage = 6;
+  } else {
+    itemsperPage = 8; // Default
+  }
+};
+
+window.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.querySelector("#search");
+  if (searchInput) {
+    searchInput.addEventListener("keypress", (e) => {
+      if (e.key === "Enter") searchFunc();
+    });
+  }
+});
