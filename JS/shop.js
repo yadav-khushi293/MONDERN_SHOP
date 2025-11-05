@@ -82,16 +82,13 @@ const appenddata = (data) => {
     let image = document.createElement("img");
     let text = document.createElement("h5");
     let price = document.createElement("p");
-    let category = document.createElement("p");
     let cart = document.createElement("button");
 
     imgBox.className = "imgbox";
-    category.className = "category";
 
     image.src = el.img;
     text.innerHTML = el.title;
     price.innerHTML = `$${el.price}`;
-    category.innerHTML = el.category;
     cart.innerHTML = "Add To Cart";
 
     cart.addEventListener("click", () => {
@@ -103,7 +100,7 @@ const appenddata = (data) => {
       };
     });
 
-    imgBox.append(image, text, price, category, cart);
+    imgBox.append(image, text, price, cart);
     imageContainer.append(imgBox);
     datashow.append(imageContainer);
   });
@@ -281,3 +278,26 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
+// Filter Functionality
+const filterSelect = document.querySelector("#filter");
+
+if (filterSelect) {
+  filterSelect.addEventListener("change", async (e) => {
+    const value = e.target.value;
+    let filteredData = [...allData]; // clone to avoid overwriting
+
+    if (value === "low_to_high") {
+      filteredData.sort((a, b) => a.price - b.price);
+    } else if (value === "high_to_low") {
+      filteredData.sort((a, b) => b.price - a.price);
+    } else if (value === "category") {
+      filteredData.sort((a, b) => a.category.localeCompare(b.category));
+    }
+
+    allData = filteredData;
+    currentPage = 1;
+    showPage(currentPage);
+    renderPagination();
+  });
+}

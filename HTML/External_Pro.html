@@ -4,20 +4,26 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <link rel="stylesheet" href="../CSS/Gallery_img.css">
-        <link rel="stylesheet" href="../CSS/index.css">
+        <link rel="stylesheet" href="../Product_CSS_pages/External_pro.css">
+        <link rel="stylesheet" href="../CSS/footer.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
     </head>
     <body onload="ApiCall()">
+
         <header class="header"></header>
         <!-- Scroll_arrow -->
         <a href="#" class="to-top">
             <i class="fas fa-chevron-up"></i>
         </a>
-        <div id="simple_product" class="masonry_container"></div>
+        <div id="simple_product">
+        </div>
+
+        <footer class="footers"></footer>
     </body>
-    <script src="../JS/Gallery_img.js"></script>
     <script type="module">
-        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
 
@@ -27,13 +33,9 @@
     styleTag.textContent = NavStyle();
     document.head.append(styleTag);
 
+    document.querySelector('.footers').innerHTML = Footers();
+
 document.querySelector(".homePage").addEventListener('click',()=>{
-    goHome();
-})
-document.querySelector(".logo").addEventListener('click',()=>{
-    goHome();
-})
-document.querySelector(".logo_mobile").addEventListener('click',()=>{
     goHome();
 })
 document.querySelector(".aboutPage").addEventListener('click',()=>{
@@ -73,4 +75,5 @@ const toTop = document.querySelector(".to-top");
         setActiveNav();
     }, 100);
     </script>
+    <script src="../Product_JS_pages/Extenal_Pro.js"></script>
 </html>
