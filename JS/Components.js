@@ -100,11 +100,11 @@ export const Navbar = () => {
                     <div class="menu">
                         <a  id="products" class="productPage nav-link">Products ▼</a>
                         <div class="dropdown-content">
-                          <a  href="../Products_HTML_pages/Simple_pro.html">Simple Product</a>
-                          <a  href="../Products_HTML_pages/Variable_pro.html">Variable Product</a>
-                          <a href= "../Products_HTML_pages/Grouped_Pro.html">Grouped Product</a>
-                          <a href="../Products_HTML_pages/External_Pro.html">Extrenal Product</a>
-                          <a href="../Products_HTML_pages/My_account.html">My Account</a>
+                          <a  href="../HTML/Simple_pro.html">Simple Product</a>
+                          <a  href="../HTML/Variable_pro.html">Variable Product</a>
+                          <a href= "../HTML/Grouped_Pro.html">Grouped Product</a>
+                          <a href="../HTML/External_Pro.html">Extrenal Product</a>
+                          <a href="../HTML/My_account.html">My Account</a>
                         </div>
                       </div>
                     <li class="aboutPage nav-link">About</li>
@@ -124,11 +124,11 @@ export const Navbar = () => {
                     <div class="menu">
                         <a  id="products" class="productPage nav-link">Products ▼</a>
                         <div class="dropdown-content">
-                          <a  href="../Products_HTML_pages/Simple_pro.html">Simple Product</a>
-                          <a  href="../Products_HTML_pages/Variable_pro.html">Variable Product</a>
-                          <a href= "../Products_HTML_pages/Grouped_Pro.html">Grouped Product</a>
-                          <a href="../Products_HTML_pages/External_Pro.html">Extrenal Product</a>
-                          <a href="../Products_HTML_pages/My_account.html">My Account</a>
+                          <a  href="../HTML/Simple_pro.html">Simple Product</a>
+                          <a  href="../HTML/Variable_pro.html">Variable Product</a>
+                          <a href= "../HTML/Grouped_Pro.html">Grouped Product</a>
+                          <a href="../HTML/External_Pro.html">Extrenal Product</a>
+                          <a href="../HTML/My_account.html">My Account</a>
                         </div>
                       </div>
                     <li class="aboutPage nav-link">About</li>

@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Product_CSS_pages/Simple_Pro.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-</head>
-<body onload="ApiCall()">
-    
-    <header class="header"></header>
-    <div id="simple_product"></div>
-          <footer class="footers"></footer>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../Product_CSS_pages/Grouped_pro.css">
+        <link rel="stylesheet" href="../CSS/footer.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    </head>
+    <body onload="ApiCall()">
 
-</body>
-<script type="module">
+        <header class="header"></header>
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <div id="simple_product"></div>
+
+        <footer class="footers"></footer>
+
+    </body>
+    <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
@@ -68,6 +74,5 @@ const toTop = document.querySelector(".to-top");
         setActiveNav();
     }, 100);
     </script>
-    <script src="../Product_JS_pages/Simple_Pro.js"></script>
-    
+    <script src="../Product_JS_pages/Grouped_Pro.js"></script>
 </html>

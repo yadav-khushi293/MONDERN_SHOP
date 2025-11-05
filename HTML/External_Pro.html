@@ -1,78 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-      <!-- <link rel="stylesheet" href="./CSS/footer.css"> -->
-     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../Product_CSS_pages/External_pro.css">
+        <link rel="stylesheet" href="../CSS/footer.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
 
-    <style>
+    </head>
+    <body onload="ApiCall()">
 
-.masonry_container {
-  width: 1500px;
-  margin: 20px auto;
-  column-count: 3;
-  column-gap: 20px;
-}
+        <header class="header"></header>
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <div id="simple_product">
+        </div>
 
-.img_div {
-  break-inside: avoid;
-  margin-bottom: 20px;
-}
-
- Default image size 
-.img_1 {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  border: 1px solid rgb(241, 197, 212);
-}
-.img_small {
-  height: 500px;
-  object-fit: cover;
-}
-
-.img_medium {
-  height: 600px;
-  object-fit: cover;
-}
-
-.img_large {
-  height: 700px;
-  object-fit: cover;
-}
-
-.img_1 {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
- Hover effect 
-.img_1:hover {
-  transform: scale(1.05);
-  filter: brightness(1.1);
-  opacity: 0.6;
-}
-
-
-
-    </style>
-
-</head>
-
-<body onload="ApiCall()">
-      <!-- <header class="header"></header> -->
-      <div id="simple_product" class="masonry_container"></div>
-<!-- 
-        <footer class="footers"></footer> -->
-        
-</body>
-
-
-<script type="module">
+        <footer class="footers"></footer>
+    </body>
+    <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
@@ -125,7 +75,5 @@ const toTop = document.querySelector(".to-top");
         setActiveNav();
     }, 100);
     </script>
-
-<script src="./index.js"></script>
-
+    <script src="../Product_JS_pages/Extenal_Pro.js"></script>
 </html>

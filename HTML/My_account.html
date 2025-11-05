@@ -1,24 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../Product_CSS_pages/Variable_pro.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
-     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
-</head>
-<body onload="ApiCall()">
-    
-    <header class="header"></header>
-    <div id="simple_product">
-       
-    </div>
-  
-   <footer class="footers"></footer>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../Product_CSS_pages/My account.css">
 
-</body>
-<script type="module">
+        <link rel="stylesheet" href="../CSS/footer.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+
+    </head>
+    <body>
+        <header class="header"></header>
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+
+        <div class="main_parents1">
+            <p class="My_account_text">My account</p>
+        </div>
+
+        <div class="from_div">
+            <div class="A">
+
+                <label>Username or email address <span>*</span></label><br>
+                <input class="text_input" type="text"><br>
+
+                <label>Password <span>*</span></label><br>
+                <input class="text_input" type="password"><br>
+
+                <div class="from">
+                    <input class="checkbox_op" type="checkbox">
+                    <label>Remember me</label><br>
+                </div>
+            </div>
+
+            <button id="login_button" type="submit">Login</button>
+            <a href="../Products_HTML_pages/ResetPassaword.html">
+                <p class="p1"> Lost Your Password?</p>
+            </a>
+        </div>
+
+        <footer class="footers"></footer>
+    </body>
+    <script type="module">
         import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage,Footers} from "../JS/Components.js";
 
      document.querySelector('.header').innerHTML = Navbar();
@@ -71,5 +98,4 @@ const toTop = document.querySelector(".to-top");
         setActiveNav();
     }, 100);
     </script>
-    <script src="../Product_JS_pages/Variable_Pro.js"></script>
 </html>
