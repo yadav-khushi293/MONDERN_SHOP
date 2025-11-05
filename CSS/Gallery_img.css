@@ -7,12 +7,11 @@
   font-family: "Times New Roman", Times, serif;
   font-size: 17px;
 }
-
 .masonry_container {
-  width: 1500px;
+  width: 1450px;
   margin: 20px auto;
   column-count: 3;
-  column-gap: 20px;
+  column-gap: 10px;
 }
 
 /* Image wrapper */
