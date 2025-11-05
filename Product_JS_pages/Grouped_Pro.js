@@ -79,6 +79,7 @@ description_text.innerHTML = `
     </div>
 
     <h3 class="hading_3">Related products</h3>
+    
 `;
 
 datashow.append(description_text);
