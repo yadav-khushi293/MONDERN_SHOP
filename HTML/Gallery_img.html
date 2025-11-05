@@ -1,14 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../CSS/Gallery_img.css">
-</head>
-<body onload="ApiCall()">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="../CSS/Gallery_img.css">
+        <link rel="stylesheet" href="../CSS/index.css">
+    </head>
+    <body onload="ApiCall()">
+        <header class="header"></header>
+        <!-- Scroll_arrow -->
+        <a href="#" class="to-top">
+            <i class="fas fa-chevron-up"></i>
+        </a>
+        <div id="simple_product" class="masonry_container"></div>
+    </body>
+    <script src="../JS/Gallery_img.js"></script>
+    <script type="module">
+        import { Navbar, NavStyle, typePlaceholder, setActiveNav, productPage, shopPage, contactPage, goHome, aboutPage} from "../JS/Components.js";
 
-<div id="simple_product" class="masonry_container"></div>
-</body>
-<script src="../JS/Gallery_img.js"></script>
+     document.querySelector('.header').innerHTML = Navbar();
+
+    document.querySelector('body').addEventListener('load', typePlaceholder());
+
+    let styleTag = document.createElement("style");
+    styleTag.textContent = NavStyle();
+    document.head.append(styleTag);
+
+document.querySelector(".homePage").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".logo").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".logo_mobile").addEventListener('click',()=>{
+    goHome();
+})
+document.querySelector(".aboutPage").addEventListener('click',()=>{
+    aboutPage();
+})
+document.querySelector(".productPage").addEventListener('click',()=>{
+    productPage();
+})
+document.querySelector(".shopPage").addEventListener('click',()=>{
+    shopPage();
+})
+document.querySelector(".contactPage").addEventListener('click',()=>{
+    contactPage();
+})
+
+//Day-Night-mode-code
+      const body = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      // Default: Light mode (no class)
+      btn.addEventListener("click", () => {
+        body.classList.toggle("dark");
+      });
+
+    //Scroll-Arrow-code
+const toTop = document.querySelector(".to-top");
+
+    window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 100) {
+            toTop.classList.add("active");
+        } else {
+            toTop.classList.remove("active");
+        }
+    });
+
+    setTimeout(() => {
+        setActiveNav();
+    }, 100);
+    </script>
 </html>

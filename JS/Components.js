@@ -93,8 +93,8 @@ export const Navbar = () => {
     <li class="homePage nav-link">Home</li> <div class="menu">
                         <a id="shop" class="shopPage nav-link">Shop ▼</a>
                         <div class="dropdown-content">
-                          <a id="right">Right Sidebar</a>
-                          <a id="left">Left Sidebar</a>
+                          <a class="right">Right Sidebar</a>
+                          <a class="left">Left Sidebar</a>
                         </div>
                     </div>
                     <div class="menu">
@@ -117,8 +117,8 @@ export const Navbar = () => {
                     <div class="menu">
                         <a id="shop" class="shopPage nav-link">Shop ▼</a>
                         <div class="dropdown-content">
-                          <a id="right">Right Sidebar</a>
-                          <a id="left">Left Sidebar</a>
+                          <a class="right">Right Sidebar</a>
+                          <a class="left">Left Sidebar</a>
                         </div>
                     </div>
                     <div class="menu">
@@ -915,7 +915,7 @@ export const shopPage = () => {
 };
 
 export const productPage = () => {
-  window.location.pathname = getBasePath() + "product.html";
+  window.location.pathname = getBasePath() + "Gallery_img.html";
 };
 
 // Highlight Active Nav Item
@@ -942,7 +942,8 @@ export const setActiveNav = () => {
       (currentPage === "contect.html" &&
         item.classList.contains("contactPage")) ||
       (currentPage === "shop.html" && item.classList.contains("shopPage")) ||
-      (currentPage === "product.html" && item.classList.contains("productPage"))
+      (currentPage === "gallery_img.html" &&
+        item.classList.contains("productPage"))
     ) {
       item.classList.add("active");
     }
@@ -1074,25 +1075,29 @@ export const Shop = () => {
   });
 
   // When clicking Right Sidebar → show products
-  document.querySelector("#right").addEventListener("click", (e) => {
-    e.preventDefault(); // stop default link behavior
-    resetLayout();
-    productParent.style.display = "block";
-    document.body.classList.add("sidebar-active");
-    adventure.style.display = "none";
-    filter.style.marginRight = "55px";
+  document.querySelectorAll(".right").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault(); // stop default link behavior
+      resetLayout();
+      productParent.style.display = "block";
+      document.body.classList.add("sidebar-active");
+      adventure.style.display = "none";
+      filter.style.marginRight = "55px";
+    });
   });
 
   // When clicking Left Sidebar → show products
-  document.querySelector("#left").addEventListener("click", (e) => {
-    e.preventDefault(); // stop default link behavior
-    resetLayout();
-    adventure.style.display = "none";
-    document.body.classList.add("sidebar-active");
-    productParent.style.display = "block";
-    product.style.flexDirection = "row-reverse";
-    product.style.marginLeft = "50px";
-    filter.style.marginRight = "55px";
+  document.querySelectorAll(".left").forEach((el) => {
+    el.addEventListener("click", (e) => {
+      e.preventDefault(); // stop default link behavior
+      resetLayout();
+      adventure.style.display = "none";
+      document.body.classList.add("sidebar-active");
+      productParent.style.display = "block";
+      product.style.flexDirection = "row-reverse";
+      product.style.marginLeft = "50px";
+      filter.style.marginRight = "55px";
+    });
   });
 };
 
