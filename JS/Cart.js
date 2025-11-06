@@ -5,6 +5,23 @@ let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
 console.log(cartItems);
 let currentPage = 1;
 let itemsperPage = 5;
+let token = sessionStorage.getItem("token");
+
+if (!token || token == "null" || token == "undefined") {
+  alert("please login first....");
+  window.location = "../HTML/Login.html";
+}
+
+setTimeout(() => {
+  let cartDisplay = document.querySelector(".cartDisplay");
+
+  if (path == `../HTML/Cart.html` || path == `../HTML/Cart.html`) {
+    cartDisplay.style.display = "block";
+    cartDisplay.style.opacity = 1;
+  }
+}, 100);
+
+
 
 const apiCall = () => {
   fetch(apiCart)

@@ -649,10 +649,8 @@ footer {
 }
 }
 @media(min-width:841px) and (max-width:1340px){
-
-
-    
-       .maindiv {
+      
+    .maindiv {
      display:grid;
     justify-content:center;
     align-items: center;
@@ -666,6 +664,7 @@ footer {
     margin: auto;
     border-bottom: 1px solid rgb(222, 220, 220);
 }
+
 .main_parent {
     padding: 20px 24px;
 }

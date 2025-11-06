@@ -70,7 +70,7 @@ span{
     color: #ffcc25;
      }
 
-    @media(max-width:320px){
+ @media(max-width:320px){
      .child1,#search,.battery,.icon,.cart_num,.FC_child2 {
     display: none !important;
 }
