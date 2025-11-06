@@ -294,15 +294,15 @@
 
 .arrow {
   position: absolute;
-  top: 50%;
+  top: 55%;
   transform: translateY(-50%);
-  font-size: 2rem;
-  color: black;
+  font-size: 1.3rem;
+  color:#eac004;
   cursor: pointer;
   user-select: none;
-  padding: 10px;
+  padding: 13px;
   background: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
+  border-radius: 100% !important;
   z-index: 10;  
 }
 
