@@ -113,6 +113,8 @@ main {
 
 .mcc2_box1 > button {
   padding: 23px 48px;
+  width: 45%;
+  height: auto;
   font-size: 23px;
   font-weight: 550;
   border-radius: 5px;
@@ -286,6 +288,8 @@ h4 {
 
 .mc4_child1 > button {
   padding: 23px 35px;
+  width: 25%;
+  height: auto;
   cursor: pointer;
   font-size: 25px;
   border-radius: 5px;
@@ -303,86 +307,150 @@ h4 {
 
 /***********Media Query*****************/
 
-@media (max-width: 320px) {
-  /* .parent_child1 {
-        height: 70px;
-        padding: 20px;
-        border-bottom: 1px solid rgb(222, 220, 220);
-    }
-
-    .parent_child1 {
-    justify-content:center;
-    align-items: center;
-    gap: 90px !important;
-    margin: auto;
-    border-bottom: 1px solid rgb(222, 220, 220);
-}
-    .logo_mobile {
-        width: 60%;
-        display: block;
-        margin: auto;
-        height: 0px !important;
-    } */
-
+@media (max-width: 430px) {
+  .main_cantaner1 {
+    height: 77vh;
+  }
+  .main_cantaner1 > .child1 {
+    width: 100%;
+  }
   .main_cantaner1 > .child1 > h1 {
-    font-size: 28px;
-    font-weight: 800;
+    font-size: 30px;
+    padding: 0;
   }
-
-  .mc2_box1 {
-    width: 380px;
-    height: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 5px;
-    text-align: center;
+  .main_cantaner1 > .child1 > p {
+    padding-top: 30px;
+    font-size: large !important;
+    opacity: 0.7;
+    letter-spacing: 0.5px;
+    color: #000;
   }
-
   .m_cont2_child1 {
-    display: flex;
-    overflow: scroll;
+    flex-direction: column;
     margin: auto;
-    width: 96%;
-    scrollbar-width: none;
-    height: 700px;
-    padding: 80px 30px;
-  }
-  .m_cont2_child2 {
-    display: grid;
-    /* justify-items: center;
-    align-items: center; */
-    margin: 50px 40px;
   }
   .mcc2_box1 > h1 {
-    font-size: 41px;
-    line-height: 57px;
-    font-weight: 900;
-    margin-bottom: 20px;
+    font-size: 30px;
+    line-height: normal;
+    padding: 0;
+    margin: 20px 0;
   }
-
-  .m_cont3_child2 {
-    width: 100%;
-    height: auto;
+  .mc2_box1 {
+    width: 90%;
+    height: 250px;
+  }
+  .mc2_box1 > p {
+    font-size: medium !important;
+    color: #000;
+    letter-spacing: 0.3px;
+  }
+  .mcc2_box1 > p {
+    font-size: large !important;
+    color: #000;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .m_cont2_child2 {
+    flex-direction: column;
+    margin: 20px 0;
+  }
+  .mcc2_box1,
+  .mcc2_box2 {
+    width: 90%;
     margin: auto;
-    overflow: scroll;
-    scrollbar-width: none;
-    display: flex;
-    justify-content: start;
-    gap: 377px;
-    padding: 90px 0px;
   }
-
-  .mc3c2_box1 > img {
-    width: 400px;
-    height: 500px;
-    margin-bottom: 70px;
-    border-radius: 5px;
+  .mcc2_box2 {
+    height: auto;
+  }
+  .mcc2_box2 > img {
+    height: auto;
+  }
+  .mcc2_box1 > button {
+    padding: 15px;
+    width: 90%;
+    margin: 25px auto;
+  }
+  .main_cantaner3 {
+    padding-bottom: 50px;
+    margin-bottom: 15px;
+  }
+  .m_cont3_child1 {
+    margin: auto;
+    height: auto;
+    line-height: normal;
+    width: 100%;
+  }
+  .m_cont3_child1 > h1 {
+    font-size: 30px;
+  }
+  .m_cont3_child1 > p {
+    width: 90%;
+    margin: 21px auto;
+    font-size: large !important;
+    color: #000;
+  }
+  .m_cont3_child2 {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    margin: auto;
+    width: 90%;
   }
   .mc3c2_box1 {
     width: 100%;
+  }
+  .mc3c2_box1 > img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+  }
+  .mc3c2_box1 > h1,
+  .mc3c2_box1 > h4 {
+    margin: 21px auto;
+  }
+  .mc3c2_box1 > h1 {
+    padding: 0;
+  }
+  .mc3c2_box1 > p {
+    width: 70%;
+    margin: 21px auto;
+    color: #000;
+    font-size: larger !important;
+  }
+  .mc3c2_box1 > i {
+    margin: 7px 11px;
+    font-size: 17px !important;
+  }
+  .main_cantaner4 {
+    margin: 30px auto;
+  }
+  .mc4_child1 {
+    flex-direction: column;
+    gap: 30px;
+    height: auto;
+  }
+  .mc4_c1_box {
+    width: 100%;
+    height: auto;
+  }
+  .mc4_c1_box > h1 {
+    font-size: 33px;
+    padding: 30px 0;
+  }
+  .mc4_c1_box > p {
+    width: 80%;
+    margin: auto;
+    line-height: 29px !important;
     text-align: center;
-    border: 1px solid black;
+    font-size: large !important;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+  }
+  .mc4_child1 > button {
+    width: 80%;
+    padding: 20px 30px;
+    margin: 15px auto;
+    font-size: 19px;
   }
 }
