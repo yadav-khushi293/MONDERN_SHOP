@@ -172,10 +172,6 @@
   border: 2px solid #fda901ff;
 }
 
-.footers {
-  display: none;
-}
-
 .result {
   display: flex;
   justify-content: center;
