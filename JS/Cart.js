@@ -21,8 +21,6 @@ setTimeout(() => {
   }
 }, 100);
 
-
-
 const apiCall = () => {
   fetch(apiCart)
     .then((res) => res.json())

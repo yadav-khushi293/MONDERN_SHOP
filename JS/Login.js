@@ -105,7 +105,7 @@ const validateUserForm = async (e) => {
 
     if (foundUser) {
       sessionStorage.setItem("token", JSON.stringify(foundUser.id));
-      window.location.href = `index.html`;
+      window.location.href = `../index.html`;
     } else {
       alert("Invalid email or password!");
     }
