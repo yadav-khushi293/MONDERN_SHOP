@@ -839,10 +839,9 @@ footer {
 
 
 .cart_num {
-    right: 199px;
-    top: 48px;
+  right:30px !important;
+  top: 30px !important;
 }
-
 .imageContainer {
     display: flex;
     overflow: scroll;
