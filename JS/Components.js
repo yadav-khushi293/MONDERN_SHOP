@@ -875,31 +875,23 @@ navigator.getBattery().then(function (battery) {
 });
 
 function getBasePath() {
-  let path = window.location.pathname;
+  let path = window.location.pathname.replace(/\/{2,}/g, "/");
 
-  // Normalize multiple slashes
-  path = path.replace(/\/{2,}/g, "/");
-
-  // Find "HTML" folder
-  let index = path.indexOf("/HTML/");
-  if (index !== -1) {
-    // Keep everything up to "/HTML/"
-    path = path.substring(0, index + 6); // "/HTML/"
+  // Detect if inside /HTML/ folder
+  const htmlIndex = path.indexOf("/HTML/");
+  if (htmlIndex !== -1) {
+    // Go up one folder to main MONDERN_SHOP
+    path = path.substring(0, htmlIndex + 1);
   } else {
-    // Fallback: current folder
-    path = "./";
+    // Already in root (like index.html)
+    path = path.substring(0, path.lastIndexOf("/") + 1);
   }
 
-  // Ensure trailing slash
-  if (!path.endsWith("/")) {
-    path += "/";
-  }
-
+  if (!path.endsWith("/")) path += "/";
   return path;
 }
-
 export const aboutPage = () => {
-  window.location.pathname = getBasePath() + "about.html";
+  window.location.pathname = getBasePath() + "../HTML/about.html";
 };
 
 export const goHome = () => {
@@ -907,15 +899,15 @@ export const goHome = () => {
 };
 
 export const contactPage = () => {
-  window.location.pathname = getBasePath() + "contect.html";
+  window.location.pathname = getBasePath() + "../HTML/contect.html";
 };
 
 export const shopPage = () => {
-  window.location.pathname = getBasePath() + "shop.html";
+  window.location.pathname = getBasePath() + "../HTML/shop.html";
 };
 
 export const productPage = () => {
-  window.location.pathname = getBasePath() + "Gallery_img.html";
+  window.location.pathname = getBasePath() + "../HTML/Gallery_img.html";
 };
 
 // Highlight Active Nav Item

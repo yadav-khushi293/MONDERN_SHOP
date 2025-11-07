@@ -94,8 +94,8 @@ section {
 .cp2_child2 {
   width: 100%;
   display: flex;
- justify-content: center;
- align-items: center;
+  justify-content: center;
+  align-items: center;
   margin: 150px 0px;
   gap: 50px !important;
 }
@@ -111,7 +111,7 @@ section {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-   color: #4c5258;
+  color: #4c5258;
 }
 
 .form_box > label {
@@ -122,10 +122,10 @@ section {
   outline: none;
 }
 
-.form_box > label>span{
+.form_box > label > span {
   font-size: 25px;
   color: #e91309;
-  font-weight:normal;
+  font-weight: normal;
 }
 
 .form_box > input {
@@ -138,7 +138,8 @@ section {
   font-weight: 500;
 }
 
-.form_box > input:focus,.form_box > textarea:focus{
+.form_box > input:focus,
+.form_box > textarea:focus {
   border: 3px solid #f5cb2a;
   opacity: 1;
 }
@@ -151,22 +152,20 @@ form {
   height: 250px;
   font-size: 22px;
   padding: 12px 12px;
-  color: #6a625a;;
+  color: #6a625a;
   outline: none;
   border: 3px solid #dddde2;
   border-radius: 5px;
   font-weight: 500;
 }
 
-.form_box >span{
+.form_box > span {
   font-size: 20px;
-  margin-top:10px ;
+  margin-top: 10px;
 }
 
-
 .cp2_child2_formDiv > form > button {
-  padding: 15px 40px;
-  font-size: 23px;
+  font-size: 21px;
   font-weight: 550;
   border-radius: 5px;
   text-align: center;
@@ -178,4 +177,62 @@ form {
 
 .cp2_child2_formDiv > form > button:hover {
   background-color: #ffcc06;
+}
+
+@media (max-width: 430px) {
+  .contect_parent1 {
+    height: 77vh;
+  }
+  .cp1_child1 {
+    width: 90%;
+  }
+  .contect_parent1 > .cp1_child1 > h1 {
+    font-size: 30px;
+    padding: 0;
+  }
+  .contect_parent1 > .cp1_child1 > p,
+  .cp2_box1 > p {
+    font-size: 18px !important;
+    color: #000;
+    padding: 25px 0;
+    line-height: 30px !important;
+  }
+  .cp2_child1 {
+    flex-direction: column;
+    margin: 50px auto;
+    gap: 30px;
+  }
+  .cp2_box1 {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    gap: 31px;
+  }
+  .cp2_box1_icondiv {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+  }
+  .cp2_box1_icondiv > i {
+    font-size: 25px !important;
+  }
+  .cp2_box1 > h2 {
+    font-size: 21px;
+    text-align: center;
+  }
+  .cp2_box1 > p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+  }
+  .cp2_child2 {
+    margin: 50px auto;
+    width: 90%;
+    flex-direction: column;
+  }
+  .cp2_child2_mapDiv > iframe {
+    width: 100%;
+    height: 350px;
+    margin: auto;
+  }
 }
