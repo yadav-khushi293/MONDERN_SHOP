@@ -6,6 +6,8 @@ console.log(cartItems);
 let currentPage = 1;
 let itemsperPage = 5;
 let token = sessionStorage.getItem("token");
+// let path = window.location.pathname;
+
 
 if (!token || token == "null" || token == "undefined") {
   alert("please login first....");
@@ -15,10 +17,10 @@ if (!token || token == "null" || token == "undefined") {
 setTimeout(() => {
   let cartDisplay = document.querySelector(".cartDisplay");
 
-  if (path == `../HTML/Cart.html` || path == `../HTML/Cart.html`) {
-    cartDisplay.style.display = "block";
-    cartDisplay.style.opacity = 1;
-  }
+if (path == `../HTML/Cart.html` || path == `../HTML/Cart.htmlS`) {
+cartDisplay.style.display = "block";
+cartDisplay.style.opacity = 1;
+}
 }, 100);
 
 const apiCall = () => {
