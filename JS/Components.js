@@ -1171,7 +1171,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cart_Page = document.querySelector(".cart");
   if (cart_Page) {
     cart_Page.addEventListener("click", (e) => {
-      window.location.href = "Cart.html";
+      window.location.href = "HTML/Cart.html";
     });
   }
   updateCartCount();

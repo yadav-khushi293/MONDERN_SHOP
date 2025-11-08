@@ -71,28 +71,6 @@ const validateUserForm = async (e) => {
     password,
   };
 
-  // try {
-  //   let res = await fetch(apiLogin, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-Type": "application/json",
-  //     },
-  //     body: JSON.stringify(userData),
-  //   });
-  //   let data = await res.json();
-
-  // let token = sessionStorage.getItem("token");
-
-  // if (token) {
-  //   alert("you have token please go to home page...");
-  //   return;
-  // } else if (data.accessToken) {
-  //   sessionStorage.setItem("token", JSON.stringify(data.accessToken));
-  //   window.location.href = `index.html`;
-  // } else if (data === "Cannot find user") {
-  //   alert("data coudn't found");
-  //   window.location = "Sign_page.html";
-  // }
 
   try {
     let res = await fetch(apiLogin);
