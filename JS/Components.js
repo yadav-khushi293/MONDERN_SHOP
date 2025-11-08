@@ -1173,10 +1173,6 @@ document.addEventListener("DOMContentLoaded", function () {
     cart_Page.addEventListener("click", (e) => {
       window.location.href = "HTML/Cart.html";
     });
-  } else {
-    cart_Page.addEventListener("click", (e) => {
-      window.location.href = "Cart.html";
-    });
   }
   updateCartCount();
   setActiveNav();
