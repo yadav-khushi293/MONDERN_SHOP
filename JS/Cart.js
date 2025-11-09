@@ -8,19 +8,32 @@ let itemsperPage = 5;
 let token = sessionStorage.getItem("token");
 // let path = window.location.pathname;
 
-
 if (!token || token == "null" || token == "undefined") {
   alert("please login first....");
   window.location = "../HTML/Login.html";
 }
 
-setTimeout(() => {
-  let cartDisplay = document.querySelector(".cartDisplay");
+// setTimeout(() => {
+//   let cartDisplay = document.querySelector(".cartDisplay");
 
-if (path == `../HTML/Cart.html` || path == `../HTML/Cart.htmlS`) {
-cartDisplay.style.display = "block";
-cartDisplay.style.opacity = 1;
-}
+//   if (path == `../HTML/Cart.html` || path == `../HTML/Cart.html`) {
+//     cartDisplay.style.display = "block";
+//     cartDisplay.style.opacity = 1;
+//   }
+// }, 100);
+
+setTimeout(() => {
+  const path = window.location.pathname; // ✅ define path first
+  const cartDisplay = document.querySelector(".cartDisplay");
+
+  // Normalize for different possible locations
+  if (
+    cartDisplay &&
+    (path.endsWith("/Cart.html") || path.includes("Cart.html"))
+  ) {
+    cartDisplay.style.display = "block";
+    cartDisplay.style.opacity = 1;
+  }
 }, 100);
 
 const apiCall = () => {
@@ -31,19 +44,35 @@ const apiCall = () => {
       sessionStorage.setItem("cartItems", JSON.stringify(allData));
       showPage(currentPage);
       renderPagination();
+      appenddata(allData);
     })
     .catch((err) => console.log(err));
 };
 
 const appenddata = (data) => {
+  const pagination1 = document.querySelector("#pagination");
   const datashow = document.querySelector("#cart_Products");
-  const cart_flex = document.createElement("div");
-  cart_flex.className = "cart_flex";
-  datashow.innerHTML = "";
-  cart_flex.innerHTML = "";
 
-  const table = document.createElement("table");
-  table.innerHTML = `
+  if (!data || data.length === 0) {
+    if (pagination1) pagination1.style.display = "none";
+    datashow.innerHTML = `
+      <div class = "emptyCart">
+        <h2> No Products Added Yet</h2>
+        <p>Looks like you haven't added anything to your cart.</p>
+        <button class="goShop" onclick="window.location.href='../HTML/shop.html'">Go To Shop</button>
+      </div>
+    `;
+    return;
+  } else {
+    datashow.innerHTML = "";
+    if (pagination1) pagination1.style.display = "block";
+
+    const cart_flex = document.createElement("div");
+    cart_flex.className = "cart_flex";
+    cart_flex.innerHTML = "";
+
+    const table = document.createElement("table");
+    table.innerHTML = `
       <thead>
         <tr>
           <th>Product</th>
@@ -54,24 +83,24 @@ const appenddata = (data) => {
       <tbody></tbody>
     `;
 
-  const tbody = table.querySelector("tbody");
+    const tbody = table.querySelector("tbody");
 
-  let total = 0;
+    let total = 0;
 
-  data.forEach((el) => {
-    const imageContainer = document.createElement("div");
-    imageContainer.className = "imageContainer";
+    data.forEach((el) => {
+      const imageContainer = document.createElement("div");
+      imageContainer.className = "imageContainer";
 
-    let imgBox = document.createElement("div");
-    imgBox.className = "imgBox";
+      let imgBox = document.createElement("div");
+      imgBox.className = "imgBox";
 
-    const price = parseInt(el.price);
-    const count = parseInt(el.count);
-    const subTotal = price * count;
+      const price = parseInt(el.price);
+      const count = parseInt(el.count);
+      const subTotal = price * count;
 
-    total += subTotal;
+      total += subTotal;
 
-    imgBox.innerHTML = `
+      imgBox.innerHTML = `
     <img src="${el.img}" alt="Product Image" class="cart_img"/>
       <div class="cart_desc">
             <td><h6>${el.title}</h6></td>
@@ -80,12 +109,12 @@ const appenddata = (data) => {
             <div class="btn_border1">
               <td>
                 <button class="btns neg" onclick="decrementCount(${el.id}, ${
-      el.count
-    })">-</button>
+        el.count
+      })">-</button>
                 <p class="button_count">${el.count}</p>
                 <button class="btns pos" onclick="incrementCount(${el.id}, ${
-      el.count
-    })">+</button>
+        el.count
+      })">+</button>
                 </td>
               </div>
             <td>
@@ -104,12 +133,12 @@ const appenddata = (data) => {
         <div class="btn_border">
               <td>
                 <button class="btns neg" onclick="decrementCount(${el.id}, ${
-      el.count
-    })">-</button>
+        el.count
+      })">-</button>
                 ${el.count}
                 <button class="btns pos" onclick="incrementCount(${el.id}, ${
-      el.count
-    })">+</button>
+        el.count
+      })">+</button>
                 </td>
               </div>
             <td>
@@ -122,19 +151,19 @@ const appenddata = (data) => {
 </svg>
       `;
 
-    tbody.appendChild(imgBox);
-  });
+      tbody.appendChild(imgBox);
+    });
 
-  let overallTotal = allData.reduce((acc, el) => {
-    return acc + parseFloat(el.price) * parseInt(el.count);
-  }, 0);
+    let overallTotal = allData.reduce((acc, el) => {
+      return acc + parseFloat(el.price) * parseInt(el.count);
+    }, 0);
 
-  // reduce goes item by item, multiplies price × count, and adds it to a running total.
+    // reduce goes item by item, multiplies price × count, and adds it to a running total.
 
-  const cart_total = document.createElement("div");
-  cart_total.className = "cart_total";
+    const cart_total = document.createElement("div");
+    cart_total.className = "cart_total";
 
-  cart_total.innerHTML = `
+    cart_total.innerHTML = `
   <h6>Cart Totals</h6>
   <div class="subTotal">
     <p>Subtotal</p>
@@ -147,8 +176,9 @@ const appenddata = (data) => {
   <button class="proceed">Proceed To Checkout</button>
   `;
 
-  cart_flex.append(tbody, cart_total);
-  datashow.append(table, cart_flex);
+    cart_flex.append(tbody, cart_total);
+    datashow.append(table, cart_flex);
+  }
 };
 
 const showPage = (page) => {
@@ -170,8 +200,8 @@ const incrementCount = async (id, count) => {
         "Content-Type": "application/json",
       },
     });
-    updateCartCount();
     apiCall();
+    updateCartCount();
   } catch (error) {
     console.log("🚀 ~ error:", error);
   }
