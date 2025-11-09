@@ -76,7 +76,7 @@ span{
      }
 
  @media(max-width:320px){
-     .child1,#search,.battery,.icon,.cart_num,.FC_child2 {
+     .child1,#search,.battery,.icon,.cart_num,.FC_child2,.to-top {
     display: none !important;
 }
       
@@ -158,7 +158,7 @@ label {
 
     @media (min-width:321px) and (max-width:380px){
 
-       .child1,#search,.battery,.icon,.cart_num,.FC_child2 {
+       .child1,#search,.battery,.icon,.cart_num,.FC_child2,.to-top {
     display: none !important;
 }
       
