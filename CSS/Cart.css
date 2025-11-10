@@ -198,10 +198,6 @@ tbody {
   cursor: not-allowed;
 }
 
-.footers {
-  display: none;
-}
-
 .grid_price,
 .grid_price1,
 .button_count {
@@ -210,6 +206,24 @@ tbody {
 
 .button_flex {
   display: none;
+}
+
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.emptyCart > p {
+  color: #000;
+  opacity: 0.8;
+}
+
+.emptyCart > h2 {
+  font-size: xx-large;
 }
 
 @media (max-width: 430px) {

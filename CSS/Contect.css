@@ -235,4 +235,93 @@ form {
     height: 350px;
     margin: auto;
   }
+  form {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 840px) {
+  .contect_parent1 {
+    height: 77vh;
+  }
+  .cp1_child1 {
+    width: 90%;
+  }
+  .contect_parent1 > .cp1_child1 > h1 {
+    font-size: 30px;
+    padding: 0;
+  }
+  .contect_parent1 > .cp1_child1 > p,
+  .cp2_box1 > p {
+    font-size: 18px !important;
+    color: #000;
+    padding: 25px 0;
+    line-height: 30px !important;
+  }
+  .cp2_child1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 50px auto;
+    gap: 30px;
+  }
+  .cp2_box1 {
+    width: 90%;
+    margin: auto;
+    height: auto;
+    gap: 31px;
+  }
+  .cp2_box1_icondiv {
+    width: 60px;
+    height: 60px;
+    padding: 15px;
+  }
+  .cp2_box1_icondiv > i {
+    font-size: 25px !important;
+  }
+  .cp2_box1 > h2 {
+    font-size: 21px;
+    text-align: center;
+  }
+  .cp2_box1 > p {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+  }
+  .cp2_child2 {
+    margin: 50px auto;
+    width: 100%;
+    flex-direction: column;
+  }
+  .cp2_child2_mapDiv {
+    width: 90%;
+  }
+  .cp2_child2_mapDiv > iframe {
+    width: 100%;
+    height: 350px;
+    margin: auto;
+  }
+  .cp2_child2_formDiv {
+    width: 90%;
+    margin: auto;
+  }
+  .cp2_child2_formDiv > form > h1 {
+    text-align: left;
+    padding: 0;
+    margin: auto;
+    margin-bottom: 35px;
+  }
+  .form_box > label {
+    font-size: 17px;
+    padding: 11px;
+  }
+  .form_box > input {
+    padding: 11px;
+    font-size: 17px;
+  }
+  .cp2_child2_formDiv > form > button {
+    margin: 0;
+    font-size: 17px;
+    padding: 13px;
+  }
 }

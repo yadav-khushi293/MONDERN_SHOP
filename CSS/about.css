@@ -281,6 +281,7 @@ h4 {
 }
 
 .mc4_c1_box > p {
+  color: #fff !important;
   font-size: 22px;
   line-height: 40px;
   font-weight: 600;
@@ -310,8 +311,7 @@ h4 {
 .mcc2_box1 > p,
 .mc3c2_box1 > p,
 .mc4_c1_box > p {
-  color: #000
-  ;
+  color: #000;
 }
 
 /***********Media Query*****************/

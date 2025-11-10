@@ -2,25 +2,38 @@ let apiCart = "https://weather-app-6du4.onrender.com/cart";
 
 let allData = [];
 let cartItems = JSON.parse(sessionStorage.getItem("cartItems")) || [];
-console.log(cartItems);
+// console.log(cartItems);
 let currentPage = 1;
 let itemsperPage = 5;
 let token = sessionStorage.getItem("token");
 // let path = window.location.pathname;
-
 
 if (!token || token == "null" || token == "undefined") {
   alert("please login first....");
   window.location = "../HTML/Login.html";
 }
 
-setTimeout(() => {
-  let cartDisplay = document.querySelector(".cartDisplay");
+// setTimeout(() => {
+//   let cartDisplay = document.querySelector(".cartDisplay");
 
-if (path == `../HTML/Cart.html` || path == `../HTML/Cart.htmlS`) {
-cartDisplay.style.display = "block";
-cartDisplay.style.opacity = 1;
-}
+//   if (path == `../HTML/Cart.html` || path == `../HTML/Cart.html`) {
+//     cartDisplay.style.display = "block";
+//     cartDisplay.style.opacity = 1;
+//   }
+// }, 100);
+
+setTimeout(() => {
+  const path = window.location.pathname; // ✅ define path first
+  const cartDisplay = document.querySelector(".cartDisplay");
+
+  // Normalize for different possible locations
+  if (
+    cartDisplay &&
+    (path.endsWith("/Cart.html") || path.includes("Cart.html"))
+  ) {
+    cartDisplay.style.display = "block";
+    cartDisplay.style.opacity = 1;
+  }
 }, 100);
 
 const apiCall = () => {
@@ -31,15 +44,31 @@ const apiCall = () => {
       sessionStorage.setItem("cartItems", JSON.stringify(allData));
       showPage(currentPage);
       renderPagination();
+      // appenddata(allData);
     })
     .catch((err) => console.log(err));
 };
 
 const appenddata = (data) => {
+  const pagination1 = document.querySelector("#pagination");
   const datashow = document.querySelector("#cart_Products");
+
+  // if (!data || data.length === 0) {
+  //   if (pagination1) pagination1.style.display = "none";
+  //   datashow.innerHTML = `
+  //     <div class = "emptyCart">
+  //       <h2> No Products Added Yet</h2>
+  //       <p>Looks like you haven't added anything to your cart.</p>
+  //       <button class="goShop" onclick="window.location.href='../HTML/shop.html'">Go To Shop</button>
+  //     </div>
+  //   `;
+  //   return;
+  // } else {
+  datashow.innerHTML = "";
+  if (pagination1) pagination1.style.display = "block";
+
   const cart_flex = document.createElement("div");
   cart_flex.className = "cart_flex";
-  datashow.innerHTML = "";
   cart_flex.innerHTML = "";
 
   const table = document.createElement("table");
@@ -150,6 +179,7 @@ const appenddata = (data) => {
   cart_flex.append(tbody, cart_total);
   datashow.append(table, cart_flex);
 };
+// };
 
 const showPage = (page) => {
   let start = (page - 1) * itemsperPage;
@@ -170,8 +200,8 @@ const incrementCount = async (id, count) => {
         "Content-Type": "application/json",
       },
     });
-    updateCartCount();
     apiCall();
+    updateCartCount();
   } catch (error) {
     console.log("🚀 ~ error:", error);
   }
