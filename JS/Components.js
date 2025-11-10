@@ -38,7 +38,6 @@ export const Navbar = () => {
                     </svg>
                 </div>
                 <div class="child2">
-                  <img src="../Utils/Menu.svg" alt="Menu" class="nav_menu">
                 <?xml version="1.0" encoding="UTF-8"?>
 <svg viewBox="0 0 191 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="logo">
     <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
@@ -142,9 +141,6 @@ export const Navbar = () => {
 
 export const NavStyle = () => {
   return `
-  .nav_menu{
-  display: none;
-  }
  .main_parent {
   padding: 20px 70px;
   background-color:#fff;
@@ -664,15 +660,14 @@ body.dark .btn strong:nth-child(2) {
   }
 
   @media (min-width: 321px) and (max-width: 430px){
-    .nav_menu,.logo_mobile{
+  .logo_mobile{
   display: inline-block;
     }
   .menu > a {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
   padding: 15px 0;
   cursor: pointer;
-  color: #fff;
 }
   .main_parent{
   padding: 0;
@@ -682,15 +677,13 @@ body.dark .btn strong:nth-child(2) {
   width: 100%;
   }
   .cart_num.not-charging,.cart_num {
-    right: 3px;
+    right: 115px;
     top: 19px;
   }
     .child1,
     #search,
     .profile,
     .battery,
-    #toggleBtn,
-    .parent_child2,
     .video_container,
     .deal_child2,
     .child2 > svg{
@@ -707,6 +700,13 @@ body.dark .btn strong:nth-child(2) {
     padding: 20px;
     border-bottom: 1px solid rgb(222, 220, 220);
   }
+    .navbar_ul, li{
+    font-size: 13px;
+    gap: 15px;
+    }
+    .child3{
+    gap: 50px;
+    }
     .to-top{
     right: 13px;
     }
@@ -716,7 +716,7 @@ body.dark .btn strong:nth-child(2) {
   }
 
   @media (min-width: 431px) and (max-width: 840px){
-    .nav_menu,.logo_mobile{
+  .logo_mobile{
   display: inline-block;
     }
   .main_parent{
@@ -727,31 +727,38 @@ body.dark .btn strong:nth-child(2) {
   width: 100%;
   }
   .cart_num.not-charging,.cart_num {
-    right: 3px;
+    right: 230px;
     top: 19px;
   }
     .child1,
     #search,
     .profile,
     .battery,
-    #toggleBtn,
-    .parent_child2,
     .video_container,
     .deal_child2,
     .child2 > svg{
     display: none;1
     }
   .logo_mobile {
-    width: 60%;
     display: block;
     margin: auto;
     height: 35px;
+  }
+  .child2,.child3{
+    width: 50%;
   }
   .parent_child1 {
     height: 70px;
     padding: 20px;
     border-bottom: 1px solid rgb(222, 220, 220);
   }
+    .navbar_ul, li{
+    font-size: 17px;
+    gap: 35px;
+    }
+    .child3{
+    gap: 50px;
+    }
     .to-top{
     right: 13px;
     }
@@ -759,13 +766,12 @@ body.dark .btn strong:nth-child(2) {
     right: -11px;
     }
     .menu > a {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   padding: 15px 0;
   cursor: pointer;
-  color: #fff;
 }
-  }
+}
     
 @media (min-width: 841px) and (max-width: 1340px){
   .child2 > svg {
@@ -913,6 +919,7 @@ export const shopPage = () => {
 };
 
 export const productPage = () => {
+  if (window.innerWidth <= 840) return;
   window.location.pathname = getBasePath() + "../HTML/Gallery_img.html";
 };
 
@@ -941,6 +948,11 @@ export const setActiveNav = () => {
         item.classList.contains("contactPage")) ||
       (currentPage === "shop.html" && item.classList.contains("shopPage")) ||
       (currentPage === "gallery_img.html" &&
+        "external_pro.html" &&
+        "grouped_pro.html" &&
+        "variable_pro" &&
+        "simple_pro" &&
+        "my_account.html" &&
         item.classList.contains("productPage"))
     ) {
       item.classList.add("active");
@@ -1070,6 +1082,13 @@ export const Shop = () => {
     document.body.classList.remove("sidebar-active");
     adventure.style.display = "block";
     filter.style.marginRight = "73px";
+
+    if (window.innerWidth >= 841 && window.innerWidth <= 1340) {
+      itemsperPage = 8; // or your default value
+      currentPage = 1;
+      showPage(currentPage);
+      renderPagination();
+    }
   });
 
   // When clicking Right Sidebar → show products
@@ -1081,6 +1100,13 @@ export const Shop = () => {
       document.body.classList.add("sidebar-active");
       adventure.style.display = "none";
       filter.style.marginRight = "55px";
+
+      if (window.innerWidth >= 841 && window.innerWidth <= 1340) {
+        itemsperPage = 6; // Example: show fewer items when sidebar visible
+        currentPage = 1;
+        showPage(currentPage);
+        renderPagination();
+      }
     });
   });
 
@@ -1095,6 +1121,13 @@ export const Shop = () => {
       product.style.flexDirection = "row-reverse";
       product.style.marginLeft = "50px";
       filter.style.marginRight = "55px";
+
+      if (window.innerWidth >= 841 && window.innerWidth <= 1340) {
+        itemsperPage = 6; // Example: show fewer items when sidebar visible
+        currentPage = 1;
+        showPage(currentPage);
+        renderPagination();
+      }
     });
   });
 };
@@ -1111,67 +1144,67 @@ const updateCartCount = async () => {
 
 // Sidebar Js
 
-document.addEventListener("DOMContentLoaded", () => {
-  const ham = document.querySelector(".nav_menu");
-  const sidebar = document.querySelector(".mobile_sidebar");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const ham = document.querySelector(".nav_menu");
+//   const sidebar = document.querySelector(".mobile_sidebar");
 
-  if (ham && sidebar) {
-    ham.addEventListener("click", () => {
-      sidebar.classList.toggle("active");
+//   if (ham && sidebar) {
+//     ham.addEventListener("click", () => {
+//       sidebar.classList.toggle("active");
 
-      // Hide hamburger when sidebar is active
-      if (sidebar.classList.contains("active")) {
-        ham.style.display = "none";
-        if (overlay) overlay.classList.add("active");
-      } else {
-        ham.style.display = "inline-block";
-        if (overlay) overlay.classList.remove("active");
-      }
-    });
+//       // Hide hamburger when sidebar is active
+//       if (sidebar.classList.contains("active")) {
+//         ham.style.display = "none";
+//         if (overlay) overlay.classList.add("active");
+//       } else {
+//         ham.style.display = "inline-block";
+//         if (overlay) overlay.classList.remove("active");
+//       }
+//     });
 
-    // Close sidebar on outside click
-    document.addEventListener("click", (e) => {
-      if (
-        !sidebar.contains(e.target) &&
-        !ham.contains(e.target) &&
-        sidebar.classList.contains("active")
-      ) {
-        sidebar.classList.remove("active");
-        ham.style.display = "inline-block"; // show again
-        if (overlay) overlay.classList.remove("active");
-      }
-    });
-  }
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const home = document.querySelectorAll(".homePage");
-  const about = document.querySelectorAll(".aboutPage");
-  const contact = document.querySelectorAll(".contactPage");
-  const shop = document.querySelectorAll(".shopPage");
-  const product = document.querySelectorAll(".productPage");
+//     // Close sidebar on outside click
+//     document.addEventListener("click", (e) => {
+//       if (
+//         !sidebar.contains(e.target) &&
+//         !ham.contains(e.target) &&
+//         sidebar.classList.contains("active")
+//       ) {
+//         sidebar.classList.remove("active");
+//         ham.style.display = "inline-block"; // show again
+//         if (overlay) overlay.classList.remove("active");
+//       }
+//     });
+//   }
+// });
+// document.addEventListener("DOMContentLoaded", () => {
+//   const home = document.querySelectorAll(".homePage");
+//   const about = document.querySelectorAll(".aboutPage");
+//   const contact = document.querySelectorAll(".contactPage");
+//   const shop = document.querySelectorAll(".shopPage");
+//   const product = document.querySelectorAll(".productPage");
 
-  const sidebar = document.querySelector(".mobile_sidebar");
-  const ham = document.querySelector(".nav_menu");
+//   const sidebar = document.querySelector(".mobile_sidebar");
+//   const ham = document.querySelector(".nav_menu");
 
-  const addNavAction = (elements, action) => {
-    elements.forEach((el) => {
-      el.addEventListener("click", () => {
-        action(); // Go to page
-        setTimeout(() => setActiveNav(), 300); // Highlight after navigation delay
+//   const addNavAction = (elements, action) => {
+//     elements.forEach((el) => {
+//       el.addEventListener("click", () => {
+//         action(); // Go to page
+//         setTimeout(() => setActiveNav(), 300); // Highlight after navigation delay
 
-        // Close sidebar if open (mobile)
-        if (sidebar) sidebar.classList.remove("active");
-        if (ham) ham.style.display = "inline-block";
-      });
-    });
-  };
+//         // Close sidebar if open (mobile)
+//         if (sidebar) sidebar.classList.remove("active");
+//         if (ham) ham.style.display = "inline-block";
+//       });
+//     });
+//   };
 
-  addNavAction(home, goHome);
-  addNavAction(about, aboutPage);
-  addNavAction(contact, contactPage);
-  addNavAction(shop, shopPage);
-  addNavAction(product, productPage);
-});
+//   addNavAction(home, goHome);
+//   addNavAction(about, aboutPage);
+//   addNavAction(contact, contactPage);
+//   addNavAction(shop, shopPage);
+//   addNavAction(product, productPage);
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   const cart_Page = document.querySelector(".cart");

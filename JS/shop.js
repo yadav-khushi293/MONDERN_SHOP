@@ -110,7 +110,6 @@ const appenddata = (data) => {
 };
 
 const showPage = (page) => {
-  updateItemsPerPage();
   let start = (page - 1) * itemsperPage;
   let end = page * itemsperPage;
   let paginatedItems = allData.slice(start, end);
@@ -258,29 +257,6 @@ const searchFunc = async () => {
     console.error("Search failed:", err);
   }
 };
-
-// Pagination Is Changing On Media-Query (min-width: 841px) and (max-width: 1340px) With Sidebar
-
-const updateItemsPerPage = () => {
-  const width = window.innerWidth;
-  const isSidebarActive = document.body.classList.contains("sidebar-active");
-
-  // ✅ When sidebar active + within 841–1340px → show 6 items
-  if (isSidebarActive && width >= 841 && width <= 1340) {
-    itemsperPage = 6;
-  } else {
-    itemsperPage = 8; // Default
-  }
-};
-
-window.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.querySelector("#search");
-  if (searchInput) {
-    searchInput.addEventListener("keypress", (e) => {
-      if (e.key === "Enter") searchFunc();
-    });
-  }
-});
 
 // Filter Functionality
 const filterSelect = document.querySelector("#filter");
