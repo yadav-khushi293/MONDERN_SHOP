@@ -82,11 +82,14 @@ const appenddata = (data) => {
     let image = document.createElement("img");
     let text = document.createElement("h5");
     let price = document.createElement("p");
+    let category = document.createElement("p");
     let cart = document.createElement("button");
 
     imgBox.className = "imgbox";
+    category.className = "category";
 
     image.src = el.img;
+    category.innerHTML = el.category;
     text.innerHTML = el.title;
     price.innerHTML = `$${el.price}`;
     cart.innerHTML = "Add To Cart";
@@ -100,7 +103,7 @@ const appenddata = (data) => {
       };
     });
 
-    imgBox.append(image, text, price, cart);
+    imgBox.append(image, text, price, category, cart);
     imageContainer.append(imgBox);
     datashow.append(imageContainer);
   });
@@ -291,8 +294,6 @@ if (filterSelect) {
       filteredData.sort((a, b) => a.price - b.price);
     } else if (value === "high_to_low") {
       filteredData.sort((a, b) => b.price - a.price);
-    } else if (value === "category") {
-      filteredData.sort((a, b) => a.category.localeCompare(b.category));
     }
 
     allData = filteredData;

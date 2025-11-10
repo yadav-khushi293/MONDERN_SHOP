@@ -88,29 +88,30 @@ export const Navbar = () => {
                     </div>
                 </div>
             </div>
-            <div class="mobile_sidebar">
-  <ul>
-    <li class="homePage nav-link">Home</li> <div class="menu">
-                        <a id="shop" class="shopPage nav-link">Shop ▼</a>
-                        <div class="dropdown-content">
-                          <a class="right">Right Sidebar</a>
-                          <a class="left">Left Sidebar</a>
-                        </div>
-                    </div>
-                    <div class="menu">
-                        <a  id="products" class="productPage nav-link">Products ▼</a>
-                        <div class="dropdown-content">
-                          <a  href="../HTML/Simple_pro.html">Simple Product</a>
-                          <a  href="../HTML/Variable_pro.html">Variable Product</a>
-                          <a href= "../HTML/Grouped_Pro.html">Grouped Product</a>
-                          <a href="../HTML/External_Pro.html">Extrenal Product</a>
-                          <a href="../HTML/My_account.html">My Account</a>
-                        </div>
-                      </div>
-                    <li class="aboutPage nav-link">About</li>
-    <li class="contactPage nav-link">Contact</li>
-  </ul>
-</div>
+            <!-- <div class="mobile_sidebar">
+   <ul>
+     <li class="homePage nav-link">Home</li> <div class="menu">
+                         <a id="shop" class="shopPage nav-link">Shop ▼</a>
+                         <div class="dropdown-content">
+                           <a class="right">Right Sidebar</a>
+                           <a class="left">Left Sidebar</a>
+                         </div>
+                     </div>
+                     <div class="menu">
+                         <a  id="products" class="productPage nav-link">Products ▼</a>
+                         <div class="dropdown-content">
+                           <a  href="../HTML/Simple_pro.html">Simple Product</a>
+                           <a  href="../HTML/Variable_pro.html">Variable Product</a>
+                           <a href= "../HTML/Grouped_Pro.html">Grouped Product</a>
+                           <a href="../HTML/External_Pro.html">Extrenal Product</a>
+                           <a href="../HTML/My_account.html">My Account</a>
+                         </div>
+                       </div>
+                     <li class="aboutPage nav-link">About</li>
+     <li class="contactPage nav-link">Contact</li>
+   </ul>
+ </div> -->
+       
             <div class="parent_child2">
                 <ul class="navbar_ul">
                     <li class="homePage nav-link">Home</li>
@@ -392,42 +393,42 @@ top: 57px;
   top: 55px;
 }
 
-.mobile_sidebar {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 70%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.9);
-  padding: 30px 20px;
-  transition: left 0.3s ease-in-out;
-  z-index: 11;
-  color: #fff;
-}
+// .mobile_sidebar {
+//   position: fixed;
+//   top: 0;
+//   left: -100%;
+//   width: 70%;
+//   height: 100vh;
+//   background: rgba(0, 0, 0, 0.9);
+//   padding: 30px 20px;
+//   transition: left 0.3s ease-in-out;
+//   z-index: 11;
+//   color: #fff;
+// }
 
-.mobile_sidebar.active {
-  left: 0;
-}
+// .mobile_sidebar.active {
+//   left: 0;
+// }
 
-.mobile_sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: grid;
-  justify-items: left;
-}
+// .mobile_sidebar ul {
+//   list-style: none;
+//   padding: 0;
+//   margin: 0;
+//   display: grid;
+//   justify-items: left;
+// }
 
-.mobile_sidebar li,.productPage,.shopPage,.menu > a {
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 0;
-  cursor: pointer;
-  color: #fff;
-}
+// .mobile_sidebar li,.productPage,.shopPage,.menu > a {
+//   font-size: 18px;
+//   font-weight: 700;
+//   padding: 15px 0;
+//   cursor: pointer;
+//   color: #fff;
+// }
 
-.mobile_sidebar li:hover {
-  color: #fda901ff;
-}
+// .mobile_sidebar li:hover {
+//   color: #fda901ff;
+// }
 
 /* Day-night-mode*/
 
@@ -606,7 +607,7 @@ body.dark .btn strong:nth-child(2) {
     }
 
 @media (max-width: 320px){
-    .nav_menu,.logo_mobile{
+  .logo_mobile{
   display: inline-block;
     }
   .main_parent{
@@ -617,15 +618,13 @@ body.dark .btn strong:nth-child(2) {
   width: 100%;
   }
   .cart_num.not-charging,.cart_num {
-    right: 3px;
+    right: 115px;
     top: 19px;
   }
     .child1,
     #search,
     .profile,
     .battery,
-    #toggleBtn,
-    .parent_child2,
     .video_container,
     .deal_child2,
     .child2 > svg{
@@ -640,8 +639,16 @@ body.dark .btn strong:nth-child(2) {
   .parent_child1 {
     height: 70px;
     padding: 20px;
+    gap: 50px;
     border-bottom: 1px solid rgb(222, 220, 220);
   }
+    .navbar_ul, li{
+    font-size: 13px;
+    gap: 15px;
+    }
+    .child3{
+    gap: 50px;
+    }
     .to-top{
     right: 13px;
     }
@@ -649,11 +656,10 @@ body.dark .btn strong:nth-child(2) {
     right: -11px;
     }
     .menu > a {
-  font-size: 18px;
+  font-size: 13px;
   font-weight: 700;
   padding: 15px 0;
   cursor: pointer;
-  color: #fff;
 }
   }
 
