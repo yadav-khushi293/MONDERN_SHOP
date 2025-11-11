@@ -240,7 +240,7 @@
     gap: 50px;
     padding: 20px 0px;
 }
-.child1,#search,.battery,.icon,.cart_num,.FC_child2,.to-top {
+.child1,#search,.battery,.icon,.cart_num,.FC_child2{
     display: none !important;
 }
 .child2 > svg {
@@ -372,7 +372,7 @@ footer {
     gap: 50px;
     padding: 20px 0px;
 }
-.child1,#search,.battery,.icon,.cart_num,.FC_child2,.to-top {
+.child1,#search,.battery,.icon,.cart_num,.FC_child2{
     display: none !important;
 }
 .child2 > svg {

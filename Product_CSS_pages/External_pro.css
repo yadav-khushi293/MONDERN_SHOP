@@ -468,7 +468,7 @@ footer {
     margin: 80px 0px !important;
 }
 
-.child1,#search,.battery,.icon,.cart_num,.FC_child2,.to-top {
+.child1,#search,.battery,.icon,.cart_num,.FC_child2{
     display: none !important;
 }
 
@@ -627,7 +627,7 @@ footer {
     margin: 80px 0px !important;
 }
 
-.child1,#search,.battery,.icon,.cart_num,.FC_child2 ,.to-top{
+.child1,#search,.battery,.icon,.cart_num,.FC_child2{
     display: none !important;
 }
 
