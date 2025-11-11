@@ -237,9 +237,20 @@
     gap: 50px;
     padding: 20px 0px;
 }
-.child1,#search,.battery,.icon,.cart_num,.FC_child2{
+.child1,#search,.battery,.FC_child2{
     display: none !important;
 }
+ .child2 {
+        display: flex;
+        width: 20% !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+       .cart_num {
+        right: 128px !important;
+        top: 32px !important;
+    }
+
 .child2 > svg {
     width: 200px;
     height: 60px;
@@ -369,9 +380,19 @@ footer {
     gap: 50px;
     padding: 20px 0px;
 }
-.child1,#search,.battery,.icon,.cart_num,.FC_child2{
+.child1,#search,.battery,.FC_child2{
     display: none !important;
 }
+   .cart_num {
+        right: 128px !important;
+        top: 32px !important;
+    }
+ .child2 {
+        display: flex;
+        width: 20% !important;
+        justify-content: space-between;
+        align-items: center;
+    }
 .child2 > svg {
     width: 200px;
     height: 60px;
@@ -495,9 +516,21 @@ footer {
     gap: 50px;
     padding: 20px 0px;
 }
-.child1,#search,.battery,.icon,.cart_num,.FC_child2 {
+.child1,#search,.battery,.FC_child2 {
     display: none !important;
 }
+ .child2 {
+        display: flex;
+        width: 20% !important;
+        justify-content: space-between;
+        align-items: center;
+    }
+       .cart_num {
+        right: 110px !important;
+        top: 10px !important;
+    }
+
+
 .child2 > svg {
     width: 200px;
     height: 60px;
@@ -589,10 +622,16 @@ footer {
     justify-content: center !important;
     gap: 20px !important;
 }
-.cart_num {
-  right: 187px !important;
-  top: 50px !important;
-}
+   .cart_num {
+        right: 255px!important;
+        top: 30px !important;
+    }
+ .child2 {
+        display: flex;
+        width: 40% !important;
+        justify-content: space-between;
+        align-items: center;
+    }
 .main_parent {
     padding: 20px 24px !important;
 }
@@ -606,10 +645,6 @@ footer {
 }
 
 
-.cart_num {
-  right:30px !important;
-  top: 30px !important;
-}
 
 .imageContainer {
     display: flex;
