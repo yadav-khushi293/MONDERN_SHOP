@@ -343,7 +343,7 @@
      display:grid;
     justify-content:start;
     align-items: start;
-    padding: 40px 0px;
+    padding: 40px 10px;
     gap: 40px;
 }
 .navbar_ul, li {
@@ -433,9 +433,9 @@
 
 .info1 {
     display: flex;
-    gap: 35px;
+    gap: 30px !important;
     justify-content: center;
-    padding: 26px 0px;
+    padding: 26px 10px !important;
 }
 .Box > h2 {
     padding:0px;
@@ -507,7 +507,7 @@ footer {
      display:grid;
     justify-content:start;
     align-items: start;
-    padding: 40px 0px;
+    padding: 40px 10px !important;
     gap: 40px;
 }
 .navbar_ul, li {
@@ -597,9 +597,9 @@ footer {
 
 .info1 {
     display: flex;
-    gap: 35px;
+    gap: 30px !important;
     justify-content: center;
-    padding: 26px 0px;
+    padding: 26px 10px !important;
 }
 .Box > h2 {
     padding:0px;
@@ -670,8 +670,9 @@ footer {
      display:grid;
     justify-content:start;
     align-items: start;
-    padding: 40px 0px;
+    padding: 40px 10px;
     gap: 40px;
+
 }
 .navbar_ul, li {
     list-style: none;
@@ -760,9 +761,9 @@ footer {
 
 .info1 {
     display: flex;
-    gap: 35px;
+    gap: 30px !important;
     justify-content: center;
-    padding: 26px 0px;
+    padding: 26px 10px !important;
 }
 .Box > h2 {
     padding:0px;
