@@ -886,22 +886,35 @@ navigator.getBattery().then(function (battery) {
   battery.addEventListener("chargingchange", updateBattery);
 });
 
-function getBasePath() {
-  let path = window.location.pathname.replace(/\/{2,}/g, "/");
+// function getBasePath() {
+//   let path = window.location.pathname.replace(/\/{2,}/g, "/");
 
-  // Detect if inside /HTML/ folder
-  const htmlIndex = path.indexOf("/HTML/");
-  if (htmlIndex !== -1) {
-    // Go up one folder to main MONDERN_SHOP
-    path = path.substring(0, htmlIndex + 1);
-  } else {
-    // Already in root (like index.html)
-    path = path.substring(0, path.lastIndexOf("/") + 1);
+//   // Detect if inside /HTML/ folder
+//   const htmlIndex = path.indexOf("/HTML/");
+//   if (htmlIndex !== -1) {
+//     // Go up one folder to main MONDERN_SHOP
+//     path = path.substring(0, htmlIndex + 1);
+//   } else {
+//     // Already in root (like index.html)
+//     path = path.substring(0, path.lastIndexOf("/") + 1);
+//   }
+
+//   if (!path.endsWith("/")) path += "/";
+//   return path;
+// }
+
+function getBasePath() {
+  let path = window.location.pathname;
+
+  // If current file is inside /HTML/ folder, go one level up
+  if (path.includes("/HTML/")) {
+    return path.substring(0, path.indexOf("/HTML/"));
   }
 
-  if (!path.endsWith("/")) path += "/";
-  return path;
+  // If already in root, return current directory
+  return path.substring(0, path.lastIndexOf("/"));
 }
+
 export const aboutPage = () => {
   window.location.pathname = getBasePath() + "../HTML/about.html";
 };
