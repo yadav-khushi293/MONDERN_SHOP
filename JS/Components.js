@@ -915,8 +915,12 @@ function getBasePath() {
   return path.substring(0, path.lastIndexOf("/"));
 }
 
+const base = window.location.hostname.includes("netlify.app")
+  ? "/"
+  : "../HTML/";
+
 export const aboutPage = () => {
-  window.location.pathname = getBasePath() + "../HTML/about.html";
+  window.location.pathname = base + "about.html";
 };
 
 export const goHome = () => {
@@ -924,16 +928,16 @@ export const goHome = () => {
 };
 
 export const contactPage = () => {
-  window.location.pathname = getBasePath() + "../HTML/contect.html";
+  window.location.pathname = base + "contect.html";
 };
 
 export const shopPage = () => {
-  window.location.pathname = getBasePath() + "../HTML/shop.html";
+  window.location.pathname = base + "shop.html";
 };
 
 export const productPage = () => {
   if (window.innerWidth <= 840) return;
-  window.location.pathname = getBasePath() + "../HTML/Gallery_img.html";
+  window.location.pathname = base + "Gallery_img.html";
 };
 
 // Highlight Active Nav Item
@@ -1223,7 +1227,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const cart_Page = document.querySelector(".cart");
   if (cart_Page) {
     cart_Page.addEventListener("click", (e) => {
-      window.location.href = getBasePath() + "HTML/Cart.html";
+      window.location.href = base + "Cart.html";
     });
   }
   updateCartCount();
