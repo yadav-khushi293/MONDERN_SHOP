@@ -29,7 +29,7 @@
 <br>
 <hr>
 
-🧑‍🤝‍🧑 Team Behind the Project
+🧑‍🤝‍🧑Team Members
 -------------------------------------
 ⭐ Mehfooz Khan ==>	Team Manager
 <br>
