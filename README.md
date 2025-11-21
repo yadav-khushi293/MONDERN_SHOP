@@ -29,12 +29,11 @@
 
 💡 Each member contributed to design, logic, testing and creativity of this amazing project.
 <hr>
-<br>
 🛠️ Technologies Used
 <br>
 ✨ HTML5
-
+<br>
 ✨ CSS3
-
+<br>
 ✨ JavaScript
 
