@@ -11,16 +11,17 @@
 <br>
 <hr>
 
-  | 👤 Name            | 🎯 Role      |
-  <hr>
-  | ⭐ **Mehfooz Khan** | Team Manager |
-  <hr>
-  | ⭐ **Khushi Yadav** | Team Leader  |
-  <hr>
-  | ⭐ **Hetuk Patel**  | Team Member  |
-  <hr>
+🧑‍🤝‍🧑 Team Behind the Project
+<br>
 
-  | ⭐ **Siraj Shekh**  | Team Member  |
+⭐ Mehfooz Khan ==>	Team Manager
+<br>
+⭐ Khushi Yadav	==>Team Leader
+<br>
+⭐ Hetuk Patel	==>Team Member
+<br>
+⭐ Siraj Shekh	==>Team Member
+<br>
   <br>
 
 💡 Each member contributed to design, logic, testing and creativity of this amazing project.
