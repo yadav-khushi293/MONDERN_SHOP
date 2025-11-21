@@ -10,19 +10,15 @@
 ✨ Experience modern shopping with clean UI & smooth flow
 <br>
 <hr>
+
   | 👤 Name            | 🎯 Role      |
-  <br>
- ----------------------------------------
-<br>
+  <hr>
   | ⭐ **Mehfooz Khan** | Team Manager |
-<br>
-<br>
+  <hr>
   | ⭐ **Khushi Yadav** | Team Leader  |
-<br>
-<br>
+  <hr>
   | ⭐ **Hetuk Patel**  | Team Member  |
-<br>
-<br>
+  <hr>
 
   | ⭐ **Siraj Shekh**  | Team Member  |
   <br>
