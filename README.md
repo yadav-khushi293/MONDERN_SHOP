@@ -13,7 +13,7 @@
   | 👤 Name            | 🎯 Role      |
 <br>
 <br>
-   | ------------------ | ------------ |
+ ----------------------------------------
 <br>
   | ⭐ **Mehfooz Khan** | Team Manager |
 <br>
@@ -25,3 +25,17 @@
 <br>
 <br>
   | ⭐ **Siraj Shekh**  | Team Member  |
+
+<br><br>
+💡 Each member contributed to design, logic, testing and creativity of this amazing project.
+<hr>
+<br>
+🛠️ Technologies Used
+<br>
+
+✨ HTML5
+
+✨ CSS3
+
+✨ JavaScript
+
