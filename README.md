@@ -11,6 +11,7 @@
 <br>
 <hr>
   | 👤 Name            | 🎯 Role      |
+  <br>
  ----------------------------------------
 <br>
   | ⭐ **Mehfooz Khan** | Team Manager |
@@ -22,14 +23,15 @@
   | ⭐ **Hetuk Patel**  | Team Member  |
 <br>
 <br>
+
   | ⭐ **Siraj Shekh**  | Team Member  |
+  <br>
 
 💡 Each member contributed to design, logic, testing and creativity of this amazing project.
 <hr>
 <br>
 🛠️ Technologies Used
-
-
+<br>
 ✨ HTML5
 
 ✨ CSS3
