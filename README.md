@@ -31,6 +31,7 @@
 <hr>
 🛠️ Technologies Used
 <br>
+<br>
 ✨ HTML5
 <br>
 ✨ CSS3
