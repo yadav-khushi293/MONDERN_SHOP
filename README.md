@@ -14,7 +14,6 @@
 🧑‍🤝‍🧑 Team Behind the Project
 -------------------------------------
 <br>
-
 ⭐ Mehfooz Khan ==>	Team Manager
 <br>
 ⭐ Khushi Yadav	==>Team Leader
