@@ -4,6 +4,24 @@
  ⁎ Welcome to Modern Shop, a beautifully designed e-commerce website made as a Group Project.
    This project focuses on modern UI, smooth experience, and simple shopping flow.
 <hr>
+
+📌 Project Overview
+
+• This project includes:
+
+• A clean and modern homepage
+
+• Product catalog with images
+
+• Product details page
+
+• Add-to-cart system
+
+•Simple checkout simulation
+
+• Fully responsive layout
+
+<hr>
 🚀 Live Demo Preview
 
 (modernshope.netlify.app/)<br>
@@ -13,7 +31,6 @@
 
 🧑‍🤝‍🧑 Team Behind the Project
 -------------------------------------
-<br>
 ⭐ Mehfooz Khan ==>	Team Manager
 <br>
 ⭐ Khushi Yadav	==>Team Leader
@@ -30,9 +47,22 @@
 <br>
 ✨ HTML5
 <br>
-<br>
 ✨ CSS3
 <br>
-<br>
 ✨ JavaScript
+<hr>
+
+✨ Features
+
+• ✔️ Modern UI/UX
+
+• ✔️ Responsive website design
+
+• ✔️ Product listing page
+
+• ✔️ Shopping cart system
+
+• ✔️ Smooth animations
+
+• ✔️  Simple checkout page
 
