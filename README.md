@@ -12,6 +12,7 @@
 <hr>
 
 🧑‍🤝‍🧑 Team Behind the Project
+-------------------------------------
 <br>
 
 ⭐ Mehfooz Khan ==>	Team Manager
@@ -23,7 +24,6 @@
 ⭐ Siraj Shekh	==>Team Member
 <br>
   <br>
-
 💡 Each member contributed to design, logic, testing and creativity of this amazing project.
 <hr>
 🛠️ Technologies Used
