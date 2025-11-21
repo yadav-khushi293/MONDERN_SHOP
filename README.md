@@ -34,7 +34,9 @@
 <br>
 ✨ HTML5
 <br>
+<br>
 ✨ CSS3
+<br>
 <br>
 ✨ JavaScript
 
