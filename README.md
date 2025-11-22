@@ -6,8 +6,9 @@
    This project focuses on modern UI, smooth experience, and simple shopping flow.
 <hr>
 🚀 Live Demo Preview
-
-([modernshope.netlify.app/](https://modernshope.netlify.app/))<br>
+<br>
+<br>
+([modernshope.netlify.app/](https://modernshope.netlify.app/))<br><br>
 ✨ Experience modern shopping with clean UI & smooth flow
 <br>
 <hr> 
