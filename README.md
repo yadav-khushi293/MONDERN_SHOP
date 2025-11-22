@@ -64,7 +64,7 @@
 <br>
 ⭐ Hetuk Patel	==>Team Member
 <br>
-⭐ Siraj Shekh	==>Team Member
+⭐ Siraj Ahmad Shaikh	==>Team Member
 <br>
   <br>
 💡 Each member contributed to design, logic, testing and creativity of this amazing project.
