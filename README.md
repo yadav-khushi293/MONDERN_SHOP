@@ -51,7 +51,7 @@
 <hr>
 🚀 Live Demo Preview
 
-(modernshope.netlify.app/)<br>
+([modernshope.netlify.app/](https://modernshope.netlify.app/))<br>
 ✨ Experience modern shopping with clean UI & smooth flow
 <br>
 <hr>
