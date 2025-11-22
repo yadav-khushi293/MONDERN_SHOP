@@ -5,6 +5,13 @@
  ⁎ Welcome to Modern Shop, a beautifully designed e-commerce website made as a Group Project.
    This project focuses on modern UI, smooth experience, and simple shopping flow.
 <hr>
+🚀 Live Demo Preview
+
+([modernshope.netlify.app/](https://modernshope.netlify.app/))<br>
+✨ Experience modern shopping with clean UI & smooth flow
+<br>
+<hr> 
+
 🖼️ Website Preview Images<br>
 --------------------------------
 <br>
@@ -51,12 +58,6 @@
 • Fully responsive layout
 
 <hr>
-🚀 Live Demo Preview
-
-([modernshope.netlify.app/](https://modernshope.netlify.app/))<br>
-✨ Experience modern shopping with clean UI & smooth flow
-<br>
-<hr>
 
 🧑‍🤝‍🧑Team Members
 -------------------------------------
@@ -93,5 +94,4 @@
 
 • ✔️ Smooth animations
 
-• ✔️  Simple checkout page
 
