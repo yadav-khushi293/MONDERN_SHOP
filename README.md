@@ -1,4 +1,5 @@
-🌟 Modern Shop – Group Project<br><br>
+🌟 Modern Shop – (Group Project)
+ ---------------------------------
  ⁎ A Clean, Stylish & User-Friendly Online Shopping Experience
 <br><br>
  ⁎ Welcome to Modern Shop, a beautifully designed e-commerce website made as a Group Project.
