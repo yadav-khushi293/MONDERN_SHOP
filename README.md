@@ -37,7 +37,7 @@
 ⭐ Cart Page 
 <br>
 <br>
-<img src="https://github.com/yadav-khushi293/khushi/blob/main/Screenshot%202025-11-22%20143744.png?raw=true"/>
+<img src="https://github.com/yadav-khushi293/khushi/blob/main/Boostraps/Screenshot%202026-04-26%20152029.png?raw=true"/>
 -------------------------------------------------------------------------------------------------------------------------
 
 <hr>
